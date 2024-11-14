@@ -9,7 +9,7 @@ const Header = () => {
 
     return (
         <header className={style.header}>
-            <div className={style.logo}>Logo</div>
+            <div className={style.logo}>LocalBrand</div>
             <div className={style.navtags}>
                 <ul>
                     <li className={location.pathname === '/' ? style.navTagsSelected : ''}>
