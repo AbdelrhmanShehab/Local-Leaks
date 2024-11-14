@@ -1,0 +1,69 @@
+.header{
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px auto;
+}
+
+.logo{
+    width: 100px;
+    background-color: #525252;
+    text-align: center;
+}
+
+.navtags ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: #525252;
+    padding: 7px;
+    gap: 5px;
+    height: 8vh;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.navtags ul li{
+    display: flex;
+    align-items: center;
+    height: 8.5vh;
+    background-color: transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.navtags ul li.navTagsSelected {
+    background-color: #000000;
+    color: white;
+}
+.navtags ul li a{ 
+    /* the <Link>component from react-router-dom renders an 
+        <a>(anchor) tag under the hood. Therefore,
+        any styles applied to <a>tags will affect <Link>components as well. */
+    text-decoration: none;
+    color: white;
+    font-family: 'Nohemi' ,sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20.09px;
+    text-align: center;
+}
+.navBtn button{
+    margin-right: 10px;
+    width: 100px;
+    height: 7vh;
+    border: 1px solid rgba(0, 255, 42, 0.7);
+    background-color: transparent;
+    color: white;
+    font-family: 'Nohemi', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20.09px;
+    text-align: center;
+}
+.navBtn button:nth-child(2) {
+    background: linear-gradient(271.15deg, rgba(0, 255, 42, 0.7) 7.64%, #1B8926 90.68%);
+}
