@@ -1,0 +1,140 @@
+.container {
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    gap: 01px;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.leftContainer,
+.midContainer,
+.rightContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2%;
+}
+
+.leftContainer {
+    flex: 1;
+}
+
+.midContainer {
+    flex: 2;
+}
+
+.rightContainer {
+    flex: 1;
+}
+
+.leftContainer div,
+.midContainer div,
+.rightContainer div {
+    text-align: center;
+}
+
+.leftContainer button,
+.midContainer button,
+.rightContainer button {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.rightContainer button{
+    height: 92%;
+}
+
+.leftContainer img,
+.midContainer img,
+.rightContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay shadow layer */
+.leftContainer .overlay,
+.midContainer .overlay,
+.rightContainer .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.leftContainer h2,
+.midContainer h1,
+.midContainer h2,
+.rightContainer h2 {
+    position: absolute;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    display: flex;
+}
+
+.leftContainer h2,
+.midContainer h2,
+.rightContainer h2{
+    font-family: 'Nohemi' ,sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 38.17px;
+    color: white;
+}
+
+
+.midContainer h1{
+    color: #00FF2A;
+    font-family: 'Share Tech Mono' ,sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.midContainer h2{
+    position: absolute;
+    top: 35%;
+    right: 5%;
+}
+
+
+@media (max-width: 800px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+    .leftContainer,
+    .midContainer,
+    .rightContainer {
+        gap: 10px;
+    }
+
+    .leftContainer img,
+    .midContainer img,
+    .rightContainer img {
+        height: 100px;
+    }
+    .midContainer h1 {
+        font-size: 20px;
+    }
+    .midContainer h2 {
+        top: auto;
+        right: auto;
+    }
+}
