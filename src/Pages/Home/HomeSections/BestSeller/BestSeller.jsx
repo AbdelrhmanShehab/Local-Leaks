@@ -34,20 +34,27 @@ const BestSeller = () => {
             <h1>BestSeller</h1>
             <div className={style.bestSellerContainer}>
                 {BestSellerItems.map((item, index) => (
-                    <div key={index} className={style.bestSellerImgs}>
+                    <div className={style.bestSellerImgaes}>
                         {/* First and Second Images Stacked */}
                         <div className={style.leftImages}>
                             <img src={item.imgs[0]} alt="BestSeller 1" className={style.firstImg} />
                             <img src={item.imgs[1]} alt="BestSeller 2" className={style.secondImg} />
                         </div>
 
-                        {/* Third Image */}
-                        <img src={item.imgs[2]} alt="BestSeller 3" className={style.thirdImg} />
+                        {/* Third Image and Pagination */}
+                        <div  className={style.rightContent}>
+                            <img src={item.imgs[2]} alt="BestSeller 3" className={style.thirdImg} />
+                            <button>Hello</button>
+                        </div>
                     </div>
                 ))}
 
-                <div className={style.bestSeller}>
-                    <h4>Bradn Name</h4>
+                <div className={style.bestSellerDescription}>
+                    <h4>Brand Name</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+                        commodo cursus magna, vel scelerisque nisl consectetur et.
+                    </p>
                 </div>
             </div>
         </div>

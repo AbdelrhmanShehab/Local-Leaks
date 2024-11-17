@@ -1,67 +1,100 @@
-.bestSeller {
-    color: #fff;
-    background-color: #000;
-    padding: 20px;
-    height: 100vh;
+.bestSeller{
+    padding: 30px 0px;
+    margin-top: 20px;
 }
 
 .bestSeller h1 {
     color: #00FF2A;
-    font-size: 2.5rem;
-    text-align: center;
+    text-align: left;
+    font-family: 'Nohemi', sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 48.22px;
     margin-bottom: 0px;
 }
 
 .bestSellerContainer {
+    background-color: #000;
+    color: #fff;
+    padding: 30px 0;
+    height: 100vh;
     display: flex;
-    /* flex-direction: column; */
-    gap: 40px;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
-/* Images Container */
-.bestSellerImgs {
-    box-sizing: border-box;
+.bestSellerImgaes {
+    flex: 3;  /* 60% of the width */
+    max-width: 60%;
+    height: 100%;
     display: flex;
-    position: relative;
-    height: 400px;
-    /* Example height, you can adjust */
-    gap: 10px;
+    gap: 20px;
 }
 
-/* Left Images (First and Second Stacked) */
 .leftImages {
     display: flex;
     flex-direction: column;
-    gap: 10%;
-    /* Gap between first and second images */
-    flex: 1;
-    /* Take 50% of container's width */
-    box-sizing: border-box;
+    justify-content: space-between;
+    gap: 10px;
+    flex: 50%;
 }
 
-.firstImg {
-    flex: 0 0 40%;
-    /* Take 40% of the main container's height */
-    width: 100%;
-    object-fit: cover;
-    box-sizing: border-box;
-}
-
+.firstImg,
 .secondImg {
-    flex: 0 0 50%;
-    /* Take 50% of the main container's height */
     width: 100%;
     object-fit: cover;
-    box-sizing: border-box;
+    height: 48%;
 }
 
-/* Third Image */
+.rightContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex: 50%;
+}
+
 .thirdImg {
-    flex: 0 0 80%;
-    /* Take 80% of the main container's height */
     width: 100%;
-    /* Automatically adjust width */
+    height: 80%;
     object-fit: cover;
-    box-sizing: border-box;
+}
+
+.paginationButton {
+    width: 100%;
+    height: 20%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Nohemi', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.bestSellerDescription {
+    flex: 2;  /* 40% of the width */
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #111;
+    border-radius: 10px;
+    font-family: 'Nohemi', sans-serif;
+}
+
+.bestSellerDescription h4 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.bestSellerDescription p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ddd;
 }
