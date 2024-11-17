@@ -6,6 +6,8 @@ import Footer from '../../Components/Footer/Footer';
 import HomeCategories from './HomeSections/HomeCategories/HomeCategories';
 import TopBrands from './HomeSections/TopBrands/TopBrands';
 import BestSeller from './HomeSections/BestSeller/BestSeller';  
+import NewLeaks from './HomeSections/NewLeaks/NewLeaks';
+import OurServices from './HomeSections/OurServices/OurServices';
 
 const Home = () => {
     return (
@@ -14,6 +16,8 @@ const Home = () => {
             <HomeCategories />
             <TopBrands />
             <BestSeller />
+            <NewLeaks />
+            <OurServices />
             <Footer />
         </div>
     );
