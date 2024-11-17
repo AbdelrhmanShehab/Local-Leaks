@@ -45,51 +45,49 @@ const BestSeller = () => {
     return (
         <div className={style.bestSeller}>
             <h1>BestSeller</h1>
-                {/* {BestSellerItems.map((item, index) => ( */}
-                    <div className={style.bestSellerContainer}>
-                        <div className={style.bestSellerImgaes}>
-                            {/* First and Second Images Stacked */}
-                            <div className={style.leftImages}>
-                                <img src={BestSellerItems[currentIndex].imgs[0]} alt="BestSeller 1" className={style.firstImg} />
-                                <img src={BestSellerItems[currentIndex].imgs[1]} alt="BestSeller 2" className={style.secondImg} />
-                            </div>
+            <div className={style.bestSellerContainer}>
+                <div className={style.bestSellerImgaes}>
+                    {/* First and Second Images Stacked */}
+                    <div className={style.leftImages}>
+                        <img src={BestSellerItems[currentIndex].imgs[0]} alt="BestSeller 1" className={style.firstImg} />
+                        <img src={BestSellerItems[currentIndex].imgs[1]} alt="BestSeller 2" className={style.secondImg} />
+                    </div>
 
-                            {/* Third Image and Pagination */}
-                            <div  className={style.rightContent}>
-                                <img src={BestSellerItems[currentIndex].imgs[2]} alt="BestSeller 3" className={style.thirdImg} />
-                                {/* Pagination Dots */}
-                                <div className={style.pagination}>
-                                    <button onClick={handlePrevClick}>&lt;</button>
-                                    {BestSellerItems.map((_, idx) => (
-                                        <span
-                                            key={idx}
-                                            className={`${style.dot} ${currentIndex === idx ? style.active : ''}`}
-                                            onClick={() => handleDotClick(idx)}
-                                        ></span>
-                                    ))}
-                                    <button onClick={handleNextClick}>&gt;</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className={style.bestSellerDescription}>
-                            <h4>{BestSellerItems[currentIndex].title}</h4>
-                            <span>{BestSellerItems[currentIndex].price} EGP</span>
-                            <div className={style.sizes}>
-                                {['S', 'M', 'L', 'XL', 'XXL'].map((size) => (
-                                    <button key={size} className={size === 'M' ? style.active : ''}>
-                                        {size}
-                                    </button>
-                                ))}
-                            </div>
-                            <p>{BestSellerItems[currentIndex].description}</p>
-                            <button className={style.addToBasket}>
-                                <i className="fas fa-shopping-cart" style={{ marginRight: "5px" }}></i>
-                                Add to Basket
-                            </button>
+                    {/* Third Image and Pagination */}
+                    <div  className={style.rightContent}>
+                        <img src={BestSellerItems[currentIndex].imgs[2]} alt="BestSeller 3" className={style.thirdImg} />
+                        {/* Pagination Dots */}
+                        <div className={style.pagination}>
+                            <button onClick={handlePrevClick}>&lt;</button>
+                            {BestSellerItems.map((_, idx) => (
+                                <span
+                                    key={idx}
+                                    className={`${style.dot} ${currentIndex === idx ? style.active : ''}`}
+                                    onClick={() => handleDotClick(idx)}
+                                ></span>
+                            ))}
+                            <button onClick={handleNextClick}>&gt;</button>
                         </div>
                     </div>
-                {/* ))} */}
+                </div>
+
+                <div className={style.bestSellerDescription}>
+                    <h4>{BestSellerItems[currentIndex].title}</h4>
+                    <span>{BestSellerItems[currentIndex].price} EGP</span>
+                    <div className={style.sizes}>
+                        {['S', 'M', 'L', 'XL', 'XXL'].map((size) => (
+                            <button key={size} className={size === 'M' ? style.active : ''}>
+                                {size}
+                            </button>
+                        ))}
+                    </div>
+                    <p>{BestSellerItems[currentIndex].description}</p>
+                    <button className={style.addToBasket}>
+                        <i className="fas fa-shopping-cart" style={{ marginRight: "5px" }}></i>
+                        Add to Basket
+                    </button>
+                </div>
+            </div>
         </div>
     );
 };

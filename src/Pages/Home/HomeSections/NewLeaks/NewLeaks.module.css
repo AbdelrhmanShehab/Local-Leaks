@@ -1,3 +1,54 @@
-.newLeaks{
-    
+.newLeaks {
+    font-family: 'Nohemi', sans-serif;
+    box-sizing: border-box;
+}
+
+.newLeaks h1{
+    color: #00FF2A;
+    text-align: left;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 48.22px;
+    margin-bottom: 20px;
+}
+
+.newLeaksContainer{
+    color: #fff;
+    padding: 30px 0;
+    /* height: auto; */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.newLeaksLeftImg{
+    flex: 2;
+    max-width: 50%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+}
+.newLeaksLeftImg img{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+    object-position: center;
+}
+
+.newLeaksRightImgs{
+    flex: 3;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.newLeaksRightImgs img{
+    height: 49%;
+    width: 49%;
+    box-sizing: border-box;
+    object-fit: cover;
+    object-position: center;
 }

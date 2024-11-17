@@ -14,7 +14,6 @@
 }
 
 .bestSellerContainer {
-    background-color: #000;
     color: #fff;
     padding: 30px 0;
     height: 80vh;
@@ -108,7 +107,6 @@
     gap: 15px;
     padding: 0px 20px;
     border-radius: 10px;
-    font-family: 'Nohemi', sans-serif;
 }
 
 /* Brand Name */
