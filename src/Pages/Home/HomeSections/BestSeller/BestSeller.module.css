@@ -1,7 +1,6 @@
 .bestSeller{
     padding: 30px 0px;
     margin-top: 20px;
-    font-family: 'Nohemi', sans-serif;
 }
 
 .bestSeller h1 {
@@ -166,4 +165,24 @@
     font-size: 15px;
     font-weight: 400;
     color: #fff;
+}
+
+
+/* Responsive Part */
+
+@media (max-width:799px) {
+    .bestSellerContainer{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .bestSellerImgaes{
+        flex: 1;
+        max-width: 100%;
+        max-height: 70vh;
+    }
+    .bestSellerDescription{
+        flex: 1;
+        max-width: 100%;
+    }
 }

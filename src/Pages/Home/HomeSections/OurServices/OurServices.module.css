@@ -1,3 +1,58 @@
 .ourServices{
-    
+    box-sizing: border-box;
+}
+
+.ourServicesContainer{
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.servicesDescription{
+    flex: 1;
+    margin-top: 80px;
+}
+
+.servicesDescription strong{
+    color: #00FF2A;
+}
+.servicesDescription p{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: left;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+.servicesImage{
+    flex: 1;
+    position: relative;
+}
+.servicesImage h1{
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 130.59px;
+    z-index: 5;
+    position: absolute;
+}
+.servicesImage img{
+    max-width: 300px;
+    position: absolute;
+    z-index: 5;
+}
+.imageCircle{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    max-width: 500px;
+    max-height: 500px;
+    background: #00FF2A;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
