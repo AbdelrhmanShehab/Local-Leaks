@@ -23,11 +23,11 @@ const HomeCategories = () => {
                 </button>
             </div>
             <div className={style.midContainer}>
-                <button className={style.encryptedStyle}>
+                <div className={style.encryptedStyle}>
                     <img src={EncryptedStyle} alt="EncryptedStyle" />
                     <div className={style.overlay}></div>
                     <h1>Encrypted Style Decrypted for You</h1>
-                </button>
+                </div>
                 <button>
                     <img src={MenCollections} alt="MenCollections" />
                     <div className={style.overlay}></div>
@@ -38,7 +38,7 @@ const HomeCategories = () => {
                 <button>
                     <img src={WomanCollections} alt="WomanCollections" />
                     <div className={style.overlay}></div>
-                    <h2>Woman Collections</h2>
+                    <h2>Women Collections</h2>
                 </button>
             </div>
         </div>
