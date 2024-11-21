@@ -1,11 +1,11 @@
 import React from 'react';
 import style from './HomeCategories.module.css';
 
-import EncryptedStyle from '../../../../Assets/HomeCategories/EncryptedStyle.jpg';
-import MostPopular from '../../../../Assets/HomeCategories/MostPopular.jpg';
-import MenCollections from '../../../../Assets/HomeCategories/MenCollections.jpg';
-import WomanCollections from '../../../../Assets/HomeCategories/WomanCollections.jpg';
-import WinterLeaks from '../../../../Assets/HomeCategories/WinterLeaks.jpg';
+import EncryptedStyle from '../../../../Assets/HomeImages/HomeCategories/EncryptedStyle.jpg';
+import MostPopular from '../../../../Assets/HomeImages/HomeCategories/MostPopular.jpg';
+import MenCollections from '../../../../Assets/HomeImages/HomeCategories/MenCollections.jpg';
+import WomanCollections from '../../../../Assets/HomeImages/HomeCategories/WomanCollections.jpg';
+import WinterLeaks from '../../../../Assets/HomeImages/HomeCategories/WinterLeaks.jpg';
 
 const HomeCategories = () => {
     return (

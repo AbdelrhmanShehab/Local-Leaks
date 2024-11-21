@@ -8,6 +8,7 @@ import TopBrands from './HomeSections/TopBrands/TopBrands';
 import BestSeller from './HomeSections/BestSeller/BestSeller';  
 import NewLeaks from './HomeSections/NewLeaks/NewLeaks';
 import OurServices from './HomeSections/OurServices/OurServices';
+import LifestyleWear from './HomeSections/LifestyleWear/LifestyleWear';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <BestSeller />
             <NewLeaks />
             <OurServices />
+            <LifestyleWear />
             <Footer />
         </div>
     );

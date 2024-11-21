@@ -30,18 +30,37 @@
 .servicesImage{
     flex: 1;
     position: relative;
+    text-align: center;
 }
 .servicesImage h1{
-    font-size: 80px;
-    font-weight: 500;
-    line-height: 130.59px;
-    z-index: 5;
-    position: absolute;
+        font-size: 5vw;
+        font-weight: 500;
+        line-height: 60.59px;
+        z-index: 5;
+        position: absolute;
+        width: 100%;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
 }
 .servicesImage img{
-    max-width: 300px;
-    position: absolute;
-    z-index: 5;
+        /*max-width: 400px;
+        position: absolute;
+        z-index: 5;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        */max-width: 100%;
+        max-height: 400px;
+        position: absolute;
+        z-index: 5;
+        top: 70%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
 }
 .imageCircle{
     position: absolute;

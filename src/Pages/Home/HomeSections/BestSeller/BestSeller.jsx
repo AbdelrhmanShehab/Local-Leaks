@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import style from './BestSeller.module.css';
 
-import bestSeller1 from '../../../../Assets/BestSeller/BestSeller1.jpg';
-import bestSeller2 from '../../../../Assets/BestSeller/BestSeller2.jpg';
-import bestSeller3 from '../../../../Assets/BestSeller/BestSeller3.jpg';
-import bestSeller4 from '../../../../Assets/BestSeller/BestSeller4.jpg';
-import bestSeller5 from '../../../../Assets/BestSeller/BestSeller5.jpg';
-import bestSeller6 from '../../../../Assets/BestSeller/BestSeller6.jpg';
+import bestSeller1 from '../../../../Assets/HomeImages/BestSeller/BestSeller1.jpg';
+import bestSeller2 from '../../../../Assets/HomeImages/BestSeller/BestSeller2.jpg';
+import bestSeller3 from '../../../../Assets/HomeImages/BestSeller/BestSeller3.jpg';
+import bestSeller4 from '../../../../Assets/HomeImages/BestSeller/BestSeller4.jpg';
+import bestSeller5 from '../../../../Assets/HomeImages/BestSeller/BestSeller5.jpg';
+import bestSeller6 from '../../../../Assets/HomeImages/BestSeller/BestSeller6.jpg';
 
 const BestSellerItems = [
     {

@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './OurServices.module.css';
-import ourServicesImg from '../../../../Assets/OurServices.png'
+import ourServicesImg from '../../../../Assets/HomeImages/OurServices.png'
 
 const OurServices = () => {
     return (
