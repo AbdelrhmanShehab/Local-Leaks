@@ -13,31 +13,31 @@ const HomeCategories = () => {
             <div className={style.leftContainer}>
                 <button>
                     <img src={MostPopular} alt="MostPopular" />
-                    <div class={style.overlay}></div>
+                    <div className={style.overlay}></div>
                     <h2>Most Popular</h2>
                 </button>
                 <button>
                     <img src={WinterLeaks} alt="WinterLeaks" />
-                    <div class={style.overlay}></div>
+                    <div className={style.overlay}></div>
                     <h2>Winter Leaks</h2>
                 </button>
             </div>
             <div className={style.midContainer}>
                 <button className={style.encryptedStyle}>
                     <img src={EncryptedStyle} alt="EncryptedStyle" />
-                    <div class={style.overlay}></div>
+                    <div className={style.overlay}></div>
                     <h1>Encrypted Style Decrypted for You</h1>
                 </button>
                 <button>
                     <img src={MenCollections} alt="MenCollections" />
-                    <div class={style.overlay}></div>
+                    <div className={style.overlay}></div>
                     <h2>Men Collections</h2>
                 </button>
             </div>
             <div className={style.rightContainer}>
                 <button>
                     <img src={WomanCollections} alt="WomanCollections" />
-                    <div class={style.overlay}></div>
+                    <div className={style.overlay}></div>
                     <h2>Woman Collections</h2>
                 </button>
             </div>
