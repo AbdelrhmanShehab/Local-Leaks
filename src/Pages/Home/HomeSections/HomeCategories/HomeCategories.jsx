@@ -38,7 +38,7 @@ const HomeCategories = () => {
                 <button>
                     <img src={WomanCollections} alt="WomanCollections" />
                     <div className={style.overlay}></div>
-                    <h2>Women Collections</h2>
+                    <h2>Women Collections hhhh</h2>
                 </button>
             </div>
         </div>
