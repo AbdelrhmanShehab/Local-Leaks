@@ -89,7 +89,6 @@
 .leftContainer h2,
 .midContainer h2,
 .rightContainer h2{
-    font-family: 'Nohemi' ,sans-serif;
     font-size: 24px;
     font-weight: 600;
     line-height: 38.17px;
@@ -114,6 +113,9 @@
     display: flex;
 
 }
+
+
+/* Responsive */
 
 @media (max-width: 800px) {
     .container {

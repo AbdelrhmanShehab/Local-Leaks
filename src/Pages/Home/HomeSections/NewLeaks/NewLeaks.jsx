@@ -1,11 +1,11 @@
 import React from 'react';
 import style from './NewLeaks.module.css';
 
-import newLeaks1 from '../../../../Assets/NewLeaks/NewLeaks1.jpg';
-import newLeaks2 from '../../../../Assets/NewLeaks/NewLeaks2.jpg';
-import newLeaks3 from '../../../../Assets/NewLeaks/NewLeaks3.jpg';
-import newLeaks4 from '../../../../Assets/NewLeaks/NewLeaks4.jpg';
-import newLeaks5 from '../../../../Assets/NewLeaks/NewLeaks5.jpg';
+import newLeaks1 from '../../../../Assets/HomeImages/NewLeaks/NewLeaks1.jpg';
+import newLeaks2 from '../../../../Assets/HomeImages/NewLeaks/NewLeaks2.jpg';
+import newLeaks3 from '../../../../Assets/HomeImages/NewLeaks/NewLeaks3.jpg';
+import newLeaks4 from '../../../../Assets/HomeImages/NewLeaks/NewLeaks4.jpg';
+import newLeaks5 from '../../../../Assets/HomeImages/NewLeaks/NewLeaks5.jpg';
 
 const NewLeaksImages = [
     {
@@ -43,12 +43,60 @@ const NewLeaks = () => {
             <div className={style.newLeaksContainer}>
                 <div className={style.newLeaksLeftImg}>
                     <img src={NewLeaksImages[0].imgSrc} alt="" />
+                    <div className={style.overlay}></div>
+                    <div className={style.priceAndAddBtn}>
+                        <h2>{NewLeaksImages[0].price} EGP</h2>
+                        <button>
+                            <i className="fas fa-shopping-cart" style={{ marginRight: "5px" }}></i>
+                            Add to Basket
+                        </button>
+                    </div>
                 </div>
                 <div className={style.newLeaksRightImgs}>
-                    <img src={NewLeaksImages[1].imgSrc}  alt="" />
-                    <img src={NewLeaksImages[2].imgSrc}  alt="" />
-                    <img src={NewLeaksImages[3].imgSrc}  alt="" />
-                    <img src={NewLeaksImages[4].imgSrc}  alt="" />
+                    <div className={style.newLeaksRightImg}>
+                        <img src={NewLeaksImages[1].imgSrc} alt="" />
+                        <div className={style.overlay}></div>
+                        <div className={style.priceAndAddBtn}>
+                            <h2>{NewLeaksImages[4].price} EGP</h2>
+                            <button>
+                                <i className="fas fa-shopping-cart" style={{ marginRight: "5px" }}></i>
+                                Add to Basket
+                            </button>
+                        </div>
+                    </div>
+                    <div className={style.newLeaksRightImg}>
+                        <img src={NewLeaksImages[2].imgSrc} alt="" />
+                        <div className={style.overlay}></div>
+                        <div className={style.priceAndAddBtn}>
+                            <h2>{NewLeaksImages[4].price} EGP</h2>
+                            <button>
+                                <i className="fas fa-shopping-cart" style={{ marginRight: "5px" }}></i>
+                                Add to Basket
+                            </button>
+                        </div>
+                    </div>
+                    <div className={style.newLeaksRightImg}>
+                        <img src={NewLeaksImages[3].imgSrc} alt="" />
+                        <div className={style.overlay}></div>
+                        <div className={style.priceAndAddBtn}>
+                            <h2>{NewLeaksImages[4].price}  EGP</h2>
+                            <button>
+                                <i className="fas fa-shopping-cart" style={{ marginRight: "5px" }}></i>
+                                Add to Basket
+                            </button>
+                        </div>
+                    </div>
+                    <div className={style.newLeaksRightImg}>
+                        <img src={NewLeaksImages[4].imgSrc} alt="" />
+                        <div className={style.overlay}></div>
+                        <div className={style.priceAndAddBtn}>
+                            <h2>{NewLeaksImages[4].price} EGP</h2>
+                            <button>
+                                <i className="fas fa-shopping-cart" style={{ marginRight: "5px" }}></i>
+                                Add to Basket
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
