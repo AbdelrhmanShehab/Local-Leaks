@@ -1,17 +1,30 @@
-.app{
+.app {
   background-color: #000000;
-  font-family: 'Nohemi', sans-serif;
+  font-family: "Nohemi", sans-serif;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --mainColor: #00ff2a;
+  --secondryColor: #999999;
+  --secondryRedColor: #e50000;
+  --borderColor: #1f1f1f;
 }
 
-.container{
-    /* to make padding works even in mobile size screens */
-    padding-right: 15px;
-    padding-left: 15px;
-    /* to set all elements in the center verticlly */
-    margin-right: auto;
-    margin-left: auto;
-    /* set the width for the container */
-    /* width: calc( 100% - 200px );  */
-    width: 89%;
-    position: relative;
+.container {
+  /* to make padding works even in mobile size screens */
+  padding-right: 15px;
+  padding-left: 15px;
+  /* to set all elements in the center verticlly */
+  margin-right: auto;
+  margin-left: auto;
+  /* set the width for the container */
+  /* width: calc( 100% - 200px );  */
+  width: 93%;
+  position: relative;
 }
