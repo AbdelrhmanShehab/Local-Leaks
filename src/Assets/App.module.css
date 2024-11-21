@@ -3,6 +3,14 @@
 }
 
 .container{
-  width: 85%;
-  margin: auto;
+    /* to make padding works even in mobile size screens */
+    padding-right: 15px;
+    padding-left: 15px;
+    /* to set all elements in the center verticlly */
+    margin-right: auto;
+    margin-left: auto;
+    /* set the width for the container */
+    /* width: calc( 100% - 200px );  */
+    width: 89%;
+    position: relative;
 }

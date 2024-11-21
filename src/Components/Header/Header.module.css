@@ -40,9 +40,6 @@
     color: white;
 }
 .navtags ul li a{ 
-    /* the <Link>component from react-router-dom renders an 
-        <a>(anchor) tag under the hood. Therefore,
-        any styles applied to <a>tags will affect <Link>components as well. */
     text-decoration: none;
     color: white;
     font-family: 'Nohemi' ,sans-serif;
