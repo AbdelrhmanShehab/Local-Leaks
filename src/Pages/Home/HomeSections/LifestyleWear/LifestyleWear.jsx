@@ -1,37 +1,43 @@
 import React from 'react';
 import style from './LifestyleWear.module.css';
 
-import classicImg from '../../../../Assets/HomeImages/LifestyleWear/Classic.jpg'
-import casualImg from '../../../../Assets/HomeImages/LifestyleWear/Casual.jpg'
-import streetWareImg from '../../../../Assets/HomeImages/LifestyleWear/StreetWare.jpg'
+import classicImg from '../../../../Assets/HomeImages/LifestyleWear/Classic.jpg';
+import casualImg from '../../../../Assets/HomeImages/LifestyleWear/Casual.jpg';
+import streetWareImg from '../../../../Assets/HomeImages/LifestyleWear/StreetWare.jpg';
 
 const LifeStyleWear = [
     {
         imgSrc: classicImg,
-        title: 'Classic'
+        title: 'Classic',
     },
     {
         imgSrc: casualImg,
-        title: 'Casual'
+        title: 'Casual',
     },
     {
         imgSrc: streetWareImg,
-        title: 'Street Ware'
+        title: 'Street Ware',
     },
-]
+];
 
 const LifestyleWear = () => {
     return (
-        <div className={style.lifeStyls}>
+        <section className={style.lifeStyls}>
             {LifeStyleWear.map((lifeStyle, index) => (
-                <div className={style.style} >
-                    <div className={style.overlay}></div>
-                    <img src={lifeStyle.imgSrc} alt={lifeStyle.title} />
-                    <h1>{lifeStyle.title}</h1>
-                </div>
+                <article className={style.style} key={index}>
+                    <div className={style.greenShadow} aria-hidden="true"></div>
+                    <figure>
+                        <img src={lifeStyle.imgSrc} alt={lifeStyle.title} />
+                        <figcaption className={style.titleBackgroundShadow}>
+                            <h1 className={style.title}>{lifeStyle.title}</h1>
+                        </figcaption>
+                    </figure>
+                    <div className={style.overlay} aria-hidden="true"></div>
+                </article>
             ))}
-        </div>
+        </section>
     );
 };
 
 export default LifestyleWear;
+

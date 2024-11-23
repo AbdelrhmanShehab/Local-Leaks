@@ -9,6 +9,7 @@ import BestSeller from './HomeSections/BestSeller/BestSeller';
 import NewLeaks from './HomeSections/NewLeaks/NewLeaks';
 import OurServices from './HomeSections/OurServices/OurServices';
 import LifestyleWear from './HomeSections/LifestyleWear/LifestyleWear';
+import NewSletter from './HomeSections/NewSletter/NewSletter';
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             <NewLeaks />
             <OurServices />
             <LifestyleWear />
+            <NewSletter />
             <Footer />
         </div>
     );

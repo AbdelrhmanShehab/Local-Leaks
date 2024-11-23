@@ -4,7 +4,7 @@
     font-weight: 500;
     line-height: 48.22px;
     color: #00FF2A;
-    margin-bottom: 40px;
+    margin: 50px 0px;
 }
 
 .brandsContainer {
@@ -33,14 +33,22 @@
     transform: translate(50%, -50%);
     background-color: #00FF2A;
     width: 2px;
-    height: 40px;
+    height: 50px;
 }
 
 .brand h2 {
-    font-family: 'Montagu Slab', sans-serif;
-    font-size: 20px;
+    font-family: 'Montagu Slab';
+    font-size: 25px;
     font-weight: 500;
-    line-height: 20px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+.brand p{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
 }
 
 @media (max-width: 800px) {

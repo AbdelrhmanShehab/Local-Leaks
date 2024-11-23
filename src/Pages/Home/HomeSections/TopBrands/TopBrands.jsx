@@ -27,19 +27,21 @@ const Brands = [
 
 const TopBrands = () => {
     return (
-        <div className={style.topBrands}>
-            <h1>Our Top Brands</h1>
+        <section className={style.topBrands}>
+            <header>
+                <h1>Our Top Brands</h1>
+            </header>
             <div className={style.brandsContainer}>
                 {Brands.map((brand) => (
-                    <div className={style.brands} key={brand.title}>
+                    <article className={style.brands} key={brand.title}>
                         <div className={style.brand}>
                             <h2>{brand.title}</h2>
-                            <p>{brand.projectsNumber} Products</p>
+                            <p>{brand.projectsNumber} <br /> Products</p>
                         </div>
-                    </div>
+                    </article>
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 
