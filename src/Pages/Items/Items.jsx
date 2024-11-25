@@ -4,16 +4,17 @@ import style from './Items.module.css';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 import Card from '../../Components/Card/Card';
+import CheckBoxFilter from '../../Components/CheckBoxFilter/CheckBoxFilter';
 
 const Items = () => {
 
-    const [selectedFilter, setSelectedFilter] = useState(''); // To track selected filter
+    const [selectedSort, setSelectedSort] = useState(''); // To track selected filter
     const [isListVisible, setIsListVisible] = useState(true); // To track visibility
 
 
-    const handleFilterClick = (filterId) => {
-        setSelectedFilter((prevSelected) =>
-            prevSelected === filterId ? "" : filterId
+    const handleSortClick = (sortId) => {
+        setSelectedSort((prevSelected) =>
+            prevSelected === sortId ? "" : sortId
         ); // Unselect if already selected
     };
 
@@ -21,7 +22,7 @@ const Items = () => {
         setIsListVisible((prev) => !prev); // Toggle visibility
     };
 
-    const filterOptions = [
+    const sortOptions = [
         { id: 'high-to-low', label: 'Price from high to low' },
         { id: 'low-to-high', label: 'Price from low to high' },
         { id: 'best-selling', label: 'Best selling' },
@@ -69,10 +70,10 @@ const Items = () => {
         // parseInt(..., 10): Converts the string into an integer. 
         // The second argument(10) ensures that the number is interpreted in base 10.
 
-        if (selectedFilter === "high-to-low") {
+        if (selectedSort === "high-to-low") {
             return priceB - priceA; // Sort descending
         }
-        if (selectedFilter === "low-to-high") {
+        if (selectedSort === "low-to-high") {
             return priceA - priceB; // Sort ascending
         }
         return 0; // Keep the original order
@@ -88,7 +89,7 @@ const Items = () => {
                         <h1 className={style.filterHeader}>New Leaks</h1>
                     </header>
                     <section className={style.sortBySection}>
-                        <header className={style.sortBy}>
+                        <header className={style.sortByHeader}>
                             <h2>Sort By</h2>
                             <button onClick={toggleListVisibility} >
                                 {isListVisible ? (
@@ -103,20 +104,26 @@ const Items = () => {
                             </button>
                         </header>
                         {isListVisible && (
-                            <ul className={style.filterList}>
-                                {filterOptions.map((option) => (
+                            <ul className={style.sortList}>
+                                {sortOptions.map((option) => (
                                     <li
                                         key={option.id}
-                                        className={`${style.filterOption} ${
-                                            selectedFilter === option.id ? style.active : ""
+                                        className={`${style.sortOption} ${
+                                            selectedSort === option.id ? style.active : ""
                                         }`}
-                                        onClick={() => handleFilterClick(option.id)}
+                                        onClick={() => handleSortClick(option.id)}
                                     >
                                         <span>{option.label}</span>
                                     </li>
                                 ))}
                             </ul>
                         )}
+                    </section>
+                    <section className={style.filterBySection}>
+                        <header className={style.filterByHeader}>
+                            <h2>Filter By:</h2>
+                        </header>
+                        <CheckBoxFilter />
                     </section>
                 </aside>
 
