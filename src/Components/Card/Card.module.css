@@ -1,0 +1,101 @@
+.card{
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.container {
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin: 3rem auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.imageWrapper img {
+    width: 100%;
+    /* height: auto; */
+    /* height: 400px; */
+    height: 300px;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.imageWrapper:hover img{
+    transform: scale(1.1);
+    height: 300px;
+}
+
+.favoriteButton {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #939393;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 50%;
+}
+
+.favoriteButton:hover {
+    transform: scale(1.2);
+}
+
+.productDetails {
+    position: relative;
+    padding: 10px 0px;
+}
+
+.productTitle {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20.09px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.productPrice {
+    color: #00FF2A;
+    font-size: 17px;
+    font-weight: 550;
+}
+
+.colorOptions {
+    display: flex;
+    justify-content: left;
+    margin-top: 10px;
+}
+
+.colorDot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #fff;
+    transition: transform 0.3s ease;
+}
+
+.colorDotSelected {
+    transform: scale(1.2);
+}
+
+.colorDot:hover {
+    transform: scale(1.3);
+}
