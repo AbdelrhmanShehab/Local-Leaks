@@ -4,16 +4,81 @@ import style from './Items.module.css';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 import Card from '../../Components/Card/Card';
+import CheckBoxFilter from '../../Components/CheckBoxFilter/CheckBoxFilter';
+
+
+
+const filterOptions = [
+    {
+        group: 'Gender',
+        options: [
+            { value: 'for woman', label: 'For Woman' },
+            { value: 'for men', label: 'For Men' },
+            { value: 'for both', label: 'For Both' },
+        ],
+    },
+    {
+        group: 'Style',
+        options: [
+            { value: 'casual', label: 'Casual' },
+            { value: 'classic', label: 'Classic' },
+            { value: 'streetwear', label: 'Streetwear' },
+        ],
+    },
+    {
+        group: 'Brand',
+        options: [
+            { value: 'LC Wakiki', label: 'LC Wakiki' },
+            { value: 'LC Wakiki', label: 'LC Wakiki' },
+            { value: 'LC Wakiki', label: 'LC Wakiki' },
+            { value: 'LC Wakiki', label: 'LC Wakiki' },
+            { value: 'LC Wakiki', label: 'LC Wakiki' },
+            { value: 'LC Wakiki', label: 'LC Wakiki' },
+        ],
+    },
+    {
+        group: 'Category',
+        options: [
+            { value: 't-shirt', label: 'T-shirt' },
+            { value: 'jacket', label: 'Jacket' },
+            { value: 'hoodie', label: 'Hoodie' },
+            { value: 'trousers', label: 'Trousers' },
+            { value: 'sweatshirts', label: 'Sweatshirts' },
+            { value: 'jumpers', label: 'Jumpers' },
+        ],
+    },
+    {
+        group: 'Size',
+        options: [
+            { value: 'small', label: 'Small' },
+            { value: 'medium', label: 'Medium' },
+            { value: 'large', label: 'Large' },
+            { value: 'xlarge', label: 'XL' },
+        ],
+    },
+    {
+        group: 'Color',
+        options: [
+            { value: 'black', label: 'Black' },
+            { value: 'white', label: 'White' },
+            { value: 'green', label: 'Green' },
+            { value: 'blue', label: 'Blue' },
+            { value: 'pink', label: 'Pink' },
+        ],
+    },
+];
+
+
 
 const Items = () => {
 
-    const [selectedFilter, setSelectedFilter] = useState(''); // To track selected filter
+    const [selectedSort, setSelectedSort] = useState(''); // To track selected filter
     const [isListVisible, setIsListVisible] = useState(true); // To track visibility
 
 
-    const handleFilterClick = (filterId) => {
-        setSelectedFilter((prevSelected) =>
-            prevSelected === filterId ? "" : filterId
+    const handleSortClick = (sortId) => {
+        setSelectedSort((prevSelected) =>
+            prevSelected === sortId ? "" : sortId
         ); // Unselect if already selected
     };
 
@@ -21,7 +86,7 @@ const Items = () => {
         setIsListVisible((prev) => !prev); // Toggle visibility
     };
 
-    const filterOptions = [
+    const sortOptions = [
         { id: 'high-to-low', label: 'Price from high to low' },
         { id: 'low-to-high', label: 'Price from low to high' },
         { id: 'best-selling', label: 'Best selling' },
@@ -69,10 +134,10 @@ const Items = () => {
         // parseInt(..., 10): Converts the string into an integer. 
         // The second argument(10) ensures that the number is interpreted in base 10.
 
-        if (selectedFilter === "high-to-low") {
+        if (selectedSort === "high-to-low") {
             return priceB - priceA; // Sort descending
         }
-        if (selectedFilter === "low-to-high") {
+        if (selectedSort === "low-to-high") {
             return priceA - priceB; // Sort ascending
         }
         return 0; // Keep the original order
@@ -88,7 +153,7 @@ const Items = () => {
                         <h1 className={style.filterHeader}>New Leaks</h1>
                     </header>
                     <section className={style.sortBySection}>
-                        <header className={style.sortBy}>
+                        <header className={style.sortByHeader}>
                             <h2>Sort By</h2>
                             <button onClick={toggleListVisibility} >
                                 {isListVisible ? (
@@ -103,20 +168,32 @@ const Items = () => {
                             </button>
                         </header>
                         {isListVisible && (
-                            <ul className={style.filterList}>
-                                {filterOptions.map((option) => (
+                            <ul className={style.sortList}>
+                                {sortOptions.map((option) => (
                                     <li
                                         key={option.id}
-                                        className={`${style.filterOption} ${
-                                            selectedFilter === option.id ? style.active : ""
+                                        className={`${style.sortOption} ${
+                                            selectedSort === option.id ? style.active : ""
                                         }`}
-                                        onClick={() => handleFilterClick(option.id)}
+                                        onClick={() => handleSortClick(option.id)}
                                     >
                                         <span>{option.label}</span>
                                     </li>
                                 ))}
                             </ul>
                         )}
+                    </section>
+                    <section className={style.filterBySection}>
+                        <header className={style.filterByHeader}>
+                            <h2>Filter By:</h2>
+                        </header>
+                        {filterOptions.map(({ group, options }) => (
+                            <CheckBoxFilter key={group} group={group} options={options} />
+                        ))}
+                        <div className={style.filterByButton}>
+                            <button className={style.applyFilterButton}>Apply filter</button>
+                            <button className={style.surpriseMeButton}>Surprise me</button>
+                        </div>
                     </section>
                 </aside>
 
