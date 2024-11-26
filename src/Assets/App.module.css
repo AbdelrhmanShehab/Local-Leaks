@@ -15,6 +15,9 @@
   --secondryRedColor: #e50000;
   --borderColor: #1f1f1f;
 }
+.html{
+  font-size: 10px;
+}
 
 .container {
   /* to make padding works even in mobile size screens */
