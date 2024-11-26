@@ -6,6 +6,70 @@ import Header from '../../Components/Header/Header';
 import Card from '../../Components/Card/Card';
 import CheckBoxFilter from '../../Components/CheckBoxFilter/CheckBoxFilter';
 
+
+
+const filterOptions = [
+    {
+        group: 'Gender',
+        options: [
+            { value: 'for woman', label: 'For Woman' },
+            { value: 'for men', label: 'For Men' },
+            { value: 'for both', label: 'For Both' },
+        ],
+    },
+    {
+        group: 'Style',
+        options: [
+            { value: 'casual', label: 'Casual' },
+            { value: 'classic', label: 'Classic' },
+            { value: 'streetwear', label: 'Streetwear' },
+        ],
+    },
+    {
+        group: 'Brand',
+        options: [
+            { value: 'LC Wakiki', label: 'LC Wakiki' },
+            { value: 'LC Wakiki', label: 'LC Wakiki' },
+            { value: 'LC Wakiki', label: 'LC Wakiki' },
+            { value: 'LC Wakiki', label: 'LC Wakiki' },
+            { value: 'LC Wakiki', label: 'LC Wakiki' },
+            { value: 'LC Wakiki', label: 'LC Wakiki' },
+        ],
+    },
+    {
+        group: 'Category',
+        options: [
+            { value: 't-shirt', label: 'T-shirt' },
+            { value: 'jacket', label: 'Jacket' },
+            { value: 'hoodie', label: 'Hoodie' },
+            { value: 'trousers', label: 'Trousers' },
+            { value: 'sweatshirts', label: 'Sweatshirts' },
+            { value: 'jumpers', label: 'Jumpers' },
+        ],
+    },
+    {
+        group: 'Size',
+        options: [
+            { value: 'small', label: 'Small' },
+            { value: 'medium', label: 'Medium' },
+            { value: 'large', label: 'Large' },
+            { value: 'xlarge', label: 'XL' },
+        ],
+    },
+    {
+        group: 'Color',
+        options: [
+            { value: 'black', label: 'Black' },
+            { value: 'white', label: 'White' },
+            { value: 'green', label: 'Green' },
+            { value: 'blue', label: 'Blue' },
+            { value: 'pink', label: 'Pink' },
+        ],
+    },
+];
+
+
+
 const Items = () => {
 
     const [selectedSort, setSelectedSort] = useState(''); // To track selected filter
@@ -123,7 +187,13 @@ const Items = () => {
                         <header className={style.filterByHeader}>
                             <h2>Filter By:</h2>
                         </header>
-                        <CheckBoxFilter />
+                        {filterOptions.map(({ group, options }) => (
+                            <CheckBoxFilter key={group} group={group} options={options} />
+                        ))}
+                        <div className={style.filterByButton}>
+                            <button className={style.applyFilterButton}>Apply filter</button>
+                            <button className={style.surpriseMeButton}>Surprise me</button>
+                        </div>
                     </section>
                 </aside>
 

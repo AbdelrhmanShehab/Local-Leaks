@@ -19,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px;
+    margin: 8px auto;
 }
 
 /* Sort By and Filter By Header */
@@ -55,7 +55,7 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 0px 25%;
+    justify-content: space-between;
 }
 
 .checkBoxOption {
@@ -73,6 +73,8 @@
     margin-right: 8px;
     background-color: transparent;
     transition: background-color 0.2s ease;
+    cursor: pointer;
+    position: relative;
 }
 
 .checkBoxOption input[type="checkbox"]:checked {
@@ -85,6 +87,10 @@
     color: black;
     font-size: 10px;
     font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .checkBoxOption label {
@@ -94,3 +100,21 @@
     text-align: left;
     color: #999999;
 }
+
+
+/* .applyFilterButton,
+.surpriseMeButton{
+    width: 100px;
+    height: 7vh;
+    border: 1px solid hsla(130, 100%, 50%, 0.7);
+    background: linear-gradient(271.15deg, rgba(0, 255, 42, 0.7) 7.64%, #1B8926 90.68%);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20.09px;
+    text-align: center;
+}
+
+.surpriseMeButton{
+    background-color: transparent;
+} */
