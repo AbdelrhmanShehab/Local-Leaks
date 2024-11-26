@@ -1,63 +1,71 @@
-.header{
-    height: 15vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px auto;
+.header {
+  height: 18vh;
+  /* margin-top: 20px; */
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-.logo{
-    width: 100px;
-    background-color: #525252;
-    text-align: center;
+.logo {
+  width: 170px;
+}
+.navBar {
+  border: 1px #222222 solid;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.2rem;
+}
+.navBar ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 7px;
+  gap: 5px;
+  height: 8vh;
+  align-items: center;
+  border-radius: 15px;
 }
 
-.navtags ul{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    background-color: #525252;
-    padding: 7px;
-    gap: 5px;
-    height: 8vh;
-    align-items: center;
-    border-radius: 15px;
+.navBar ul li {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding: 25px 22px 25px 22px;
+  border-radius: 15px;
+  transition: background-color 0.3s;
 }
 
-.navtags ul li{
-    display: flex;
-    align-items: center;
-    height: 8.5vh;
-    background-color: transparent;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 15px;
-    transition: background-color 0.3s;
+.navBar ul li.navTagsSelected {
+  background-color: #222222;
+  color: white;
 }
-
-.navtags ul li.navTagsSelected {
-    background-color: #000000;
-    color: white;
+.navBar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 450;
+  text-align: center;
 }
-.navtags ul li a{ 
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: 450;
-    text-align: center;
-}
-.navBtn button{
-    margin-right: 10px;
-    width: 100px;
-    height: 7vh;
-    border: 1px solid hsla(130, 100%, 50%, 0.7);
-    background-color: transparent;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20.09px;
-    text-align: center;
+.navBtn button {
+  margin-right: 10px;
+  width: 100px;
+  height: 7vh;
+  border: 1px solid hsla(130, 100%, 50%, 0.7);
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.09px;
+  text-align: center;
 }
 .navBtn button:nth-child(2) {
-    background: linear-gradient(271.15deg, rgba(0, 255, 42, 0.7) 7.64%, #1B8926 90.68%);
+  background: linear-gradient(
+    271.15deg,
+    rgba(0, 255, 42, 0.7) 7.64%,
+    #1b8926 90.68%
+  );
 }
