@@ -6,20 +6,20 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-  }
-  
-  .logo {
+}
+
+.logo {
     width: 170px;
-  }
-  .navBar {
+}
+.navBar {
     border: 1px #222222 solid;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 1.2rem;
-  }
-  .navBar ul {
+}
+.navBar ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
@@ -28,29 +28,29 @@
     height: 8vh;
     align-items: center;
     border-radius: 15px;
-  }
-  
-  .navBar ul li {
+}
+
+.navBar ul li {
     display: flex;
     align-items: center;
     background-color: transparent;
     padding: 25px 22px 25px 22px;
     border-radius: 15px;
     transition: background-color 0.3s;
-  }
-  
-  .navBar ul li.navTagsSelected {
+}
+
+.navBar ul li.navTagsSelected {
     background-color: #222222;
     color: white;
-  }
-  .navBar ul li a {
+}
+.navBar ul li a {
     text-decoration: none;
     color: white;
     font-size: 16px;
     font-weight: 450;
     text-align: center;
-  }
-  .navBtn button {
+}
+.navBtn button {
     margin-right: 10px;
     width: 100px;
     height: 7vh;
@@ -61,11 +61,11 @@
     font-weight: 500;
     line-height: 20.09px;
     text-align: center;
-  }
-  .navBtn button:nth-child(2) {
+}
+.navBtn button:nth-child(2) {
     background: linear-gradient(
-      271.15deg,
-      rgba(0, 255, 42, 0.7) 7.64%,
-      #1b8926 90.68%
+        271.15deg,
+        rgba(0, 255, 42, 0.7) 7.64%,
+        #1b8926 90.68%
     );
-  }
+}

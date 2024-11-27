@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import style from './CheckBoxFilter.module.css';
 
+import { Checkbox } from '../ReusableComponents/ReusableComponents';
+
 const CheckBoxFilter = ({ group, options }) => {
     const [isListVisible, setIsListVisible] = useState(true); // Track visibility
     const [selectedOption, setSelectedOption] = useState(''); // Track selected checkbox
@@ -35,21 +37,18 @@ const CheckBoxFilter = ({ group, options }) => {
             {isListVisible && (
                 <ul className={style.checkBoxOptions}>
                     {options.map(({ value, label }) => (
-                        <li className={style.checkBoxOption} key={value}>
-                            <input
-                                type="checkbox"
+                        <li key={value}>
+                            <Checkbox
                                 id={value}
+                                label={label}
                                 checked={selectedOption === value}
                                 onChange={() => handleCheckboxChange(value)}
                             />
-                            <label htmlFor={value}>{label}</label>
                         </li>
                     ))}
                 </ul>
             )}
 
-            {/* <button className={style.applyFilterButton}>Apply filter</button>
-            <button className={style.surpriseMeButton}>Surprise me</button> */}
         </section>
     );
 };
