@@ -14,3 +14,49 @@
   font-size: 1rem;
 }
 /* end styling of small button component */
+
+
+/* styling for CheckBox component */
+.checkBox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkBox input[type="checkbox"] {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  margin-right: 8px;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkBox input[type="checkbox"]:checked {
+  background-color: #00FF00;
+  border: none;
+}
+
+.checkBox input[type="checkbox"]:checked::after {
+  content: '✔';
+  color: black;
+  font-size: 10px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkBox label {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #999999;
+}
+/* end styling for CheckBox component */
