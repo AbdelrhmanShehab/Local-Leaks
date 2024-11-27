@@ -8,6 +8,7 @@ const Signup = lazy(() => import('./Pages/Signup/Signup'));
 const Items = lazy(() => import('./Pages/Items/Items')); 
 const Item = lazy(() => import('./Pages/Item/Item')); 
 const Favorites = lazy(() => import('./Pages/Favorites/Favorites')); 
+const Checkout = lazy(() => import('./Pages/Checkout/Checkout')); 
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route path="/items" element={<Items />} />
               <Route path="/item" element={<Item />} />
               <Route path="/favorites" element={<Favorites />} />
+              <Route path="/checkout" element={<Checkout />} />
             </Routes>
           </Suspense>
         </Router>
