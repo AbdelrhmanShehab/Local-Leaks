@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import style from './CheckBoxFilter.module.css';
 
-import { Checkbox } from '../ReusableComponent/ReusableComponent';
+import { Checkbox } from '../ReusableComponents/ReusableComponents';
 
 const CheckBoxFilter = ({ group, options }) => {
     const [isListVisible, setIsListVisible] = useState(true); // Track visibility
