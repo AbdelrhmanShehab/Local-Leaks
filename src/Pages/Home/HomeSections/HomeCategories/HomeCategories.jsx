@@ -24,11 +24,19 @@ const HomeCategories = () => {
       </div>
       <div className={style.midContainer}>
         <div className={style.encryptedStyle}>
-          <img className={style.hackerMask} src={EncryptedStyle} alt="EncryptedStyle" />
+          <img
+            className={style.hackerMask}
+            src={EncryptedStyle}
+            alt="EncryptedStyle"
+          />
           <h1>Encrypted Style Decrypted for You</h1>
         </div>
         <button>
-          <img src={MenCollections} alt="MenCollections" />
+          <img
+            className={style.menCollections}
+            src={MenCollections}
+            alt="MenCollections"
+          />
           <div className={style.overlay}></div>
           <h2>Men Collection</h2>
         </button>
