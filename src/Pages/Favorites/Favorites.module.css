@@ -24,7 +24,7 @@
 }
 
 .cardItems>div {
-    flex: 1 1 calc(25% - 20px);
+    flex: 1 1 calc(24% - 20px);
     /* Default: 4 cards in a row */
     box-sizing: border-box;
     max-width: 300px;
