@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import style from './Card.module.css';
+import QuickAddCard from './QuickAddCard/QuickAddCard';
 
 const Card = ({ id, imgSrc, title, price, colors }) => {
 
     const [isFavorite, setIsFavorite] = useState(false);
     const [selectedColor, setSelectedColor] = useState(null); // State to track selected color
+    const [quickAddButtonClicked, setQuickAddButtonClicked] = useState(false);
 
 
     useEffect(() => {
@@ -50,6 +52,13 @@ const Card = ({ id, imgSrc, title, price, colors }) => {
         setSelectedColor((prevColor) => (prevColor === color ? null : color)); // Toggle color selection
     };
 
+    const quickAddButtonHandler = () => {
+        setQuickAddButtonClicked(true);
+    }
+    const handleCloseQuickAdd = () => {
+        setQuickAddButtonClicked(false);
+    };
+
     return (
         <div className={style.card}>
             <div className={style.container}>
@@ -83,6 +92,12 @@ const Card = ({ id, imgSrc, title, price, colors }) => {
                             </svg>
                         )}
                     </button>
+                    <button
+                        className={style.quickAddButton}
+                        onClick={quickAddButtonHandler}
+                    >
+                        Quick Add
+                    </button>
                 </div>
                 <div className={style.productDetails}>
                     <p className={style.productTitle}>{title}</p>
@@ -99,6 +114,14 @@ const Card = ({ id, imgSrc, title, price, colors }) => {
                     </div>
                 </div>
             </div>
+            {quickAddButtonClicked && (
+                <div
+                    className={style.quickAddOverlay}
+                    onClick={handleCloseQuickAdd}
+                >
+                    <QuickAddCard onClose={handleCloseQuickAdd} />
+                </div>
+            )}
         </div>
     );
 };

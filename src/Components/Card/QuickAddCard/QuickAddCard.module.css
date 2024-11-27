@@ -1,0 +1,118 @@
+/* .quickAddCard{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 400px;
+    height: 200px;
+    background: black;
+    border: 5px solid var(--mainColor);
+    color: white;
+    z-index: ;
+} */
+
+.quickAddCard {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: black;
+    border: 2px solid var(--mainColor);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    color: #fff;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.quickAddCardHeader{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.quickAddCardHeader img{
+    width: 100px;
+    height:120px;
+}
+
+.quickAddCardHeaderDescription h1{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20.09px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.quickAddCardHeader span{
+    color: var(--mainColor);
+    font-size: 17px;
+    font-weight: 550;
+}
+
+
+.productDetails{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.productDetailsColor h2,
+.productDetailsSize h2{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20.09px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.colorOptions {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.colorDot {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #fff;
+    transition: transform 0.3s ease;
+}
+
+.colorDotSelected {
+    transform: scale(1.2);
+}
+
+.colorDot:hover {
+    transform: scale(1.3);
+}
+
+.productDetailsSize button{
+    cursor: pointer;
+    color: #fff;
+    margin: 10px 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid var(--borderColor);
+}
+
+.quickAddCardButton{
+    margin: auto;
+}
