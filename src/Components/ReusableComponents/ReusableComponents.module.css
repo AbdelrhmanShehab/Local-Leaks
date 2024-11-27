@@ -1,0 +1,16 @@
+/* styling for small button comoponent */
+.smallButton {
+  background: linear-gradient(
+    271.15deg,
+    rgba(0, 255, 42, 0.7) 7.64%,
+    #1b8926 90.68%
+  );
+  border: none;
+  color: white;
+  padding: 20px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+/* end styling of small button component */
