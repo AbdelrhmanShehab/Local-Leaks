@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400&display=swap');
+
+.favoritesContainer{
+    margin: 30px auto;
+}
+
+.favoritesHeader h1{
+    color: var(--mainColor);
+    font-family: 'Manrope', sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 76.5px;
+    letter-spacing: 0.35em;
+    text-align: center;
+}
+
+/* Card Section  */
+
+.cardItems {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.cardItems>div {
+    flex: 1 1 calc(25% - 20px);
+    /* Default: 4 cards in a row */
+    box-sizing: border-box;
+    max-width: 300px;
+}
+
+@media (max-width: 1200px) {
+    .cardItems>div {
+        flex: 1 1 calc(33.33% - 20px);
+        /* 3 cards per row */
+    }
+}
+
+@media (max-width: 900px) {
+    .cardItems>div {
+        flex: 1 1 calc(50% - 20px);
+        /* 2 cards per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .cardItems>div {
+        flex: 1 1 100%;
+        /* 1 card per row */
+    }
+}

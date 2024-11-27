@@ -162,9 +162,11 @@
 }
 
 .cardItems>div {
-    flex: 1 1 calc(25% - 20px); /* Default: 4 cards in a row */
+    /* flex: 1 1 calc(25% - 20px);  Default: 4 cards in a row  */
+    flex: 1 1 calc(33.33% - 20px);  /* 3 cards per row */
     box-sizing: border-box;
-    max-width: 237px;
+    /* max-width: 237px; */
+    max-width: 300px;
 }
 
 @media (max-width: 1200px) {
