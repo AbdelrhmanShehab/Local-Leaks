@@ -1,7 +1,7 @@
 .footer {
-  padding: 40px 20px;
   background-color: #000;
   text-align: left;
+  color: white;
 }
 
 .footerContainer {
@@ -9,8 +9,6 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
-  max-width: 1200px;
-  width: 100%;
   margin: 0 auto;
   flex-wrap: wrap;
 }
@@ -47,7 +45,6 @@
   font-size: 14px;
   font-weight: 300;
   width: max-content;
-  transition: ;
 }
 .footerColumn li:hover {
   color: #00ff00;
@@ -69,7 +66,7 @@
 
 .socialIcons a {
   margin: 0 10px;
-  font-size: 20px;
+  font-size: 28px;
   color: #fff;
   text-decoration: none;
 }
