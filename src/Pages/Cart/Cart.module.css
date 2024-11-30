@@ -23,7 +23,7 @@
 }
 
 /* main tag that hold both checkout and order summary */
-.checkoutMain {
+.cartMain {
     margin: 10px 0px;
     display: flex;
     justify-content: space-between;
@@ -217,7 +217,7 @@
 }
 
 @media (max-width: 768px) {
-    .checkoutMain {
+    .cartMain {
         flex-direction: column;
         gap: 20px;
     }
