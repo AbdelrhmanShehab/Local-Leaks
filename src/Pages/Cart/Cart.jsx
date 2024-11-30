@@ -5,18 +5,18 @@ import Header from '../../Components/Header/Header';
 import firstProduct from '../../Assets/CardImages/cardItem1.jpg';
 import secondProduct from '../../Assets/CardImages/cardItem2.png';
 
-import style from './Checkout.module.css';
+import style from './Cart.module.css';
 
-const Checkout = () => {
+const Cart = () => {
     return (
         <div className={style.checkout}>
 
             <Header />
 
-            <h1 className={style.cartHeader}>Checkout</h1>
+            <h1 className={style.cartHeader}>Your Cart</h1>
             <p className={style.cartCount}>2 Products</p>
 
-            <main className={style.checkoutMain}>
+            <main className={style.cartMain}>
                 <section className={style.cartDetails}>
 
                     {/* Product 1 */}
@@ -106,4 +106,4 @@ const Checkout = () => {
     );
 };
 
-export default Checkout;
+export default Cart;
