@@ -1,8 +1,10 @@
 .app {
-  background-color: #000000;
   font-family: "Nohemi", sans-serif;
 }
-.html{
+body {
+  background-color: #000000;
+}
+.html {
   font-size: 10px;
 }
 * {
@@ -18,7 +20,7 @@
   --secondryRedColor: #e50000;
   --borderColor: #1f1f1f;
 }
-.html{
+.html {
   font-size: 10px;
 }
 
