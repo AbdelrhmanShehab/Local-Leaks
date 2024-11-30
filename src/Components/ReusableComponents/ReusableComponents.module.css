@@ -16,6 +16,28 @@
 /* end styling of small button component */
 
 
+/* styling for Big button comoponent */
+.bigButton {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(271.15deg, rgba(0, 255, 42, 0.85) 7.64%, #1B8926 90.68%);
+  border: none;
+  border-radius: 9px;
+  color: #fff;
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 24.11px;
+}
+
+.bigButton:hover {
+  background-color: #0c0;
+}
+/* end styling of Big button component */
+
+
 /* styling for CheckBox component */
 .checkBox {
   display: flex;
@@ -60,3 +82,79 @@
   color: #999999;
 }
 /* end styling for CheckBox component */
+
+
+
+/* styling for TextBox component */
+.textBoxLabel{
+  display: flex;
+  justify-content: space-between;
+}
+
+.textBoxLabel span,
+.textBoxLabel a{
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16.07px;
+}
+
+.textBoxLabel span{
+  color: #4A4844;
+  text-align: left;
+}
+
+.textBoxLabel a{
+  color: var(--mainColor);
+  text-align: right;
+  text-decoration: none;
+}
+
+.textBoxInputField {
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #00FF2A4D;
+  border-radius: 9px;
+  background: #222;
+  color: #fff;
+}
+
+.textBoxInputField::placeholder{
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 23.22px;
+  text-align: left;
+  color: #00FF2A4D;
+}
+/* end styling for TextBox component */
+
+
+
+/* styling for Google Button component */
+.googleLogin {
+  display: flex;
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border: 2px solid #E5E5E526;
+  border-radius: 9px;
+  background: #0E0E0E;
+}
+
+.googleLogin span {
+  color: var(--mainColor);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.googleLogin svg {
+  margin-right: 5px;
+}
+/* end styling for Google Button component */
