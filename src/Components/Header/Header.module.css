@@ -10,9 +10,11 @@
 .logo {
   width: 170px;
 }
+
+
 .navBar {
   border: 1px #222222 solid;
-  height: 100px;
+  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +43,7 @@
 .navBar ul li.navTagsSelected {
   background-color: #222222;
   color: white;
-  padding: 28px 35px;
+  padding: 20px 25px;
 }
 .navBar ul li a {
   text-decoration: none;
@@ -57,3 +59,7 @@
   gap: 20px;
 }
 
+.iconBar img{
+  width: 30px;
+  height: 25px;
+}

@@ -7,11 +7,11 @@
   );
   border: none;
   color: white;
-  padding: 20px 30px;
+  padding: 15px 25px;
   cursor: pointer;
   border-radius: 5px;
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 15px;
 }
 /* end styling of small button component */
 
@@ -122,9 +122,9 @@
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #00FF2A4D;
+  border: 1px solid #00FF2A;
   border-radius: 9px;
-  background: #222;
+  background: #0E0E0E;
   color: #fff;
 }
 
@@ -134,7 +134,7 @@
   font-weight: 400;
   line-height: 23.22px;
   text-align: left;
-  color: #00FF2A4D;
+  color: #969696;
 }
 /* end styling for TextBox component */
 
@@ -295,9 +295,9 @@
   margin-top: 5px;
   width: 72px;
   height: 40px;
-  border: 1px solid #00FF2A4D;
+  border: 1px solid #00FF2A;
   border-radius: 8px;
-  background-color: black;
+  background-color: #0E0E0E;
   color: #ffffff;
   font-size: 14px;
   font-weight: 500;
@@ -312,8 +312,18 @@
 }
 
 .selectBox option {
-  background-color: black;
+  background-color: #1b1b1b;
   color: #00FF2A;
+}
+
+.selectBox:focus {
+  outline: none;
+  border-color: #00FF2A;
+}
+
+.selectBox option:checked {
+  background-color: #00FF2A;
+  color: black;
 }
 
 .inputLabel {

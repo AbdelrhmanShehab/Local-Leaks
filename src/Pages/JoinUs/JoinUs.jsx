@@ -53,16 +53,24 @@ const JoinUs = () => {
                     <DropdownInput
                         inputLabel="Target Audience"
                         defaultOption="none"
-                        options={["Male", "Female"]}
+                        options={[
+                            { value: "male", label: "Male" },
+                            { value: "female", label: "Female" },
+                        ]}
                         value={selectedTargetAudience}
                         onChange={(e) => setSelectedTargetAudience(e.target.value)}
+                        width="110px"
                     />
                     <DropdownInput
                         inputLabel="Have a website?"
                         defaultOption="none"
-                        options={["Yes", "No"]}
+                        options={[
+                            { value: "yes", label: "Yes" },
+                            { value: "no", label: "No" },
+                        ]}
                         value={selectedWebsite}
                         onChange={(e) => setSelectedWebsite(e.target.value)}
+                        width="110px"
                     />
                 </div>
 
@@ -94,9 +102,15 @@ const JoinUs = () => {
                 <DropdownInput
                     inputLabel="Intake to join"
                     defaultOption="none"
-                    options={["Summer", "Winter"]}
+                    options={[
+                        { value: "summer", label: "Summer" },
+                        { value: "autumn", label: "Autumn" },
+                        { value: "winter", label: "Winter" },
+                        { value: "spring", label: "Spring" },
+                    ]}
                     value={selectedIntake}
                     onChange={(e) => setSelectedIntake(e.target.value)}
+                    width="110px"
                 />
 
                 <BigButton
