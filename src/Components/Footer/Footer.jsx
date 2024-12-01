@@ -16,7 +16,7 @@ const Footer = () => {
                 <div className={style.footerLinks}>
                     <div className={style.footerColumn}>
                         <h4>Join as a brand</h4>
-                        <SmallButton />
+                        <SmallButton smallButtonLabel="Join now" />
                     </div>
                     <div className={style.footerColumn}>
                         <h4>Shop Now</h4>

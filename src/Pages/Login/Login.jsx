@@ -4,9 +4,7 @@ import style from './Login.module.css';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 
-import RegistrationPhoto from '../../Assets/registrationPhoto.jpg';
-
-import { TextBox, GoogleButton, BigButton } from '../../Components/ReusableComponents/ReusableComponents';
+import { TextBox, GoogleButton, BigButton, AuthenticationBanner } from '../../Components/ReusableComponents/ReusableComponents';
 
 const Login = () => {
     return (
@@ -14,16 +12,7 @@ const Login = () => {
             <Header />
             <main className={style.login}>
                 {/* Left Section */}
-                <section className={style.leftSection}>
-                    <img 
-                        src={RegistrationPhoto}
-                        alt="Promotional image for Local Leaks" 
-                        className={style.leftImage} 
-                    />
-                    <h1 className={style.leftSectionShopSmart}>Shop Smart</h1>
-                    <h2 className={style.leftSectionShopLocal}>Shop Local.</h2>
-                    <h3 className={style.leftSectionLocalLeaks}>Local Leaks</h3>
-                </section>
+                <AuthenticationBanner />
 
                 {/* Right Section */}
                 <section className={style.rightSection}>

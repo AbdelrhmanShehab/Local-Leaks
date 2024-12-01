@@ -7,17 +7,18 @@
   );
   border: none;
   color: white;
-  padding: 20px 30px;
+  padding: 15px 25px;
   cursor: pointer;
   border-radius: 5px;
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 15px;
 }
 /* end styling of small button component */
 
 
 /* styling for Big button comoponent */
 .bigButton {
+  margin-top: 10px;
   display: block;
   width: 100%;
   padding: 13px;
@@ -30,10 +31,16 @@
   font-size: 17px;
   font-weight: 400;
   line-height: 24.11px;
+  transition: background-color 0.3s ease, cursor 0.3s ease;
 }
 
 .bigButton:hover {
   background-color: #0c0;
+}
+
+.bigButton:disabled {
+  background: gray;
+  cursor: not-allowed;
 }
 /* end styling of Big button component */
 
@@ -115,9 +122,9 @@
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #00FF2A4D;
+  border: 1px solid #00FF2A;
   border-radius: 9px;
-  background: #222;
+  background: #0E0E0E;
   color: #fff;
 }
 
@@ -127,7 +134,7 @@
   font-weight: 400;
   line-height: 23.22px;
   text-align: left;
-  color: #00FF2A4D;
+  color: #969696;
 }
 /* end styling for TextBox component */
 
@@ -158,3 +165,171 @@
   margin-right: 5px;
 }
 /* end styling for Google Button component */
+
+
+
+/* styling for Aunthentication Banner component */
+.bannerSection {
+  margin-top: 2rem;
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.leftImage {
+  padding: 10px;
+  margin-right: auto;
+  width: 90%;
+  height: 70vh;
+  object-fit: cover;
+  filter: brightness(50%);
+  position: relative;
+  z-index: 1;
+}
+
+/* Add an overlay effect */
+.bannerSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 70vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+
+.bannerSectionShopSmart,
+.bannerSectionShopLocal {
+  position: absolute;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 50px;
+  text-align: left;
+  color: var(--mainColor);
+  z-index: 2;
+}
+
+.bannerSectionShopSmart {
+  top: -15px;
+  left: 0;
+}
+
+.bannerSectionShopLocal {
+  top: 30px;
+  left: 180px;
+}
+
+.bannerSectionLocalLeaks {
+  z-index: 2;
+  position: absolute;
+  left: 20px;
+  bottom: -22px;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 100.45px;
+  letter-spacing: 0.30em;
+}
+/* end styling for Aunthentication Banner component */
+
+
+
+/*  styling for Input Select component */
+.inputSelectGroup {
+  margin-bottom: 15px;
+  margin-right: auto;
+  text-align: left;
+}
+
+.inputSelectLabel {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18.08px;
+  text-align: left;
+}
+
+.inputSelectOptions {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.inputSelectButton {
+  cursor: pointer;
+  width: 100px;
+  height: 42px;
+  gap: 10px;
+  border-radius: 6px;
+  border: 1px solid #00FF2A4D;
+  background-color: transparent;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18.08px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.inputSelectButton.active {
+  background-color: #00ff2a;
+  color: black;
+}
+
+.inputSelectButton:hover {
+  background-color: #00cc22;
+}
+/* end styling for Input Select component */
+
+
+.inputGroup{
+  display: flex;
+  flex-direction: column;
+}
+
+.selectBox {
+  cursor: pointer;
+  margin-top: 5px;
+  width: 72px;
+  height: 40px;
+  border: 1px solid #00FF2A;
+  border-radius: 8px;
+  background-color: #0E0E0E;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  appearance: none;
+  text-align: left;
+  padding-left: 10px;
+  position: relative;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%2300FF2A' d='M5 6L0 0h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.selectBox option {
+  background-color: #1b1b1b;
+  color: #00FF2A;
+}
+
+.selectBox:focus {
+  outline: none;
+  border-color: #00FF2A;
+}
+
+.selectBox option:checked {
+  background-color: #00FF2A;
+  color: black;
+}
+
+.inputLabel {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18.08px;
+  text-align: left;
+  color: #4A4844;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import style from "./ReusableComponents.module.css";
+import RegistrationPhoto from '../../Assets/registrationPhoto.jpg';
 
 // small button component/
 
@@ -7,16 +8,15 @@ export const SmallButton = ({ smallButtonLabel }) => {
   return <button className={style.smallButton}>{smallButtonLabel}</button>;
 };
 
-// small button component/
-export const BigButton = ({ buttonType, buttonText }) => {
+// BigButton Component
+export const BigButton = ({ buttonType, buttonText, disabled }) => {
   return (
-    <>
-      <button className={style.bigButton} type={buttonType}>
-        {buttonText}
-      </button>
-    </>
+    <button className={style.bigButton} type={buttonType} disabled={disabled}>
+      {buttonText}
+    </button>
   );
 };
+
 
 // Checkbox
 export const Checkbox = ({ id, label, checked, onChange }) => {
@@ -89,5 +89,80 @@ export const GoogleButton = () => {
       </svg>
       <span>Login with Google</span>
     </button>
+  );
+};
+
+
+// AuthenticationBanner For Login and Signup banner
+export const AuthenticationBanner = () => {
+  return (
+    <section className={style.bannerSection}>
+        <img 
+            src={RegistrationPhoto}
+            alt="Promotional image for Local Leaks" 
+            className={style.leftImage} 
+        />
+        <h1 className={style.bannerSectionShopSmart}>Shop Smart</h1>
+        <h2 className={style.bannerSectionShopLocal}>Shop Local.</h2>
+        <h3 className={style.bannerSectionLocalLeaks}>Local Leaks</h3>
+    </section>
+  );
+};
+
+
+// selected Inputs
+export const InputSelect = ({ inputLabel, buttons, onChange }) => {
+  const [selectedButton, setSelectedButton] = useState(null);
+
+  const handleButtonClick = (buttonText) => {
+    // Toggle selection
+    const newValue = selectedButton === buttonText ? null : buttonText;
+    setSelectedButton(newValue);
+
+    // Call external callback if provided
+    if (onChange) {
+      onChange(newValue);
+    }
+  };
+
+  return (
+    <div className={style.inputSelectGroup}>
+      <label className={style.inputSelectLabel}>{inputLabel}</label>
+      <div className={style.inputSelectOptions}>
+        {buttons.map((buttonText, index) => (
+          <button
+            key={index}
+            className={`${style.inputSelectButton} ${
+              selectedButton === buttonText ? style.active : ""
+            }`}
+            onClick={() => handleButtonClick(buttonText)}
+          >
+            {buttonText}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+
+// Dropdown Input
+export const DropdownInput = ({ inputLabel, defaultOption, options, onChange, width }) => {
+  return (
+    <div className={style.inputGroup}>
+      {inputLabel && <label className={style.inputLabel}>{inputLabel}</label>}
+      <select
+        className={style.selectBox}
+        onChange={onChange}
+        style={{ width: width || '72px' }} // Use the passed width prop, fallback to default
+      >
+        <option value="">{defaultOption} </option>
+        {options.map((option, index) => (
+          <option key={index} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
