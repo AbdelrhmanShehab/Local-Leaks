@@ -9,6 +9,7 @@ const Items = lazy(() => import('./Pages/Items/Items'));
 const Item = lazy(() => import('./Pages/Item/Item')); 
 const Favorites = lazy(() => import('./Pages/Favorites/Favorites')); 
 const Cart = lazy(() => import('./Pages/Cart/Cart')); 
+const JoinUs = lazy(() => import('./Pages/JoinUs/JoinUs')); 
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Route path="/item" element={<Item />} />
               <Route path="/favorites" element={<Favorites />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/joinUs" element={<JoinUs />} />
             </Routes>
           </Suspense>
         </Router>

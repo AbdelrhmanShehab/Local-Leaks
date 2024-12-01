@@ -1,0 +1,40 @@
+.joinUs{
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+    width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+.joinUsHeader{
+    background: linear-gradient(90deg, #00FF2A 23.53%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 50px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.joinUsDescription{
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 21.86px;
+    text-align: left;
+    color: #949494;
+    margin-bottom: 15px;
+}
+
+.joinUsDropdpwn{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.joinUsTextbox{
+    display: flex;
+    gap: 10px;
+}
