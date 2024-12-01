@@ -1,63 +1,67 @@
+.topBrands{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
 .topBrands h1 {
-    text-align: center;
-    font-size: 35px;
-    font-weight: 500;
-    line-height: 48.22px;
-    color: #00FF2A;
-    margin: 50px 0px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 48.22px;
+  color: #00ff2a;
+  margin: 50px 0px;
 }
 
 .brandsContainer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
 }
 
 .brands {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    padding: 0 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 0 10px;
 }
 
 .brands:not(:last-child)::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(50%, -50%);
-    background-color: #00FF2A;
-    width: 2px;
-    height: 50px;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  background-color: #00ff2a;
+  width: 2px;
+  height: 35px;
 }
 
 .brand h2 {
-    font-family: 'Montagu Slab';
-    font-size: 25px;
-    font-weight: 500;
-    line-height: 40px;
-    margin-bottom: 10px;
+  font-family: "Montagu Slab";
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 40px;
+  margin-bottom: 10px;
 }
 
-.brand p{
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 18px;
-    text-align: center;
+.brand p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: center;
 }
 
 @media (max-width: 800px) {
-    .brands {
-        flex: 1;
-        padding: 0 5px;
-    }
+  .brands {
+    flex: 1;
+    padding: 0 5px;
+  }
 
-    .brands:not(:last-child)::after {
-        font-size: 16px;
-    }
+  .brands:not(:last-child)::after {
+    font-size: 16px;
+  }
 }
