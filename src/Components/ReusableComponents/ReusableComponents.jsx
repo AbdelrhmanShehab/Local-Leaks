@@ -147,12 +147,16 @@ export const InputSelect = ({ inputLabel, buttons, onChange }) => {
 
 
 // Dropdown Input
-export const DropdownInput = ({ inputLabel, defaultOption, options, onChange }) => {
+export const DropdownInput = ({ inputLabel, defaultOption, options, onChange, width }) => {
   return (
     <div className={style.inputGroup}>
       {inputLabel && <label className={style.inputLabel}>{inputLabel}</label>}
-      <select className={style.selectBox} onChange={onChange}>
-        <option value="">{defaultOption}</option>
+      <select
+        className={style.selectBox}
+        onChange={onChange}
+        style={{ width: width || '72px' }} // Use the passed width prop, fallback to default
+      >
+        <option value="">{defaultOption} </option>
         {options.map((option, index) => (
           <option key={index} value={option.value}>
             {option.label}
