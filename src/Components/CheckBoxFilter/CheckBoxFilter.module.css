@@ -38,16 +38,6 @@
 
 /* CheckBoxs */
 
-/* .checkBoxOptions{
-
-}
-
-.checkBoxOption input{
-    width: 20px;
-    height: 20px;
-    border: 1px solid #FFFFFF;
-    background: transparent;
-} */
 
 .checkBoxOptions {
     margin: 0;
@@ -58,20 +48,3 @@
     justify-content: space-between;
     gap: 0px 15px;
 }
-
-/* .applyFilterButton,
-.surpriseMeButton{
-    width: 100px;
-    height: 7vh;
-    border: 1px solid hsla(130, 100%, 50%, 0.7);
-    background: linear-gradient(271.15deg, rgba(0, 255, 42, 0.7) 7.64%, #1B8926 90.68%);
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20.09px;
-    text-align: center;
-}
-
-.surpriseMeButton{
-    background-color: transparent;
-} */
