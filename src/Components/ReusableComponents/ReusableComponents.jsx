@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import style from "./ReusableComponents.module.css";
-import RegistrationPhoto from '../../Assets/registrationPhoto.jpg';
+import RegistrationPhoto from "../../Assets/registrationPhoto.jpg";
 
 // small button component/
 
@@ -16,7 +16,6 @@ export const BigButton = ({ buttonType, buttonText, disabled }) => {
     </button>
   );
 };
-
 
 // Checkbox
 export const Checkbox = ({ id, label, checked, onChange }) => {
@@ -92,23 +91,23 @@ export const GoogleButton = () => {
   );
 };
 
-
 // AuthenticationBanner For Login and Signup banner
 export const AuthenticationBanner = () => {
   return (
     <section className={style.bannerSection}>
-        <img 
-            src={RegistrationPhoto}
-            alt="Promotional image for Local Leaks" 
-            className={style.leftImage} 
-        />
-        <h1 className={style.bannerSectionShopSmart}>Shop Smart</h1>
-        <h2 className={style.bannerSectionShopLocal}>Shop Local.</h2>
-        <h3 className={style.bannerSectionLocalLeaks}>Local Leaks</h3>
+      <img
+        src={RegistrationPhoto}
+        alt="Promotional image for Local Leaks"
+        className={style.leftImage}
+      />
+      <h1 className={style.bannerSectionShopSmart}>Shop Smart</h1>
+      <h2 className={style.bannerSectionShopLocal}>
+        Shop Local<span>.</span>
+      </h2>
+      <h3 className={style.bannerSectionLocalLeaks}>Local Leaks</h3>
     </section>
   );
 };
-
 
 // selected Inputs
 export const InputSelect = ({ inputLabel, buttons, onChange }) => {
@@ -145,16 +144,21 @@ export const InputSelect = ({ inputLabel, buttons, onChange }) => {
   );
 };
 
-
 // Dropdown Input
-export const DropdownInput = ({ inputLabel, defaultOption, options, onChange, width }) => {
+export const DropdownInput = ({
+  inputLabel,
+  defaultOption,
+  options,
+  onChange,
+  width,
+}) => {
   return (
     <div className={style.inputGroup}>
       {inputLabel && <label className={style.inputLabel}>{inputLabel}</label>}
       <select
         className={style.selectBox}
         onChange={onChange}
-        style={{ width: width || '72px' }} // Use the passed width prop, fallback to default
+        style={{ width: width || "72px" }} // Use the passed width prop, fallback to default
       >
         <option value="">{defaultOption} </option>
         {options.map((option, index) => (

@@ -169,7 +169,7 @@
     }
 }
 
-@media (max-width: 900px) {
+@media (max-widzzth: 900px) {
     .cardItems>div {
         flex: 1 1 50%; 
     }
