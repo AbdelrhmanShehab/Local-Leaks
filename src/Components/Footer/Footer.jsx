@@ -49,9 +49,9 @@ const Footer = () => {
             <div className={style.footerBottom}>
                 <p>Local Leaks {new Date().getFullYear()}</p>
                 <div className={style.socialIcons}>
-                    <a href="#"><FontAwesomeIcon icon={faFacebookF} /></a>
-                    <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
-                    <a href="#"><FontAwesomeIcon icon={faTiktok} /></a>
+                    <a href="/"><FontAwesomeIcon icon={faFacebookF} /></a>
+                    <a href="/"><FontAwesomeIcon icon={faInstagram} /></a>
+                    <a href="/"><FontAwesomeIcon icon={faTiktok} /></a>
                 </div>
             </div>
         </footer>
