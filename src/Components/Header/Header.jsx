@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate  } from "react-router-dom";
 import style from "./Header.module.css";
 import logo from "../../Assets/logo.png";
 import cartIcon from "../../Assets/cartIcon.svg";
@@ -10,11 +10,16 @@ import favIcon from "../../Assets/favIcon.svg";
 const Header = () => {
 
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const logoBtn = () => { 
+    navigate("/");
+  }
 
   return (
     <header className={style.header}>
 
-      <img src={logo} className={style.logo} alt="" />
+      <img src={logo} className={style.logo} alt="Local Leaks" onClick={logoBtn}/>
 
       <nav className={style.navBar}>
         <ul>
