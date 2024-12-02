@@ -179,7 +179,6 @@ const Items = () => {
   const [selectedSort, setSelectedSort] = useState(""); // To track selected filter
   const [isListVisible, setIsListVisible] = useState(true); // To track visibility
   const [selectedStyles, setSelectedStyles] = useState([]); // Track selected styles
-  // const [filteredCards, setFilteredCards] = useState(originalCardsData); // Filtered cards data
   
 
   const handleSortClick = (sortId) => {
@@ -261,7 +260,7 @@ const Items = () => {
       <Header />
       <main className={style.items}>
 
-        {/* aside sorting and filtering */}
+        {/* aside sorting and filtering section */}
         <aside className={style.filterSide}>
           <header>
             <h1 className={style.filterHeader}>New Leaks</h1>
