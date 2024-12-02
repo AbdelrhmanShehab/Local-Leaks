@@ -34,9 +34,9 @@
 }
 
 .imageWrapper:hover img {
-  transform: scale(1.1);
-  height: 400px;
-  border-radius: 20px;
+    transform: scale(1.1);
+    height: 500px;
+    border-radius: 20px;
 }
 
 .favoriteButton {
@@ -152,15 +152,18 @@
     }
 } */
 
-@media (max-width: 1650px) {
+/* @media (max-width: 1650px) {
     .imageWrapper img{
         height: 500px;
     }
-}
+} */
 
 /* Large Laptops */
 @media (max-width: 1440px) {
     .imageWrapper img {
+        height: 410px;
+    }
+    .imageWrapper:hover img {
         height: 410px;
     }
 }
@@ -170,6 +173,9 @@
     .imageWrapper img {
         height: 400px;
     }
+    .imageWrapper:hover img {
+        height: 400px;
+    }
 }
 
 /* Tablets */
@@ -177,11 +183,20 @@
     .imageWrapper img {
         height: 350px;
     }
+    .imageWrapper:hover img {
+        height: 350px;
+    }
 }
 
 /* Mobile screens */
-@media (max-width: 480px) {
+@media (max-width: 640px) {
+    .container{
+        margin-left: 30px;
+    }
     .imageWrapper img {
-        height: 300px;
+        height: 400px;
+    }
+    .imageWrapper:hover img {
+        height: 400px;
     }
 }

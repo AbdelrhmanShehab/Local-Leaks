@@ -186,40 +186,46 @@
     flex: 1 1 calc(25% - 20px);
     box-sizing: border-box;
     /* max-width: 237px; */
-    max-width: 350px;
+    max-width: 25%;
 }
 
 /* Full HD Screens */
 @media (max-width: 1650px) {
     .cardItems>div {
-        flex: 1 1 33.33%;
+        flex: 1 1 calc(33.33% - 20px);
         box-sizing: border-box;
         /* max-width: 237px; */
-        max-width: 350px;
+        max-width: 33.33%;
     }
 }
 
 /* Large Laptops */
 @media (max-width: 1440px) {
     .cardItems>div {
-        /* flex: 1 1 calc(25% - 20px);  Default: 4 cards in a row  */
-        flex: 1 1 33.33%;
-        /* 3 cards per row */
-        box-sizing: border-box;
-        /* max-width: 237px; */
-        max-width: 335px;
-    }
+            flex: 1 1 calc(33.33% - 20px);
+            box-sizing: border-box;
+            /* max-width: 237px; */
+            max-width: 33.33%;
+        }
 }
     
 /* Small Laptops */
 @media (max-width: 1280px) {
     .cardItems>div {
+            flex: 1 1 calc(33.33% - 20px);
+            box-sizing: border-box;
+            /* max-width: 237px; */
+            max-width: 33.33%;
+        }
+}
+@media (max-width: 1000px) {
+    .cardItems>div {
         /* flex: 1 1 calc(25% - 20px);  Default: 4 cards in a row  */
-        flex: 1 1 33.33%;
+        flex: 1 1 calc(50% - 20px);
         /* 3 cards per row */
         box-sizing: border-box;
         /* max-width: 237px; */
-        max-width: 335px;
+        max-width: 50%;
     }
 }
 
@@ -227,11 +233,22 @@
 @media (max-width: 768px) {
     .cardItems>div {
         /* flex: 1 1 calc(25% - 20px);  Default: 4 cards in a row  */
-        flex: 1 1 50%;
+        flex: 1 1 calc(50% - 20px);
         /* 3 cards per row */
         box-sizing: border-box;
         /* max-width: 237px; */
-        max-width: 335px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .cardItems>div {
+        /* flex: 1 1 calc(25% - 20px);  Default: 4 cards in a row  */
+        flex: 1 1 calc(100% - 20px);
+        /* 3 cards per row */
+        box-sizing: border-box;
+        /* max-width: 237px; */
+        max-width: 100%;
     }
 }
 
@@ -243,6 +260,6 @@
         /* 3 cards per row */
         box-sizing: border-box;
         /* max-width: 237px; */
-        max-width: 335px;
+        max-width: 100%;
     }
 }
