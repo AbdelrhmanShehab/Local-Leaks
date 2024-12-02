@@ -20,7 +20,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 25px;
     /* justify-content: space-between; */
     margin-bottom: 180px;
 }
