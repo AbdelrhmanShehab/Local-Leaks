@@ -283,12 +283,22 @@
 }
 /* end styling for Input Select component */
 
-.inputGroup {
+
+/*  styling for DropDown component */
+.dropdownGroup {
   display: flex;
   flex-direction: column;
 }
 
-.selectBox {
+.dropdownInput {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18.08px;
+  text-align: left;
+  color: #4a4844;
+}
+
+.dropdownSelectBox {
   cursor: pointer;
   margin-top: 5px;
   width: 72px;
@@ -309,25 +319,18 @@
   background-position: right 10px center;
 }
 
-.selectBox option {
+.dropdownSelectBox option {
   background-color: #1b1b1b;
   color: #00ff2a;
 }
 
-.selectBox:focus {
+.dropdownSelectBox:focus {
   outline: none;
   border-color: #00ff2a;
 }
 
-.selectBox option:checked {
+.dropdownSelectBox option:checked {
   background-color: #00ff2a;
   color: black;
 }
-
-.inputLabel {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 18.08px;
-  text-align: left;
-  color: #4a4844;
-}
+/* end styling for DropDown component */

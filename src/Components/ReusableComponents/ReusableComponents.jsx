@@ -153,10 +153,10 @@ export const DropdownInput = ({
   width,
 }) => {
   return (
-    <div className={style.inputGroup}>
-      {inputLabel && <label className={style.inputLabel}>{inputLabel}</label>}
+    <div className={style.dropdownGroup}>
+      {inputLabel && <label className={style.dropdownInput}>{inputLabel}</label>}
       <select
-        className={style.selectBox}
+        className={style.dropdownSelectBox}
         onChange={onChange}
         style={{ width: width || "72px" }} // Use the passed width prop, fallback to default
       >
