@@ -12,7 +12,7 @@ const filterOptions = [
     options: [
       { value: "for woman", label: "For Woman" },
       { value: "for men", label: "For Men" },
-      { value: "for both", label: "For Both" },
+      { value: "for childern", label: "For Childern" },
     ],
   },
   {
@@ -67,16 +67,6 @@ const filterOptions = [
 ];
 
 const Items = () => {
-  const [selectedSort, setSelectedSort] = useState(""); // To track selected filter
-  const [isListVisible, setIsListVisible] = useState(true); // To track visibility
-
-  const handleSortClick = (sortId) => {
-    setSelectedSort((prevSelected) => (prevSelected === sortId ? "" : sortId)); // Unselect if already selected
-  };
-
-  const toggleListVisibility = () => {
-    setIsListVisible((prev) => !prev); // Toggle visibility
-  };
 
   const sortOptions = [
     { id: "high-to-low", label: "Price from high to low" },
@@ -93,6 +83,7 @@ const Items = () => {
       title: "Regular Fit Regular Hem Satin Trousers",
       price: "EGP 750",
       colors: ["#009688", "#000", "#3f51b5"],
+      style: "casual",
     },
     {
       id: "5002",
@@ -100,6 +91,7 @@ const Items = () => {
       title: "Slim Fit Denim Jacket",
       price: "EGP 950",
       colors: ["#FF5733", "#C70039", "#900C3F"],
+      style: "classic",
     },
     {
       id: "5003",
@@ -107,6 +99,7 @@ const Items = () => {
       title: "Regular Fit Regular Hem Satin Trousers",
       price: "EGP 850",
       colors: ["#009688", "#000", "#3f51b5"],
+      style: "streetwear",
     },
     {
       id: "5004",
@@ -114,6 +107,7 @@ const Items = () => {
       title: "Slim Fit Denim Jacket",
       price: "EGP 900",
       colors: ["#FF5733", "#C70039", "#900C3F"],
+      style: "classic",
     },
     {
       id: "5001",
@@ -121,6 +115,7 @@ const Items = () => {
       title: "Regular Fit Regular Hem Satin Trousers",
       price: "EGP 750",
       colors: ["#009688", "#000", "#3f51b5"],
+      style: "casual",
     },
     {
       id: "5002",
@@ -128,6 +123,7 @@ const Items = () => {
       title: "Slim Fit Denim Jacket",
       price: "EGP 950",
       colors: ["#FF5733", "#C70039", "#900C3F"],
+      style: "streetwear",
     },
     {
       id: "5003",
@@ -135,6 +131,7 @@ const Items = () => {
       title: "Regular Fit Regular Hem Satin Trousers",
       price: "EGP 850",
       colors: ["#009688", "#000", "#3f51b5"],
+      style: "classic",
     },
     {
       id: "5004",
@@ -142,6 +139,7 @@ const Items = () => {
       title: "Slim Fit Denim Jacket",
       price: "EGP 900",
       colors: ["#FF5733", "#C70039", "#900C3F"],
+      style: "casual",
     },
     {
       id: "5001",
@@ -149,6 +147,7 @@ const Items = () => {
       title: "Regular Fit Regular Hem Satin Trousers",
       price: "EGP 750",
       colors: ["#009688", "#000", "#3f51b5"],
+      style: "streetwear",
     },
     {
       id: "5002",
@@ -156,6 +155,7 @@ const Items = () => {
       title: "Slim Fit Denim Jacket",
       price: "EGP 950",
       colors: ["#FF5733", "#C70039", "#900C3F"],
+      style: "casual",
     },
     {
       id: "5003",
@@ -163,6 +163,7 @@ const Items = () => {
       title: "Regular Fit Regular Hem Satin Trousers",
       price: "EGP 850",
       colors: ["#009688", "#000", "#3f51b5"],
+      style: "classic",
     },
     {
       id: "5004",
@@ -170,17 +171,69 @@ const Items = () => {
       title: "Slim Fit Denim Jacket",
       price: "EGP 900",
       colors: ["#FF5733", "#C70039", "#900C3F"],
+      style: "streetwear",
     },
   ];
 
+
+  const [selectedSort, setSelectedSort] = useState(""); // To track selected filter
+  const [isListVisible, setIsListVisible] = useState(true); // To track visibility
+  const [selectedStyles, setSelectedStyles] = useState([]); // Track selected styles
+  // const [filteredCards, setFilteredCards] = useState(originalCardsData); // Filtered cards data
+  
+
+  const handleSortClick = (sortId) => {
+    setSelectedSort((prevSelected) => (prevSelected === sortId ? "" : sortId)); // Unselect if already selected
+  };
+
+  const toggleListVisibility = () => {
+    setIsListVisible((prev) => !prev); // Toggle visibility
+  };
+
+  // Handle option change (for multiple selected options)
+  const handleStyleChange = (group, option) => {
+      setSelectedStyles((prevSelectedStyles) => {
+          if (prevSelectedStyles.includes(option)) {
+              // If option is already selected, remove it
+              return prevSelectedStyles.filter(item => item !== option);
+          } else {
+              // Otherwise, add it
+              return [...prevSelectedStyles, option];
+          }
+      });
+  };
+
+
   // Sort cardsData based on selected filter
-  const sortedCardsData = [...originalCardsData].sort((a, b) => {
-    // [...originalCardsData] spreed operator => Shallow Copy
+  // const sortedCardsData = [...originalCardsData].sort((a, b) => {
+  //   // [...originalCardsData] spreed operator => Shallow Copy
+  //   const priceA = parseInt(a.price.replace("EGP ", ""), 10);
+  //   // replace("EGP ", ""): Removes the "EGP " prefix from the string, leaving just the numeric portion (e.g., "750").
+  //   const priceB = parseInt(b.price.replace("EGP ", ""), 10);
+  //   // parseInt(..., 10): Converts the string into an integer.
+  //   // The second argument(10) ensures that the number is interpreted in base 10.
+
+  //   if (selectedSort === "high-to-low") {
+  //     return priceB - priceA; // Sort descending
+  //   }
+  //   if (selectedSort === "low-to-high") {
+  //     return priceA - priceB; // Sort ascending
+  //   }
+  //   return 0; // Keep the original order
+  // });
+
+
+  // Function to handle both the style filter and price sort
+  const filteredAndSortedCardsData = [...originalCardsData]
+  .filter((card) => {
+    // Check if the card's style matches any selected style
+    // Filter by Style (check if the card's style is in the selected styles)
+    return selectedStyles.length === 0 || selectedStyles.includes(card.style);
+  })
+  .sort((a, b) => {
+    // Sort by price if the selected sort is set
     const priceA = parseInt(a.price.replace("EGP ", ""), 10);
-    // replace("EGP ", ""): Removes the "EGP " prefix from the string, leaving just the numeric portion (e.g., "750").
     const priceB = parseInt(b.price.replace("EGP ", ""), 10);
-    // parseInt(..., 10): Converts the string into an integer.
-    // The second argument(10) ensures that the number is interpreted in base 10.
 
     if (selectedSort === "high-to-low") {
       return priceB - priceA; // Sort descending
@@ -191,15 +244,31 @@ const Items = () => {
     return 0; // Keep the original order
   });
 
+
+  // // Filter cards based on selected styles
+  // useEffect(() => {
+  //     if (selectedStyles.length === 0) {
+  //         setFilteredCards(originalCardsData); // If no style is selected, show all items
+  //     } else {
+  //         setFilteredCards(originalCardsData.filter(card =>
+  //             selectedStyles.includes(card.style) // Filter items by style
+  //         ));
+  //     }
+  // }, [selectedStyles]);
+
   return (
     <>
       <Header />
       <main className={style.items}>
+
+        {/* aside sorting and filtering */}
         <aside className={style.filterSide}>
           <header>
             <h1 className={style.filterHeader}>New Leaks</h1>
           </header>
           <section className={style.sortBySection}>
+
+            {/* sort by section */}
             <header className={style.sortByHeader}>
               <h2>Sort By</h2>
               <button onClick={toggleListVisibility}>
@@ -248,12 +317,20 @@ const Items = () => {
               </ul>
             )}
           </section>
+
+          {/* filter by section */}
           <section className={style.filterBySection}>
             <header className={style.filterByHeader}>
               <h2>Filter By:</h2>
             </header>
             {filterOptions.map(({ group, options }) => (
-              <CheckBoxFilter key={group} group={group} options={options} />
+                <CheckBoxFilter
+                    key={group}
+                    group={group}
+                    options={options}
+                    selectedOptions={selectedStyles}
+                    onOptionChange={handleStyleChange}
+                />
             ))}
             <div className={style.filterByButton}>
               <button className={style.applyFilterButton}>Apply filter</button>
@@ -262,9 +339,11 @@ const Items = () => {
           </section>
         </aside>
 
+        
+        {/* displayed items */}
         <section className={style.cardItems}>
-          {sortedCardsData.map((card, index) => (
-            <Card
+          {filteredAndSortedCardsData.map((card, index) => (
+          <Card
               key={index}
               id={card.id}
               imgSrc={card.imgSrc}

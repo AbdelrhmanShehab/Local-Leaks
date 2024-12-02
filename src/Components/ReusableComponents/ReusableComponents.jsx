@@ -97,7 +97,7 @@ export const AuthenticationBanner = () => {
     <section className={style.bannerSection}>
       <img
         src={RegistrationPhoto}
-        alt="Promotional image for Local Leaks"
+        alt="Promotional for Local Leaks"
         className={style.leftImage}
       />
       <h1 className={style.bannerSectionShopSmart}>Shop Smart</h1>
