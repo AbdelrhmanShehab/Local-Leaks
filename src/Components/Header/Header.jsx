@@ -63,9 +63,9 @@ const Header = () => {
       </nav>
 
       <div className={style.iconBar}>
-        <img src={favIcon} />
-        <img src={userIcon} />
-        <img src={cartIcon} />
+        <img src={favIcon} alt="" />
+        <img src={userIcon} alt="" />
+        <img src={cartIcon} alt="" />
       </div>
 
     </header>
