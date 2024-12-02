@@ -21,26 +21,26 @@ const Footer = () => {
                     <div className={style.footerColumn}>
                         <h4>Shop Now</h4>
                         <ul>
-                        <li>New Arrivals</li>
-                        <li>Men</li>
-                        <li>Women</li>
-                        <li>Winter Collection</li>
+                            <li>New Arrivals</li>
+                            <li>Men</li>
+                            <li>Women</li>
+                            <li>Winter Collection</li>
                         </ul>
                     </div>
                     <div className={style.footerColumn}>
                         <h4>Know us</h4>
                         <ul>
-                        <li>About Us</li>
-                        <li>Contact Us</li>
-                        <li>Join as a brand</li>
+                            <li>About Us</li>
+                            <li>Contact Us</li>
+                            <li>Join as a brand</li>
                         </ul>
                     </div>
                     <div className={style.footerColumn}>
                         <h4>Help</h4>
                         <ul>
-                        <li>Local Leaks policy</li>
-                        <li>Track your order</li>
-                        <li>FAQs</li>
+                            <li>Local Leaks policy</li>
+                            <li>Track your order</li>
+                            <li>FAQs</li>
                         </ul>
                     </div>
                 </div>
@@ -49,9 +49,9 @@ const Footer = () => {
             <div className={style.footerBottom}>
                 <p>Local Leaks {new Date().getFullYear()}</p>
                 <div className={style.socialIcons}>
-                <a href="#"><FontAwesomeIcon icon={faFacebookF} /></a>
-                <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
-                <a href="#"><FontAwesomeIcon icon={faTiktok} /></a>
+                    <a href="#"><FontAwesomeIcon icon={faFacebookF} /></a>
+                    <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
+                    <a href="#"><FontAwesomeIcon icon={faTiktok} /></a>
                 </div>
             </div>
         </footer>
