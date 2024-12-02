@@ -162,28 +162,87 @@
     margin-bottom: 180px;
 }
 
-.cardItems>div {
-    /* flex: 1 1 calc(25% - 20px);  Default: 4 cards in a row  */
-    flex: 1 1 calc(33.33% - 20px);  /* 3 cards per row */
-    box-sizing: border-box;
-    /* max-width: 237px; */
-    max-width: 300px;
-}
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     .cardItems>div {
-        flex: 1 1 calc(33.33% - 20px);  /* 3 cards per row */
+        flex: 1 1 33.33%;
     }
 }
 
 @media (max-widzzth: 900px) {
     .cardItems>div {
-        flex: 1 1 calc(50% - 20px);  /* 2 cards per row */
+        flex: 1 1 50%; 
     }
 }
 
 @media (max-width: 600px) {
     .cardItems>div {
-        flex: 1 1 100%;  /* 1 card per row */
+        flex: 1 1 100%;  
+    }
+} */
+
+
+.cardItems>div {
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
+    /* max-width: 237px; */
+    max-width: 350px;
+}
+
+/* Full HD Screens */
+@media (max-width: 1650px) {
+    .cardItems>div {
+        flex: 1 1 33.33%;
+        box-sizing: border-box;
+        /* max-width: 237px; */
+        max-width: 350px;
+    }
+}
+
+/* Large Laptops */
+@media (max-width: 1440px) {
+    .cardItems>div {
+        /* flex: 1 1 calc(25% - 20px);  Default: 4 cards in a row  */
+        flex: 1 1 33.33%;
+        /* 3 cards per row */
+        box-sizing: border-box;
+        /* max-width: 237px; */
+        max-width: 335px;
+    }
+}
+    
+/* Small Laptops */
+@media (max-width: 1280px) {
+    .cardItems>div {
+        /* flex: 1 1 calc(25% - 20px);  Default: 4 cards in a row  */
+        flex: 1 1 33.33%;
+        /* 3 cards per row */
+        box-sizing: border-box;
+        /* max-width: 237px; */
+        max-width: 335px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .cardItems>div {
+        /* flex: 1 1 calc(25% - 20px);  Default: 4 cards in a row  */
+        flex: 1 1 50%;
+        /* 3 cards per row */
+        box-sizing: border-box;
+        /* max-width: 237px; */
+        max-width: 335px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    .cardItems>div {
+        /* flex: 1 1 calc(25% - 20px);  Default: 4 cards in a row  */
+        flex: 1 1 100%;
+        /* 3 cards per row */
+        box-sizing: border-box;
+        /* max-width: 237px; */
+        max-width: 335px;
     }
 }
