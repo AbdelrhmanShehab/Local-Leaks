@@ -15,14 +15,17 @@
 }
 /* end styling of small button component */
 
-
 /* styling for Big button comoponent */
 .bigButton {
   margin-top: 10px;
   display: block;
   width: 100%;
   padding: 13px;
-  background: linear-gradient(271.15deg, rgba(0, 255, 42, 0.85) 7.64%, #1B8926 90.68%);
+  background: linear-gradient(
+    271.15deg,
+    rgba(0, 255, 42, 0.85) 7.64%,
+    #1b8926 90.68%
+  );
   border: none;
   border-radius: 9px;
   color: #fff;
@@ -44,7 +47,6 @@
 }
 /* end styling of Big button component */
 
-
 /* styling for CheckBox component */
 .checkBox {
   display: flex;
@@ -56,7 +58,7 @@
   appearance: none;
   width: 15px;
   height: 15px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 4px;
   margin-right: 8px;
   background-color: transparent;
@@ -66,12 +68,12 @@
 }
 
 .checkBox input[type="checkbox"]:checked {
-  background-color: #00FF00;
+  background-color: #00ff00;
   border: none;
 }
 
 .checkBox input[type="checkbox"]:checked::after {
-  content: '✔';
+  content: "✔";
   color: black;
   font-size: 10px;
   font-weight: bold;
@@ -90,27 +92,25 @@
 }
 /* end styling for CheckBox component */
 
-
-
 /* styling for TextBox component */
-.textBoxLabel{
+.textBoxLabel {
   display: flex;
   justify-content: space-between;
 }
 
 .textBoxLabel span,
-.textBoxLabel a{
+.textBoxLabel a {
   font-size: 12px;
   font-weight: 500;
   line-height: 16.07px;
 }
 
-.textBoxLabel span{
-  color: #4A4844;
+.textBoxLabel span {
+  color: #4a4844;
   text-align: left;
 }
 
-.textBoxLabel a{
+.textBoxLabel a {
   color: var(--mainColor);
   text-align: right;
   text-decoration: none;
@@ -120,16 +120,16 @@
   margin-top: 5px;
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 18px 20px;
   margin-bottom: 10px;
-  border: 1px solid #00FF2A;
+  border: 1px solid #00ff2a;
   border-radius: 9px;
-  background: #0E0E0E;
+  background: #0e0e0e;
   color: #fff;
 }
 
-.textBoxInputField::placeholder{
-  font-family: 'Manrope', sans-serif;
+.textBoxInputField::placeholder {
+  font-family: "Manrope", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 23.22px;
@@ -137,8 +137,6 @@
   color: #969696;
 }
 /* end styling for TextBox component */
-
-
 
 /* styling for Google Button component */
 .googleLogin {
@@ -150,9 +148,9 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  border: 2px solid #E5E5E526;
+  border: 2px solid #e5e5e526;
   border-radius: 9px;
-  background: #0E0E0E;
+  background: #0e0e0e;
 }
 
 .googleLogin span {
@@ -166,11 +164,9 @@
 }
 /* end styling for Google Button component */
 
-
-
 /* styling for Aunthentication Banner component */
 .bannerSection {
-  margin-top: 2rem;
+  margin-top: 1rem;
   flex: 1;
   position: relative;
   display: flex;
@@ -193,7 +189,7 @@
 
 /* Add an overlay effect */
 .bannerSection::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -203,11 +199,10 @@
   z-index: 2;
 }
 
-
 .bannerSectionShopSmart,
 .bannerSectionShopLocal {
   position: absolute;
-  font-size: 40px;
+  font-size: 48px;
   font-weight: 400;
   line-height: 50px;
   text-align: left;
@@ -217,27 +212,31 @@
 
 .bannerSectionShopSmart {
   top: -15px;
-  left: 0;
+  left: -20px;
 }
 
 .bannerSectionShopLocal {
-  top: 30px;
+  top: 45px;
   left: 180px;
 }
-
+.bannerSectionShopLocal span {
+  font-weight: strong;
+}
 .bannerSectionLocalLeaks {
+  font-size: 72px;
   z-index: 2;
   position: absolute;
   left: 20px;
-  bottom: -22px;
-  font-size: 75px;
-  font-weight: 700;
+  bottom: -12px;
+  font-family: "Hachi Maru Pop", cursive;
+  font-style: normal;
+  width: max-content;
+  font-weight: 800;
   line-height: 100.45px;
-  letter-spacing: 0.30em;
+  word-spacing: -30px;
+  letter-spacing: 0.34em;
 }
 /* end styling for Aunthentication Banner component */
-
-
 
 /*  styling for Input Select component */
 .inputSelectGroup {
@@ -265,7 +264,7 @@
   height: 42px;
   gap: 10px;
   border-radius: 6px;
-  border: 1px solid #00FF2A4D;
+  border: 1px solid #00ff2a4d;
   background-color: transparent;
   color: white;
   font-size: 13px;
@@ -284,8 +283,7 @@
 }
 /* end styling for Input Select component */
 
-
-.inputGroup{
+.inputGroup {
   display: flex;
   flex-direction: column;
 }
@@ -295,9 +293,9 @@
   margin-top: 5px;
   width: 72px;
   height: 40px;
-  border: 1px solid #00FF2A;
+  border: 1px solid #00ff2a;
   border-radius: 8px;
-  background-color: #0E0E0E;
+  background-color: #0e0e0e;
   color: #ffffff;
   font-size: 14px;
   font-weight: 500;
@@ -313,16 +311,16 @@
 
 .selectBox option {
   background-color: #1b1b1b;
-  color: #00FF2A;
+  color: #00ff2a;
 }
 
 .selectBox:focus {
   outline: none;
-  border-color: #00FF2A;
+  border-color: #00ff2a;
 }
 
 .selectBox option:checked {
-  background-color: #00FF2A;
+  background-color: #00ff2a;
   color: black;
 }
 
@@ -331,5 +329,5 @@
   font-weight: 500;
   line-height: 18.08px;
   text-align: left;
-  color: #4A4844;
+  color: #4a4844;
 }

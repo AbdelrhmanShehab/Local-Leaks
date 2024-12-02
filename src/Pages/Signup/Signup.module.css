@@ -1,138 +1,140 @@
 .signup {
-    margin-top: 4rem;
-    margin-bottom: 15rem;
-    display: flex;
-    color: #fff;
+  margin-top: 3rem;
+  margin-bottom: 15rem;
+  display: flex;
+  color: #fff;
 }
 
 /* right section of page ( login section ) */
 .rightSection {
-    width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 70px;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 70px;
 }
 
 .signupForm {
-    height: 100%;
-    width: 100%;
-    max-width: 400px;
-    text-align: left;
+  height: 100%;
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
 }
 
 .signupFormHeader,
 .moreInfoHeader {
-    background: linear-gradient(90deg, #00FF2A 23.53%, #FFFFFF 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 38px;
-    font-weight: 400;
-    line-height: 50px;
-    text-align: left;
-    margin-bottom: 15px;
+  background: linear-gradient(90deg, #00ff2a 23.53%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 50px;
+  text-align: left;
+  margin-bottom: 15px;
 }
 
 .signupFormDescription,
 .moreInfoDescription {
-    font-family: 'Manrope', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 21.86px;
-    text-align: left;
-    color: #949494;
-    margin-bottom: 15px;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 21.86px;
+  text-align: left;
+  color: #949494;
+  margin-bottom: 15px;
 }
 
 .separator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 16px 0;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 16px 0;
+  text-align: center;
 }
 
 .separator span {
-    padding: 0 16px;
-    color: #ffffff;
-    font-size: 14px;
+  padding: 0 16px;
+  color: #ffffff;
+  font-size: 14px;
 }
 
 .separator::before,
 .separator::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background-color: #cccccc;
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #cccccc;
 }
-
 
 .options label {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    margin-top: 10px;
-    margin-bottom: 12px;
-    font-family: 'Manrope', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    line-height: 21.86px;
-    color: #4A4844;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 10px;
+  margin-bottom: 12px;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 21.86px;
+  color: #b0ada7;
 }
 .options label input {
-    cursor: pointer;
+  cursor: pointer;
+}
+.checkbox {
+  width: 15px;
+  height: 15px;
 }
 
 .createAccount {
-    margin-top: 7px;
-    font-family: 'Manrope', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 23.22px;
-    text-align: left;
-    color: #4A4844;
+  margin-top: 7px;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 23.22px;
+  text-align: left;
+  color: #4a4844;
 }
 
 .createAccount a {
-    color: var(--mainColor);
-    text-decoration: none;
+  color: var(--mainColor);
+  text-decoration: none;
 }
 
 /* End of Signup Form */
 
 /* begin of more information form */
-.moreInfoSection{
-    width: 320px;
-    margin: auto;
-    margin-top: 4rem;
-    margin-bottom: 10rem;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
+.moreInfoSection {
+  width: 320px;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
 }
-.moreInfoHeader{
-    text-align: left;
+.moreInfoHeader {
+  text-align: left;
 }
-.moreInfoDescription{
-    text-align: left;
+.moreInfoDescription {
+  text-align: left;
 }
 
-.inputGroup{
-    margin-bottom: 15px;
-    margin-right: auto;
-    text-align: left;
+.inputGroup {
+  margin-bottom: 15px;
+  margin-right: auto;
+  text-align: left;
 }
-.inputLabel{
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 18.08px;
-    text-align: left;
+.inputLabel {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18.08px;
+  text-align: left;
 }
 
 .birthdateOptions {
-    display: flex;
-    gap: 10px;
-    /* Space between selects */
+  display: flex;
+  gap: 10px;
+  /* Space between selects */
 }
-

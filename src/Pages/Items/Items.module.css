@@ -176,7 +176,7 @@
     }
 }
 
-@media (max-width: 900px) {
+@media (max-widzzth: 900px) {
     .cardItems>div {
         flex: 1 1 calc(50% - 20px);  /* 2 cards per row */
     }
