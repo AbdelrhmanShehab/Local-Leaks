@@ -24,7 +24,7 @@
 .imageWrapper img {
     width: 100%;
     /* height: auto;  */
-    height: 400px;
+    height: 500px;
     /* height: 300px; */
     display: block;
     border-radius: 20px;
@@ -143,4 +143,46 @@
     align-items: center;
     justify-content: center;
     z-index: 10;
+}
+
+
+/* Full HD Screens */
+/* @media (max-width: 1920px) {
+    .imageWrapper img{
+        height: 500px;
+    }
+} */
+
+@media (max-width: 1650px) {
+    .imageWrapper img{
+        height: 500px;
+    }
+}
+
+/* Large Laptops */
+@media (max-width: 1440px) {
+    .imageWrapper img {
+        height: 410px;
+    }
+}
+
+/* Small Laptops */
+@media (max-width: 1280px) {
+    .imageWrapper img {
+        height: 400px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .imageWrapper img {
+        height: 350px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    .imageWrapper img {
+        height: 300px;
+    }
 }
