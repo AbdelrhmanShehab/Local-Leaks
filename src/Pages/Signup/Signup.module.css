@@ -35,7 +35,6 @@
 
 .signupFormDescription,
 .moreInfoDescription {
-  font-family: "Manrope", sans-serif;
   font-size: 13px;
   font-weight: 500;
   line-height: 21.86px;
@@ -73,7 +72,6 @@
   gap: 7px;
   margin-top: 10px;
   margin-bottom: 12px;
-  font-family: "Manrope", sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 21.86px;
@@ -89,7 +87,6 @@
 
 .createAccount {
   margin-top: 7px;
-  font-family: "Manrope", sans-serif;
   font-size: 13px;
   font-weight: 500;
   line-height: 23.22px;
