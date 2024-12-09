@@ -3,15 +3,16 @@ import style from './CheckBoxFilter.module.css';
 
 import { Checkbox } from '../ReusableComponents/ReusableComponents';
 
-const CheckBoxFilter = ({ group, options }) => {
+
+const CheckBoxFilter = ({ group, options, selectedOptions, onOptionChange }) => {
     const [isListVisible, setIsListVisible] = useState(true); // Track visibility
-    const [selectedOption, setSelectedOption] = useState(''); // Track selected checkbox
 
     const toggleListVisibility = () => setIsListVisible(prev => !prev); // Toggle visibility
 
     // Handle checkbox change
     const handleCheckboxChange = (option) => {
-        setSelectedOption((prev) => (prev === option ? '' : option)); // Toggle selection
+        // Add or remove the option from selectedOptions
+        onOptionChange(group, option);
     };
 
     return (
@@ -41,16 +42,16 @@ const CheckBoxFilter = ({ group, options }) => {
                             <Checkbox
                                 id={value}
                                 label={label}
-                                checked={selectedOption === value}
-                                onChange={() => handleCheckboxChange(value)}
+                                checked={selectedOptions.includes(value)} // Check if the option is selected
+                                onChange={() => handleCheckboxChange(value)} // Toggle the checkbox
                             />
                         </li>
                     ))}
                 </ul>
             )}
-
         </section>
     );
 };
+
 
 export default CheckBoxFilter;

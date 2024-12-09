@@ -2,6 +2,7 @@
   background-color: #000;
   text-align: left;
   color: white;
+  margin-bottom: 40px;
 }
 
 .footerContainer {
@@ -45,6 +46,7 @@
   font-size: 14px;
   font-weight: 300;
   width: max-content;
+  cursor: pointer;
 }
 .footerColumn li:hover {
   color: #00ff00;

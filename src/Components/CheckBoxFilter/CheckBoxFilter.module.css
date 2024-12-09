@@ -38,16 +38,6 @@
 
 /* CheckBoxs */
 
-/* .checkBoxOptions{
-
-}
-
-.checkBoxOption input{
-    width: 20px;
-    height: 20px;
-    border: 1px solid #FFFFFF;
-    background: transparent;
-} */
 
 .checkBoxOptions {
     margin: 0;
@@ -56,65 +46,5 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 0px 15px;
 }
-
-.checkBoxOption {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.checkBoxOption input[type="checkbox"] {
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    border: 1px solid #FFFFFF;
-    border-radius: 4px;
-    margin-right: 8px;
-    background-color: transparent;
-    transition: background-color 0.2s ease;
-    cursor: pointer;
-    position: relative;
-}
-
-.checkBoxOption input[type="checkbox"]:checked {
-    background-color: #00FF00;
-    border: none;
-}
-
-.checkBoxOption input[type="checkbox"]:checked::after {
-    content: '✔';
-    color: black;
-    font-size: 10px;
-    font-weight: bold;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.checkBoxOption label {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 30px;
-    text-align: left;
-    color: #999999;
-}
-
-
-/* .applyFilterButton,
-.surpriseMeButton{
-    width: 100px;
-    height: 7vh;
-    border: 1px solid hsla(130, 100%, 50%, 0.7);
-    background: linear-gradient(271.15deg, rgba(0, 255, 42, 0.7) 7.64%, #1B8926 90.68%);
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20.09px;
-    text-align: center;
-}
-
-.surpriseMeButton{
-    background-color: transparent;
-} */

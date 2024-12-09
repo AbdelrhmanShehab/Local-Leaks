@@ -20,33 +20,80 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 25px;
+    /* justify-content: space-between; */
+    margin-bottom: 180px;
 }
 
 .cardItems>div {
-    flex: 1 1 calc(24% - 20px);
-    /* Default: 4 cards in a row */
+    flex: 1 1 calc(20% - 20px);
     box-sizing: border-box;
-    max-width: 300px;
+    max-width: 20%;
 }
 
-@media (max-width: 1200px) {
+/* Full HD Screens */
+@media (max-width: 1650px) {
+    .cardItems>div {
+        flex: 1 1 calc(25% - 20px);
+        box-sizing: border-box;
+        max-width: 25%;
+    }
+}
+
+/* Large Laptops */
+@media (max-width: 1440px) {
+    .cardItems>div {
+        flex: 1 1 calc(25% - 20px);
+        box-sizing: border-box;
+        max-width: 25%;
+    }
+}
+
+/* Small Laptops */
+@media (max-width: 1280px) {
+    .cardItems>div {
+        flex: 1 1 calc(25% - 20px);
+        box-sizing: border-box;
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 1000px) {
     .cardItems>div {
         flex: 1 1 calc(33.33% - 20px);
-        /* 3 cards per row */
+        box-sizing: border-box;
+        max-width: 33.33%;
     }
 }
 
-@media (max-width: 900px) {
+/* Tablets */
+@media (max-width: 768px) {
     .cardItems>div {
         flex: 1 1 calc(50% - 20px);
-        /* 2 cards per row */
+        box-sizing: border-box;
+        max-width: 50%;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
+    .cardItems>div {
+        flex: 1 1 calc(50% - 20px);
+        box-sizing: border-box;
+        max-width: 50%;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
     .cardItems>div {
         flex: 1 1 100%;
-        /* 1 card per row */
+        box-sizing: border-box;
+        max-width: 100%;
     }
+}
+
+.noItemsFound{
+    color: white;
+    font-size: 25px;
+    margin: 40px auto;
 }

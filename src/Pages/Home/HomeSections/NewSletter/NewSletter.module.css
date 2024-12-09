@@ -1,105 +1,106 @@
 .newSletter {
-    margin: 6rem auto;
+    /* margin: 6rem auto; */
     padding: 0 2rem;
-}
-
-.newSletterHeader {
-    color: #00FF2A;
+    margin-top: 200px;
+    margin-bottom: 200px;
+  }
+  
+  .newSletterHeader {
+    color: #00ff2a;
     text-align: left;
     font-size: 35px;
     font-weight: 500;
     margin-bottom: 20px;
-}
-
-.newSletterContainer {
+  }
+  
+  .newSletterContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-between;
     align-items: center;
-}
-
-.newSletterContainer p {
-    flex: 1;
+  }
+  
+  .newSletterContainer p {
     font-size: 18px;
     font-weight: 500;
     line-height: 30px;
     text-align: left;
     color: white;
-    min-width: 280px;
-}
-
-.newSletterContainerMessage {
-    flex: 1;
+    width: 50%;
+  }
+  
+  .newSletterContainerMessage {
     display: flex;
     height: 50px;
     min-width: 280px;
-}
-
-.newSletterContainerMessage input {
-    width: 90%;
+  }
+  
+  .newSletterContainerMessage input {
+    width: 350px;
     background: transparent;
     border: 1px solid #686868;
     border-right: none;
     padding-left: 20px;
     color: white;
     font-size: 16px;
-}
-
-.newSletterContainerMessage input::placeholder {
+  }
+  
+  .newSletterContainerMessage input::placeholder {
     color: #a0a0a0;
-}
-
-.newSletterContainerMessage button {
-    width: 10%;
+  }
+  
+  .newSletterContainerMessage button {
+    width: 15%;
     border: 1px solid #686868;
     border-left: none;
     background-color: #525252;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.newSletterContainerMessage button svg {
+  }
+  
+  .newSletterContainerMessage button svg {
     width: 25px;
-    fill: #00FF2A;
-}
-
-/* Responsive Design */
-
-/* Mobile Phones */
-@media (max-width: 480px) {
+    fill: #00ff2a;
+  }
+  
+  /* Responsive Design */
+  
+  /* Mobile Phones */
+  @media (max-width: 480px) {
     .newSletterHeader {
-        font-size: 28px;
+      font-size: 28px;
     }
-
+  
     .newSletterContainer {
-        flex-direction: column;
+      flex-direction: column;
     }
-
-    .newSletterContainer p{
-        font-size: 14px;
-        line-height: 22px;
+  
+    .newSletterContainer p {
+      font-size: 14px;
+      line-height: 22px;
     }
-
+  
     .newSletterContainerMessage input {
-        width: 100%;
+      width: 100%;
     }
-
+  
     .newSletterContainerMessage button {
-        width: 50px;
+      width: 50px;
     }
-}
-
-/* Tablets */
-@media (min-width: 768px) and (max-width: 1024px) {
+  }
+  
+  /* Tablets */
+  @media (min-width: 768px) and (max-width: 1024px) {
     .newSletterContainerMessage input {
-        font-size: 14px;
+      font-size: 14px;
     }
-}
-
-/* Laptops */
-@media (min-width: 1280px) and (max-width: 1440px) {
+  }
+  
+  /* Laptops */
+  @media (min-width: 1280px) and (max-width: 1440px) {
     .newSletterHeader {
-        font-size: 32px;
+      font-size: 32px;
     }
-}
+  }
+  

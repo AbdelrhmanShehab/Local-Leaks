@@ -1,71 +1,76 @@
-.ourServices{
-    box-sizing: border-box;
+.ourServices {
+  box-sizing: border-box;
+  margin-top: 200px;
+  margin-bottom: 220px;
 }
 
-.ourServicesContainer{
-    padding: 30px 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
+.ourServicesContainer {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
 }
 
-.servicesDescription{
-    flex: 1;
-    margin-top: 80px;
+.servicesDescription {
+  flex: 1;
+  margin-top: 80px;
 }
 
-.servicesDescription strong{
-    color: #00FF2A;
+.servicesDescription strong {
+  color: #00ff2a;
 }
-.servicesDescription p{
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 32px;
-    text-align: left;
-    color: #FFFFFF;
-    margin-bottom: 40px;
+.servicesDescription p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: left;
+  color: #ffffff;
+  margin-bottom: 40px;
 }
 
-.servicesImage{
-    flex: 1;
-    position: relative;
-    text-align: center;
+.servicesImage {
+  flex: 1;
+  position: relative;
+  text-align: center;
 }
-.servicesImage h1{
-        font-size: 5vw;
-        font-weight: 500;
-        line-height: 60.59px;
-        z-index: 5;
-        position: absolute;
-        width: 100%;
-        top: 5%;
-        left: 50%;
-        transform: translateX(-50%);
+.servicesImage h1 {
+  /* font-size: 7.14vw; */
+  font-size: clamp(60px, 7.14vw, 120px);
+  font-weight: 650;
+  line-height: 60.59px;
+  z-index: 5;
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.servicesImage img{
-        max-width: 100%;
-        max-height: 400px;
-        position: absolute;
-        z-index: 5;
-        top: 70%;
-        left: 60%;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
+.servicesImage img {
+  max-width: 100%;
+  max-height: 450px;
+  position: absolute;
+  z-index: 5;
+  top: 75%;
+  left: 60%;
+  transform: translate(-50%, -50%);
 }
-.imageCircle{
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    max-width: 500px;
-    max-height: 500px;
-    background: #00FF2A;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+.imageCircle {
+  position: absolute;
+  width: 80rem;
+  height: 80rem;
+  max-width: 500px;
+  max-height: 500px;
+  background: #00ff2a;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+@media (max-width: 1143px) {
+  .servicesImage h1{
+    font-size: 7vw;
+  }
 }

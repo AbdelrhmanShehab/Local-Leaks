@@ -9,6 +9,7 @@
 
 .logo {
   width: 170px;
+  cursor: pointer;
 }
 
 
@@ -43,7 +44,7 @@
 .navBar ul li.navTagsSelected {
   background-color: #222222;
   color: white;
-  padding: 20px 25px;
+  padding: 25px 30px;
 }
 .navBar ul li a {
   text-decoration: none;

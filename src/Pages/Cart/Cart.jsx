@@ -9,7 +9,7 @@ import style from './Cart.module.css';
 
 const Cart = () => {
     return (
-        <div className={style.checkout}>
+        <div className={style.cart}>
 
             <Header />
 

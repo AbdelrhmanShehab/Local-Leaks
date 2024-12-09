@@ -35,7 +35,7 @@ const Favourits = () => {
                             />
                         ))
                     ) : (
-                        <p>No favorite items found.</p>
+                        <p className={style.noItemsFound}>No favorite items found.</p>
                     )}
                 </section>
             </main>
