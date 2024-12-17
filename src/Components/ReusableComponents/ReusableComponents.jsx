@@ -33,6 +33,8 @@ export const TextBox = ({
   inputType,
   inputPlaceholder,
   forgetPassword,
+  onChange,
+  value
 }) => {
   return (
     <div>
@@ -48,6 +50,8 @@ export const TextBox = ({
         id={inputType}
         placeholder={inputPlaceholder}
         className={style.textBoxInputField}
+        value={value}
+        onChange={onChange}
         required
       />
     </div>

@@ -12,18 +12,15 @@
 }
 
 
-
-
-
 .leftSection {
-    max-width: 60%;
+    max-width: 63%;
 }
 
 
 .textBoxAndDropDown,
 .firstAndSecondName,
 .cityAndGovernment{
-    width: 320px;
+    width: 370px;
 }
 
 .deliveryRow{
@@ -40,11 +37,8 @@
 
 
 
-
-
-
 .rightSection {
-    max-width: 30%;
+    max-width: 37%;
 }
 
 .item{
@@ -55,7 +49,7 @@
 .itemImageWrapper{
     position: relative;
     width: 130px;
-    height: 120px;
+    height: 150px;
     margin-bottom: 30px;
 }
 .itemImageWrapper span{
@@ -76,9 +70,10 @@
 }
 .itemImageWrapper img{
     width: 100%;
-    height: 120px;
+    height: 100%;
     z-index: 1;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .itemImageDescription{
@@ -87,15 +82,178 @@
     margin-top: 30px;
     margin-left: 20px;
 }
-.itemImageDescription p{
-    font-size: 12px;
+.itemImageDescription p,
+.itemImageDescription strong{
+    font-size: 15px;
     font-weight: 400;
     line-height: 25px;
     text-align: left;
+    margin-bottom: 5px;
+}
 
+.itemImageDescription strong{
+    color: var(--mainColor);
 }
 
 .itemImagePrice{
+    color: var(--mainColor);
     display: flex;
+    margin-top: 50px;
+    margin-left: 35px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.discount{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.textbox {
+    flex-grow: 1; /* Makes the text box take up the remaining space */
+    width: 100%; 
+}
+
+.discountButton{
+    margin-top: 20px;
+    background: linear-gradient(
+        271.15deg,
+        rgba(0, 255, 42, 0.7) 7.64%,
+        #1b8926 90.68%
+    );
+    border: none;
+    color: white;
+    padding: 10px 60px;
+    height: 55px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.totals{
+    width: 100%;
+}
+
+.totalBar{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalBar:nth-child(2){
+    margin-bottom: 20px;
+}
+
+.totalBar span,
+.totalBar strong{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.totalBar span{
+    color: #ffffff;
+}
+.totalBar strong{
+    color: var(--mainColor);
+}
+
+.paymentMethod{
+    margin-top: 60px;
+}
+.paymentMethod h2{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 32.14px;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.saveAndProceedBtn{
     margin-top: 40px;
+    width: 70%;
+}
+
+
+
+@media (max-width: 1350px) {   
+    .leftSection {
+        max-width: 53%;
+    }
+    .rightSection {
+        max-width: 45%;
+    } 
+}
+
+@media (max-width: 899px) {
+    .checkout{
+        display: flex;
+        flex-direction: column;
+    }
+    .leftSection {
+        max-width: 100%;
+    }
+    .rightSection {
+        max-width: 100%;
+        margin-top: 50px;
+    } 
+}
+
+@media (max-width: 650px) {
+    .delivery,
+    .deliveryContactUs{
+        padding-top: 20px;
+        text-align: center;
+    }
+    .deliveryContactUs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .deliveryRow{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 450px) {
+    
+    .textBoxAndDropDown{
+        width: 100%;
+    }
+    .firstAndSecondName,
+    .cityAndGovernment{
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    .item{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .itemImageDescription{
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .itemImagePrice{
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .discount{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .discountButton{
+        margin-top: 0px;
+    }
 }
