@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Footer from "../../Components/Footer/Footer";
-import Header from "../../Components/Header/Header";
 import style from "./Checkout.module.css";
 
 import item1 from "../../Assets/CardImages/cardItem1.jpg";
@@ -75,7 +73,6 @@ const Checkout = () => {
 
   return (
     <>
-      {/* <Header /> */}
       <main>
         <form onSubmit={handleSubmit} className={style.checkout}>
           {/* Left Section */}
@@ -266,7 +263,6 @@ const Checkout = () => {
           </section>
         </form>
       </main>
-      {/* <Footer /> */}
     </>
   );
 };

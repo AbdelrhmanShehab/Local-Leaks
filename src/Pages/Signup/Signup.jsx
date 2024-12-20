@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import style from "./Signup.module.css";
 
-import Header from "../../Components/Header/Header";
-import Footer from "../../Components/Footer/Footer";
-
 import {
   TextBox,
   GoogleButton,
@@ -68,7 +65,6 @@ const Signup = () => {
 
   return (
     <>
-      <Header />
       {!showMoreInfo ? (
         <main className={style.signup}>
           {/* Left Section */}
@@ -108,7 +104,7 @@ const Signup = () => {
 
               <div className={style.options}>
                 <label>
-                  <input type="checkbox" className={style.checkbox}/>
+                  <input type="checkbox" className={style.checkbox} />
                   <span> Keep me signed in</span>
                 </label>
               </div>
@@ -171,7 +167,6 @@ const Signup = () => {
           />
         </div>
       )}
-      <Footer />
     </>
   );
 };

@@ -41,17 +41,21 @@
   transition: background-color 0.3s;
 }
 
+
 .navBar ul li.navTagsSelected {
   background-color: #222222;
   color: white;
   padding: 25px 30px;
 }
-.navBar ul li a {
+.navBar ul li a, .navBar button {
+  background-color: transparent;
+  border: none;
   text-decoration: none;
   color: white;
   font-size: 16px;
   font-weight: 450;
   text-align: center;
+  cursor: pointer;
 }
 
 

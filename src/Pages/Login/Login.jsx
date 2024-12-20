@@ -1,15 +1,11 @@
 import React from 'react';
 import style from './Login.module.css';
 
-import Header from '../../Components/Header/Header';
-import Footer from '../../Components/Footer/Footer';
-
 import { TextBox, GoogleButton, BigButton, AuthenticationBanner } from '../../Components/ReusableComponents/ReusableComponents';
 
 const Login = () => {
     return (
         <>
-            <Header />
             <main className={style.login}>
                 {/* Left Section */}
                 <AuthenticationBanner />
@@ -53,7 +49,6 @@ const Login = () => {
                     </form>
                 </section>
             </main>
-            <Footer />
         </>
     );
 };

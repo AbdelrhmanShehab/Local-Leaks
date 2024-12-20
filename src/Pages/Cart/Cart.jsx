@@ -11,7 +11,6 @@ const Cart = () => {
     return (
         <div className={style.cart}>
 
-            <Header />
 
             <h1 className={style.cartHeader}>Your Cart</h1>
             <p className={style.cartCount}>2 Products</p>
@@ -107,7 +106,6 @@ const Cart = () => {
                 </aside>
             </main>
 
-            <Footer />
 
         </div>
     );

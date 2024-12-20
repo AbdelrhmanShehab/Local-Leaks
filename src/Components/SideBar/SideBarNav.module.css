@@ -1,0 +1,126 @@
+.SideBarNav {
+  width: 270px;
+  height: 87vh;
+  border-radius: 0px 20px 20px 0px;
+  background-color: #1a1a1a;
+  top: 15px;
+  z-index: 10;
+  position: fixed;
+  left: 10px;
+  transform: translateX(-120%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo {
+  width: 170px;
+  cursor: pointer;
+}
+.SideBarMenu,
+.SideBarMenuCat {
+  list-style-type: none;
+  padding: 0;
+}
+.SideBarMenu {
+  margin-top: 40px;
+}
+.SideBarMenuCat {
+  margin-top: 15px;
+}
+.SideBarMenuCat li {
+  display: flex;
+}
+.SideBarMenu li {
+  padding: 22px 22px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+  color: white;
+}
+.SideBarMenuCat button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 24px;
+  border: none;
+  transition: background-color 0.3s;
+  color: white;
+  font-weight: 800;
+  background-color: transparent;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.SideBarMenu a,
+.SideBarMenuCat a {
+  text-decoration: none;
+  color: white;
+}
+.SideBarMenuCat h3,
+.SideBarMenu h3 {
+  padding: 24px 24px 20px 24px;
+  color: #32a130;
+}
+.SideBarMenu li:hover {
+  background-color: #32a130;
+}
+.SideBarMenuCat li:hover {
+  background-color: #333;
+  border-radius: 12px;
+}
+
+.SideBarMenu li:not(:last-child) {
+  border-bottom: 1px solid #333333;
+}
+
+.closeButton {
+  background: none;
+  position: absolute;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  transition: transform 1s, color 1s, font-size 1s;
+  right: 20px;
+  /* transition also when leave hover  */
+}
+
+.logoClose {
+  margin: 16px;
+}
+.closeButton:hover {
+  transform: rotate(360deg);
+  transition: 1000ms;
+  cursor: pointer;
+  color: rgb(129, 0, 0);
+  font-size: 1.8rem;
+}
+
+.filterMore,
+.filterMoreAndMore {
+  position: absolute;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  padding: 10px;
+}
+.filterMore {
+  right: -64%;
+}
+.filterMoreAndMore {
+  right: -100%;
+}
+.filterMore li:not(:last-child) {
+  border-bottom: 0.5px solid #333333;
+}
+
+.filterMore button {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* closing and oppening up sidebar */
+
+.SideBarNav.open {
+  transform: translateX(0);
+}
+
+.SideBarNav.closed {
+  transform: translateX(-110%);
+}

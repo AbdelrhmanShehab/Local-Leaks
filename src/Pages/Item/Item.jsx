@@ -1,8 +1,6 @@
 import React from "react";
 import "./Item.module.css";
 import style from "./Item.module.css";
-import Footer from "../../Components/Footer/Footer";
-import Header from "../../Components/Header/Header";
 import ItemDetails from "./ItemDetails";
 import UserReviewCard from "../../Components/UserReviewCard/UserReviewCard";
 import Card from "../../Components/Card/Card";
@@ -94,7 +92,6 @@ const Item = () => {
   ];
   return (
     <>
-      <Header />
       <ItemDetails />
       <div className={style.buyThisAndFQAs}>
         <section className={style.suggestOutfit}>
@@ -172,7 +169,6 @@ const Item = () => {
           ))}
         </div>
       </section>
-      <Footer />
     </>
   );
 };
