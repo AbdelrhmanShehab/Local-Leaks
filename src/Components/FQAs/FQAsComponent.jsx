@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./FQAs.module.css";
-import style from "./FQAs.module.css";
+import "./FQAsComponent.module.css";
+import style from "./FQAsComponent.module.css";
 import plusIcon from "../../Assets/plus-icon.svg";
 import minusIcon from "../../Assets/minus-icon.svg";
-const FAQs = ({ questionNum, questionContent, questionAnswer, miniMax }) => {
+const FQAsComponent = ({ questionNum, questionContent, questionAnswer, miniMax }) => {
   const [isAnswerd, setAnswer] = useState(false);
   function showAnswer() {
     setAnswer(!isAnswerd);
@@ -29,4 +29,4 @@ const FAQs = ({ questionNum, questionContent, questionAnswer, miniMax }) => {
     </section>
   );
 };
-export default FAQs;
+export default FQAsComponent;

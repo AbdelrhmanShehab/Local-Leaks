@@ -4,7 +4,7 @@ import style from "./Item.module.css";
 import ItemDetails from "./ItemDetails";
 import UserReviewCard from "../../Components/UserReviewCard/UserReviewCard";
 import Card from "../../Components/Card/Card";
-import FAQs from "../../Components/FQAs/FQAs";
+import FQAsComponent from "../../Components/FQAs/FQAsComponent";
 import { SmallButton } from "../../Components/ReusableComponents/ReusableComponents";
 import minusIcon from "../../Assets/minus-icon.svg";
 const Item = () => {
@@ -111,7 +111,7 @@ const Item = () => {
           <div className={style.flexQuestions}>
             {/* Mapping the Questions */}
             {FQAsData.map((data, index) => (
-              <FAQs
+              <FQAsComponent
                 key={index}
                 questionNum={data.questionNum}
                 questionContent={data.questionContent}

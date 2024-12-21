@@ -34,7 +34,7 @@ export const TextBox = ({
   inputPlaceholder,
   forgetPassword,
   onChange,
-  value
+  value,
 }) => {
   return (
     <div>
@@ -158,7 +158,9 @@ export const DropdownInput = ({
 }) => {
   return (
     <div className={style.dropdownGroup}>
-      {inputLabel && <label className={style.dropdownInput}>{inputLabel}</label>}
+      {inputLabel && (
+        <label className={style.dropdownInput}>{inputLabel}</label>
+      )}
       <select
         className={style.dropdownSelectBox}
         onChange={onChange}

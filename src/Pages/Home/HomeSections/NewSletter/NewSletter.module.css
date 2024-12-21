@@ -1,106 +1,101 @@
-.newSletter {
-    /* margin: 6rem auto; */
-    padding: 0 2rem;
-    margin-top: 200px;
-    margin-bottom: 200px;
-  }
-  
+
+.newSletterHeader {
+  color: #00ff2a;
+  letter-spacing: 1px;
+  text-align: left;
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.newSletterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.newSletterContainer p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: white;
+  width: 72%;
+  margin-bottom: 30px;
+}
+
+.newSletterContainerMessage {
+  display: flex;
+  height: 50px;
+  min-width: 280px;
+}
+
+.newSletterContainerMessage input {
+  width: 350px;
+  background: transparent;
+  border: 1px solid #686868;
+  border-right: none;
+  padding-left: 20px;
+  color: white;
+  font-size: 16px;
+}
+
+.newSletterContainerMessage input::placeholder {
+  color: #a0a0a0;
+}
+
+.newSletterContainerMessage button {
+  width: 15%;
+  border: 1px solid #686868;
+  border-left: none;
+  background-color: #525252;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newSletterContainerMessage button svg {
+  width: 25px;
+  fill: #00ff2a;
+}
+
+/* Responsive Design */
+
+/* Mobile Phones */
+@media (max-width: 480px) {
   .newSletterHeader {
-    color: #00ff2a;
-    text-align: left;
-    font-size: 35px;
-    font-weight: 500;
-    margin-bottom: 20px;
+    font-size: 28px;
   }
-  
+
   .newSletterContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
   }
-  
+
   .newSletterContainer p {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 30px;
-    text-align: left;
-    color: white;
-    width: 50%;
+    font-size: 14px;
+    line-height: 22px;
   }
-  
-  .newSletterContainerMessage {
-    display: flex;
-    height: 50px;
-    min-width: 280px;
-  }
-  
+
   .newSletterContainerMessage input {
-    width: 350px;
-    background: transparent;
-    border: 1px solid #686868;
-    border-right: none;
-    padding-left: 20px;
-    color: white;
-    font-size: 16px;
+    width: 100%;
   }
-  
-  .newSletterContainerMessage input::placeholder {
-    color: #a0a0a0;
-  }
-  
+
   .newSletterContainerMessage button {
-    width: 15%;
-    border: 1px solid #686868;
-    border-left: none;
-    background-color: #525252;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 50px;
   }
-  
-  .newSletterContainerMessage button svg {
-    width: 25px;
-    fill: #00ff2a;
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .newSletterContainerMessage input {
+    font-size: 14px;
   }
-  
-  /* Responsive Design */
-  
-  /* Mobile Phones */
-  @media (max-width: 480px) {
-    .newSletterHeader {
-      font-size: 28px;
-    }
-  
-    .newSletterContainer {
-      flex-direction: column;
-    }
-  
-    .newSletterContainer p {
-      font-size: 14px;
-      line-height: 22px;
-    }
-  
-    .newSletterContainerMessage input {
-      width: 100%;
-    }
-  
-    .newSletterContainerMessage button {
-      width: 50px;
-    }
+}
+
+/* Laptops */
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .newSletterHeader {
+    font-size: 32px;
   }
-  
-  /* Tablets */
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .newSletterContainerMessage input {
-      font-size: 14px;
-    }
-  }
-  
-  /* Laptops */
-  @media (min-width: 1280px) and (max-width: 1440px) {
-    .newSletterHeader {
-      font-size: 32px;
-    }
-  }
-  
+}

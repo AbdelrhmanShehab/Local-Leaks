@@ -14,7 +14,14 @@ const JoinUs = lazy(() => import("./Pages/JoinUs/JoinUs"));
 const Checkout = lazy(() => import("./Pages/Checkout/Checkout"));
 const SideBarNav = lazy(() => import("./Components/SideBar/SideBarNav.jsx"));
 const Brands = lazy(() => import("./Pages/Brands/Brands.jsx"));
-
+const AboutUs = lazy(() => import("./Pages/KnowUs-4pages/AboutUs/AboutUs.jsx"));
+const FAQs = lazy(() => import("./Pages/KnowUs-4pages/FAQs/FAQs.jsx"));
+const ContactUs = lazy(() =>
+  import("./Pages/KnowUs-4pages/ContactUs/ContactUs.jsx")
+);
+const ShippingReturns = lazy(() =>
+  import("./Pages/KnowUs-4pages/ShippingReturns/ShippingReturns.jsx")
+);
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -41,6 +48,13 @@ function App() {
               <Route path="/joinUs" element={<JoinUs />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/brands" element={<Brands />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/contact-us" element={<ContactUs />} />
+              <Route
+                path="/shipping-and-returns"
+                element={<ShippingReturns />}
+              />
+              <Route path="/faqs" element={<FAQs />} />
             </Routes>
           </Suspense>
           <Footer isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
