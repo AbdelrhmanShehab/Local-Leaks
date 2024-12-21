@@ -16,6 +16,15 @@ const SideBarNav = lazy(() => import("./Components/SideBar/SideBarNav.jsx"));
 const Brands = lazy(() => import("./Pages/Brands/Brands.jsx"));
 const AboutUs = lazy(() => import("./Pages/KnowUs-4pages/AboutUs/AboutUs.jsx"));
 const FAQs = lazy(() => import("./Pages/KnowUs-4pages/FAQs/FAQs.jsx"));
+const MyOrders = lazy(() =>
+  import("./Pages/AccountSettings/MyOrders/MyOrders.jsx")
+);
+const MyProfile = lazy(() =>
+  import("./Pages/AccountSettings/MyProfile/MyProfile.jsx")
+);
+const PaymentData = lazy(() =>
+  import("./Pages/AccountSettings/PaymentData/PaymentData.jsx")
+);
 const ContactUs = lazy(() =>
   import("./Pages/KnowUs-4pages/ContactUs/ContactUs.jsx")
 );
@@ -55,6 +64,9 @@ function App() {
                 element={<ShippingReturns />}
               />
               <Route path="/faqs" element={<FAQs />} />
+              <Route path="/my-orders" element={<MyOrders />} />
+              <Route path="/my-profile" element={<MyProfile />} />
+              <Route path="/payment-data" element={<PaymentData />} />
             </Routes>
           </Suspense>
           <Footer isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />

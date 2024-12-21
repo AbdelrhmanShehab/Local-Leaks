@@ -8,6 +8,7 @@
   border: none;
   color: white;
   padding: 20px 35px;
+  white-space: nowrap;
   cursor: pointer;
   border-radius: 5px;
   font-weight: 500;
@@ -136,7 +137,7 @@
   color: #969696;
 }
 
-input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   /* For most modern browsers */
   -webkit-appearance: none;
@@ -293,7 +294,6 @@ input[type="number"] {
   background-color: #00cc22;
 }
 /* end styling for Input Select component */
-
 
 /*  styling for DropDown component */
 .dropdownGroup {
