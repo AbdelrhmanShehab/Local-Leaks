@@ -11,7 +11,20 @@ import {
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import NewSletter from "../../Home/HomeSections/NewSletter/NewSletter";
 import { SmallButton } from "../../../Components/ReusableComponents/ReusableComponents";
+
+import { useNavigate } from "react-router-dom";
+
+
 const ContactUs = () => {
+
+  const navigate = useNavigate();
+
+  const joinAsBrandBtn = () => {
+      navigate("/joinUs");
+  };
+
+
+
   return (
     <>
       <KnowUsHeader />
@@ -79,7 +92,7 @@ const ContactUs = () => {
         <NewSletter />
         <div className={style.joinContactUs}>
           <h3>Join as a brand</h3>
-          <SmallButton smallButtonLabel="Join Now" />
+            <SmallButton smallButtonLabel="Join Now" onClick={joinAsBrandBtn} />
         </div>
         </div>
       </main>

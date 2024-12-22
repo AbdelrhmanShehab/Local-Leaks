@@ -4,6 +4,8 @@ import style from "./Checkout.module.css";
 import item1 from "../../Assets/CardImages/cardItem1.jpg";
 import item2 from "../../Assets/CardImages/cardItem2.png";
 
+import { useNavigate } from "react-router-dom";
+
 import {
   TextBox,
   DropdownInput,
@@ -12,6 +14,15 @@ import {
 } from "../../Components/ReusableComponents/ReusableComponents";
 
 const Checkout = () => {
+
+  const navigate = useNavigate();
+
+  const submitBtn = () => {
+    navigate("/my-orders");
+  };
+
+
+
   // Separate state for each input field
   const [email, setEmail] = useState("");
   const [country, setCountry] = useState("");
@@ -255,6 +266,7 @@ const Checkout = () => {
 
             <div className={style.saveAndProceedBtn}>
               <BigButton
+                onClick={submitBtn}
                 buttonType="submit"
                 buttonText="Submit Order"
                 disabled={!areRequiredFieldsFilled}

@@ -6,6 +6,11 @@ import cardImage from '../../../Assets/CardImages/cardItem1.jpg';
 const QuickAddCard = ({ onClose }) => {
     const [selectedColor, setSelectedColor] = useState(null); // State for selected color
 
+    const addToCartBtn = () => {
+        onClose();
+    };
+
+
     const colors = ['#FF5733', '#C70039', '#900C3F']; // Fixed color array
 
     const handleClickInside = (event) => {
@@ -57,7 +62,7 @@ const QuickAddCard = ({ onClose }) => {
                 </div>
             </section>
             <div className={style.quickAddCardButton}>
-                <button>Add to cart</button>
+                <button onClick={addToCartBtn}>Add to cart</button>
                 <button>Buy it now</button>
             </div>
         </main>

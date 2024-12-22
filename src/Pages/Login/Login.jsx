@@ -1,9 +1,19 @@
 import React from 'react';
 import style from './Login.module.css';
 
+import { useNavigate } from "react-router-dom";
+
 import { TextBox, GoogleButton, BigButton, AuthenticationBanner } from '../../Components/ReusableComponents/ReusableComponents';
 
 const Login = () => {
+
+
+    const navigate = useNavigate();
+
+    const loginBtn = () => {
+        navigate("/");
+    };
+    
     return (
         <>
             <main className={style.login}>
@@ -41,7 +51,7 @@ const Login = () => {
                             </label>
                         </div>
 
-                        <BigButton buttonType='submit' buttonText='Login' />
+                        <BigButton buttonType='submit' buttonText='Login' onClick={loginBtn}/>
 
                         <p className={style.createAccount}>
                             Don’t have an account? <a href="/signup">Create one</a>
