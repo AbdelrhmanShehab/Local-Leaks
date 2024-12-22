@@ -1,7 +1,7 @@
 .ourServices {
   box-sizing: border-box;
   margin-top: 200px;
-  margin-bottom: 220px;
+  margin-bottom: 20px;
 }
 
 .ourServicesContainer {
@@ -57,8 +57,8 @@
 }
 .imageCircle {
   position: absolute;
-  width: 80rem;
-  height: 80rem;
+  width: 50rem;
+  height: 50rem;
   max-width: 500px;
   max-height: 500px;
   background: #00ff2a;
@@ -69,8 +69,130 @@
   z-index: 1;
 }
 
+@media (max-width: 1177px) {
+  .servicesImage h1{
+    font-size: 6.5vw;
+  }
+  .servicesImage img {
+    top: 70%;
+  }
+}
 @media (max-width: 1143px) {
   .servicesImage h1{
     font-size: 7vw;
+  }
+  .servicesImage img {
+    top: 65%;
+  }
+  .servicesDescription p{
+    max-width: 90%;
+  }
+}
+
+
+@media (max-width: 1000px){
+  .imageCircle {
+    width: 28rem;
+    height: 28rem;
+    top: 50%;
+    left: 50%;
+  }  
+}
+
+@media (max-width: 899px) {
+  .ourServicesContainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .servicesDescription p{
+    max-width: 100%;
+  }
+  .servicesImage {
+    margin-top: 50px;
+    margin-bottom: 300px;
+  }
+  .servicesImage h1 {
+    font-size: 90px;
+    margin-top: -120px;
+  }
+  
+  .servicesImage img {
+    max-width: 100%;
+    max-height: 450px;
+    top: 75%;
+    left: 62%;
+    transform: translate(-60%, -20%);
+  }
+}
+
+@media (max-width: 650px) {
+  .servicesImage h1 {
+    font-size: 65px;
+    margin-top: -120px;
+  }
+  .servicesImage img {
+    max-width: 70%;
+    max-height: 450px;
+    top: 75%;
+    left: 65%;
+    transform: translate(-60%, -20%);
+  }
+  .imageCircle {
+    width: 25rem;
+    height: 25rem;
+    top: 50%;
+    left: 50%;
+  } 
+}
+
+@media (max-width: 500px) {
+  .servicesImage {
+    margin-bottom: 200px;
+  }
+  .imageCircle {
+    width: 22rem;
+    height: 22rem;
+  }  
+
+  .servicesImage h1 {
+    font-size: 55px;
+  }
+  
+  .servicesImage img {
+    max-width: 60%;
+    top: 80%;
+    transform: translate(-60%, -25%);
+  }
+}
+
+@media (max-width: 420px){
+  .imageCircle {
+    width: 20rem;
+    height: 20rem;
+  }  
+
+  .servicesImage h1 {
+    font-size: 50px;
+  }
+  
+  .servicesImage img {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 350px){
+  .servicesImage {
+    margin-top: 20px;
+    margin-bottom: 120px;
+  }
+  .imageCircle {
+    width: 17rem;
+    height: 17rem;
+  }  
+
+  .servicesImage h1 {
+    font-size: 40px;
+    margin-top: -100px;
   }
 }

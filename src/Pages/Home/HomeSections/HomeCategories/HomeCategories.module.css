@@ -132,23 +132,34 @@
     flex-direction: column;
     height: auto;
     gap: 10px;
+    width: 100%;
   }
   .leftContainer,
   .midContainer,
   .rightContainer {
     gap: 10px;
+    width: 100%;
   }
 
   .leftContainer img,
   .midContainer img,
-  .rightContainer img {
-    height: 100px;
+  .rightContainer img,
+  .encryptedStyle {
+    height: 150px;
   }
   .midContainer h1 {
     font-size: 20px;
+    margin-top: 20px;
+    line-height: 45px;
   }
   .midContainer h2 {
     top: auto;
     right: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .midContainer h1 {
+    line-height: 25px;
   }
 }

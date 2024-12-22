@@ -15,6 +15,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 0;
 }
 
@@ -26,6 +27,7 @@
   text-align: center;
   position: relative;
   padding: 0 10px;
+  min-width: 150px;
 }
 
 .brands:not(:last-child)::after {
@@ -55,13 +57,18 @@
   text-align: center;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 899px) {
   .brands {
     flex: 1;
     padding: 0 5px;
+    margin-bottom: 40px;
   }
 
   .brands:not(:last-child)::after {
     font-size: 16px;
+  }
+
+  .brands:last-child{
+    margin-bottom: 0px;
   }
 }
