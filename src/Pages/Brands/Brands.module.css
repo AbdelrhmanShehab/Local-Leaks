@@ -31,6 +31,7 @@
 }
 
 .brandCard {
+  position: relative;
   width: 284px;
   height: 240px;
   background-color: var(--mainColor);
@@ -38,9 +39,48 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .brandCard img {
-  width: 75%;
+  width: 65%;
+  transition: all 0.3s ease;
+}
+.productsNumBrand {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.brandCard:hover p {
+  display: flex;
+  bottom: 30px;
+  font-size: 18px;
+  animation: textHover 0.8s ease forwards; /* Custom hover animation */
+  letter-spacing: 3px;
+}
+.brandCard:hover img {
+  width: 80%;
+  margin-bottom: 50px;
+  animation: textHover 0.8s ease forwards; /* Custom hover animation */
+}
+@keyframes textHover {
+  0% {
+    letter-spacing: 3px;
+    color: #000;
+    bottom: 0px;
+  }
+  50% {
+    letter-spacing: 6px;
+    color: #fff;
+  }
+  100% {
+    letter-spacing: 3px;
+    color: #000; /* Final color */
+    bottom: 20px;
+    font-weight: 800;
+  }
 }
 .brandsThreeCards {
   margin-left: 25%;
@@ -75,7 +115,7 @@
   transform: translate(-50%);
 }
 .brandNum span {
-    font-weight: 600;
-    color: var(--mainColor);
+  font-weight: 600;
+  color: var(--mainColor);
   font-size: 3.2rem;
 }

@@ -1,3 +1,4 @@
-.twoSectionsFlx{
-    display: flex;
+.twoSectionsFlex {
+  display: flex;
+  gap: 120px;
 }

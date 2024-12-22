@@ -67,6 +67,7 @@ const Brands = () => {
                 alt={brand.alt}
                 className={style.brandImage}
               />
+              <p className={style.productsNumBrand}>1300 Products</p>
             </article>
           ))}
         </div>
