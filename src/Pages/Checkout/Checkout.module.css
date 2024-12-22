@@ -173,7 +173,7 @@
     line-height: 32.14px;
     text-align: left;
     margin-bottom: 12px;
-    width: min-content;
+    width: max-content;
 }
 
 .saveAndProceedBtn{

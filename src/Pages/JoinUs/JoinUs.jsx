@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import style from './JoinUs.module.css';
 
+import { useNavigate } from "react-router-dom";
+
 import { TextBox, BigButton, DropdownInput } from '../../Components/ReusableComponents/ReusableComponents';
 
 const JoinUs = () => {
@@ -23,6 +25,12 @@ const JoinUs = () => {
         selectedTargetAudience !== "none" &&
         selectedWebsite !== "none" &&
         selectedIntake !== "none";
+    
+    const navigate = useNavigate();
+
+    const submitBtn = () => {
+        navigate("/");
+    };
 
     return (
         <>
@@ -111,6 +119,7 @@ const JoinUs = () => {
                 />
 
                 <BigButton
+                    onClick={submitBtn}
                     buttonType="submit"
                     buttonText="Submit"
                     disabled={!isFormValid} // Disable the button if the form is invalid

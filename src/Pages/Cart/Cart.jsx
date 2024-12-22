@@ -1,13 +1,25 @@
 import React from "react";
-import Footer from "../../Components/Footer/Footer";
-import Header from "../../Components/Header/Header";
 import firstProduct from "../../Assets/CardImages/cardItem1.jpg";
 import secondProduct from "../../Assets/CardImages/cardItem2.png";
 import cardBasket from "../../Assets/basketCart.svg";
 
+import { useNavigate } from "react-router-dom";
+
 import style from "./Cart.module.css";
 
 const Cart = () => {
+
+  const navigate = useNavigate();
+
+  const checkoutBtn = () => {
+      navigate("/checkout");
+  };
+
+  const continueShippingBtn = () => {
+      navigate("/items");
+  };
+
+
   return (
     <div className={style.cart}>
       <h1 className={style.cartHeader}>Your Cart</h1>
@@ -83,8 +95,16 @@ const Cart = () => {
                 Shipping: <span>to be calculated</span>
               </p>
             </div>
-            <button className={style.checkoutButton}>Go to checkout</button>
-            <button className={style.continueShopping}>
+            <button
+              onClick={checkoutBtn}
+              className={style.checkoutButton}
+            >
+              Go to checkout
+            </button>
+            <button
+              onClick={continueShippingBtn}
+              className={style.continueShopping}
+            >
               Continue shopping
             </button>
           </div>

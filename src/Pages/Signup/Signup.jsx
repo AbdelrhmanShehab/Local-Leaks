@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import style from "./Signup.module.css";
 
+import { useNavigate } from "react-router-dom";
+
 import {
   TextBox,
   GoogleButton,
@@ -62,6 +64,14 @@ const Signup = () => {
     selectedDay &&
     selectedMonth &&
     selectedYear;
+  
+  
+  const navigate = useNavigate();
+
+  const submitBtn = () => {
+    navigate("/");
+  };
+
 
   return (
     <>
@@ -160,10 +170,11 @@ const Signup = () => {
             onChange={(selected) => handleSelectionChange(selected, "style")}
           />
 
-          <BigButton
-            buttonType="submit"
-            buttonText="Submit"
-            disabled={!isFormValid} // Pass the disabled prop based on form validity
+            <BigButton
+              onClick={submitBtn}
+              buttonType="submit"
+              buttonText="Submit"
+              disabled={!isFormValid} // Pass the disabled prop based on form validity
           />
         </div>
       )}
