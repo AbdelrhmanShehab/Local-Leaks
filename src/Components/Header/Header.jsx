@@ -17,6 +17,18 @@ const Header = ({ showSideBar }) => {
     navigate("/");
   };
 
+  const favoritesBtn = () => {
+    navigate("/favorites");
+  };
+
+  const profileBtn = () => {
+    navigate("/my-profile");
+  };
+
+  const cartBtn = () => {
+    navigate("/cart");
+  };
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 900);
@@ -46,32 +58,16 @@ const Header = ({ showSideBar }) => {
       {!isMobile && (
         <nav className={style.navBar}>
           <ul>
-            <li
-              className={location.pathname === "/" ? style.navTagsSelected : ""}
-            >
+            <li className={location.pathname === "/" ? style.navTagsSelected : ""} >
               <Link to="/">Home</Link>
             </li>
-            <li
-              className={
-                location.pathname === "/deals" ? style.navTagsSelected : ""
-              }
-            >
-              <Link to="/deals">All Clothing</Link>
+            <li className={location.pathname === "/items" ? style.navTagsSelected : ""} >
+              <Link to="/items">All Clothing</Link>
             </li>
-            <li
-              className={
-                location.pathname === "/categories" ? style.navTagsSelected : ""
-              }
-            >
-              <Link to="/categories">New Arrivals</Link>
+            <li className={ location.pathname === "/brands" ? style.navTagsSelected : "" }>
+              <Link to="/brands">Brands</Link>
             </li>
-            <li
-              className={
-                location.pathname === "/new-arrivals"
-                  ? style.navTagsSelected
-                  : ""
-              }
-            >
+            <li className={ location.pathname === "/shop" ? style.navTagsSelected : ""} >
               <button onClick={showSideBar}>
                 Shop
                 <svg
@@ -95,9 +91,9 @@ const Header = ({ showSideBar }) => {
 
       {!isMobile && (
         <div className={style.iconBar}>
-          <img src={favIcon} alt="" />
-          <img src={userIcon} alt="" />
-          <img src={cartIcon} alt="" />
+          <img src={favIcon} alt="" onClick={favoritesBtn} />
+          <img src={userIcon} alt="" onClick={profileBtn}/>
+          <img src={cartIcon} alt="" onClick={cartBtn}/>
         </div>
       )}
 
@@ -114,35 +110,16 @@ const Header = ({ showSideBar }) => {
           <div className={style.mobileNavTags}>
             <ul>
               <li
-                className={
-                  location.pathname === "/" ? style.navTagsSelected : ""
-                }
-              >
+                className={ location.pathname === "/" ? style.navTagsSelected : "" } >
                 <Link to="/">Home</Link>
               </li>
-              <li
-                className={
-                  location.pathname === "/items" ? style.navTagsSelected : ""
-                }
-              >
+              <li className={ location.pathname === "/items" ? style.navTagsSelected : "" } >
                 <Link to="/items">All Clothing</Link>
               </li>
-              <li
-                className={
-                  location.pathname === "/categories"
-                    ? style.navTagsSelected
-                    : ""
-                }
-              >
+              <li className={ location.pathname === "/categories" ? style.navTagsSelected : "" } >
                 <Link to="/categories">New Arrivals</Link>
               </li>
-              <li
-                className={
-                  location.pathname === "/new-arrivals"
-                    ? style.navTagsSelected
-                    : ""
-                }
-              >
+              <li className={ location.pathname === "/new-arrivals" ? style.navTagsSelected : "" } >
                 <button onClick={showSideBar}>
                   Shop
                   <svg
@@ -169,7 +146,7 @@ const Header = ({ showSideBar }) => {
             <Link to="/my-profile">
               <img src={userIcon} alt="profile" />
             </Link>
-            <Link to="/favorites">
+            <Link to="/cart">
               <img src={cartIcon} alt="your cart" />
             </Link>
           </div>

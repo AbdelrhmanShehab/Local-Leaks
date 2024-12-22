@@ -15,6 +15,12 @@ const SideBarNav = ({ isOpen, toggleSidebar }) => {
     navigate("/");
   };
 
+  const goToItemsPageBtn = () => {
+    navigate("/items");
+    resetFilters();
+    toggleSidebar();
+  };
+
   const resetFilters = () => {
     setSelectedFilter(null);
     setSelectedMoreFilter(null);
@@ -59,7 +65,7 @@ const SideBarNav = ({ isOpen, toggleSidebar }) => {
             <ul className={style.filterMoreAndMore}>
               {filterMoreAndMoreOptions.tops.map((item, index) => (
                 <li key={index}>
-                  <button>{item}</button>
+                  <button onClick={goToItemsPageBtn}>{item}</button>
                 </li>
               ))}
             </ul>
@@ -74,7 +80,7 @@ const SideBarNav = ({ isOpen, toggleSidebar }) => {
             <ul className={style.filterMoreAndMore}>
               {filterMoreAndMoreOptions.bottoms.map((item, index) => (
                 <li key={index}>
-                  <button>{item}</button>
+                  <button onClick={goToItemsPageBtn}>{item}</button>
                 </li>
               ))}
             </ul>
