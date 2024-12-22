@@ -127,7 +127,7 @@ const SideBarNav = ({ isOpen, toggleSidebar }) => {
       <ul className={style.SideBarMenu}>
         <h3>Shop by:</h3>
         <li>
-          <Link to="/item">All Clothing</Link>
+          <Link to="/items">All Clothing</Link>
         </li>
         <li>
           <Link to="/brands">Our Brands</Link>

@@ -64,10 +64,10 @@
   display: flex;
   gap: 20px;
 }
-
 .iconBar img{
   width: 30px;
   height: 25px;
+  cursor: pointer;
 }
 
 

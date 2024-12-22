@@ -9,7 +9,7 @@ const filterOptions = [
     options: [
       { value: "for woman", label: "For Woman" },
       { value: "for men", label: "For Men" },
-      { value: "for childern", label: "For Childern" },
+      { value: "for childern", label: "For Both" },
     ],
   },
   {
@@ -200,25 +200,6 @@ const Items = () => {
   };
 
 
-  // Sort cardsData based on selected filter
-  // const sortedCardsData = [...originalCardsData].sort((a, b) => {
-  //   // [...originalCardsData] spreed operator => Shallow Copy
-  //   const priceA = parseInt(a.price.replace("EGP ", ""), 10);
-  //   // replace("EGP ", ""): Removes the "EGP " prefix from the string, leaving just the numeric portion (e.g., "750").
-  //   const priceB = parseInt(b.price.replace("EGP ", ""), 10);
-  //   // parseInt(..., 10): Converts the string into an integer.
-  //   // The second argument(10) ensures that the number is interpreted in base 10.
-
-  //   if (selectedSort === "high-to-low") {
-  //     return priceB - priceA; // Sort descending
-  //   }
-  //   if (selectedSort === "low-to-high") {
-  //     return priceA - priceB; // Sort ascending
-  //   }
-  //   return 0; // Keep the original order
-  // });
-
-
   // Function to handle both the style filter and price sort
   const filteredAndSortedCardsData = [...originalCardsData]
   .filter((card) => {
@@ -240,18 +221,7 @@ const Items = () => {
     return 0; // Keep the original order
   });
 
-
-  // // Filter cards based on selected styles
-  // useEffect(() => {
-  //     if (selectedStyles.length === 0) {
-  //         setFilteredCards(originalCardsData); // If no style is selected, show all items
-  //     } else {
-  //         setFilteredCards(originalCardsData.filter(card =>
-  //             selectedStyles.includes(card.style) // Filter items by style
-  //         ));
-  //     }
-  // }, [selectedStyles]);
-
+  
   return (
     <>
       <main className={style.items}>
