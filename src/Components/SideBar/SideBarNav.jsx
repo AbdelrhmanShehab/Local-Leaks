@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import style from "./SideBarNav.module.css";
 import logo from "../../Assets/logo.png";
 import shieldCheck from "../../Assets/shieldFilter.svg";
 
-function SideBarNav({ isOpen, toggleSidebar }) {
+const SideBarNav = ({ isOpen, toggleSidebar }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -15,15 +15,44 @@ function SideBarNav({ isOpen, toggleSidebar }) {
     navigate("/");
   };
 
+  const resetFilters = () => {
+    setSelectedFilter(null);
+    setSelectedMoreFilter(null);
+  };
+
+  const enhancedToggleSidebar = () => {
+    if (isOpen) {
+      // If sidebar is open, close it and reset filters
+      resetFilters();
+    }
+    toggleSidebar(); // Toggle the sidebar state
+  };
+
+  // Reset filters when the sidebar closes
+  useEffect(() => {
+    if (!isOpen) {
+      resetFilters();
+    }
+  }, [isOpen]);
+
+  const handleFilterClick = (filter) => {
+    setSelectedFilter((prevFilter) => (prevFilter === filter ? null : filter));
+    setSelectedMoreFilter(null); // Reset child filters when switching main filters
+  };
+
+  const handleChildFilterClick = (filter) => {
+    setSelectedMoreFilter((prevFilter) => (prevFilter === filter ? null : filter));
+  };
+
   const filterMoreAndMoreOptions = {
     tops: ["Shirts", "Jackets", "Sweatshirts", "Sweaters"],
     bottoms: ["Pants", "Shorts", "Skirts", "Jeans"],
   };
 
-  const filterMore = (
+  const renderFilterMore = (
     <ul className={style.filterMore}>
       <li>
-        <button onClick={() => setSelectedMoreFilter("tops")}>Upper</button>
+        <button onClick={() => handleChildFilterClick("tops")}>Upper</button>
         {selectedMoreFilter === "tops" && (
           <>
             <img src={shieldCheck} alt="Selected" />
@@ -38,9 +67,7 @@ function SideBarNav({ isOpen, toggleSidebar }) {
         )}
       </li>
       <li>
-        <button onClick={() => setSelectedMoreFilter("bottoms")}>
-          Bottoms
-        </button>
+        <button onClick={() => handleChildFilterClick("bottoms")}>Bottoms</button>
         {selectedMoreFilter === "bottoms" && (
           <>
             <img src={shieldCheck} alt="Selected" />
@@ -71,7 +98,7 @@ function SideBarNav({ isOpen, toggleSidebar }) {
           alt="Local Leaks"
           onClick={logoBtn}
         />
-        <button className={style.closeButton} onClick={toggleSidebar}>
+        <button className={style.closeButton} onClick={enhancedToggleSidebar}>
           ✕
         </button>
       </div>
@@ -79,32 +106,20 @@ function SideBarNav({ isOpen, toggleSidebar }) {
       <ul className={style.SideBarMenuCat}>
         <h3>Shop for:</h3>
         <li>
-          <button
-            onClick={() =>
-              setSelectedFilter(selectedFilter === "men" ? null : "men")
-            }
-          >
-            Men
-          </button>
+          <button onClick={() => handleFilterClick("men")}>Men</button>
           {selectedFilter === "men" && (
             <>
               <img src={shieldCheck} alt="Selected" />
-              {filterMore}
+              {renderFilterMore}
             </>
           )}
         </li>
         <li>
-          <button
-            onClick={() =>
-              setSelectedFilter(selectedFilter === "women" ? null : "women")
-            }
-          >
-            Women
-          </button>
+          <button onClick={() => handleFilterClick("women")}>Women</button>
           {selectedFilter === "women" && (
             <>
               <img src={shieldCheck} alt="Selected" />
-              {filterMore}
+              {renderFilterMore}
             </>
           )}
         </li>
@@ -123,6 +138,6 @@ function SideBarNav({ isOpen, toggleSidebar }) {
       </ul>
     </div>
   );
-}
+};
 
 export default SideBarNav;
