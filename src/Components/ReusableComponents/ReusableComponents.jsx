@@ -21,8 +21,16 @@ export const BigButton = ({ buttonType, buttonText, disabled }) => {
 export const Checkbox = ({ id, label, checked, onChange }) => {
   return (
     <li className={style.checkBox}>
-      <input type="checkbox" id={id} checked={checked} onChange={onChange} />
-      <label htmlFor={id}>{label}</label>
+      <input
+        type="checkbox"
+        id={id}
+        checked={checked}
+        onChange={onChange}
+        className={style.checkbox}
+      />
+      <label htmlFor={id} className={checked ? style.checkedLabel : ""}>
+        {label}
+      </label>
     </li>
   );
 };
@@ -33,6 +41,8 @@ export const TextBox = ({
   inputType,
   inputPlaceholder,
   forgetPassword,
+  onChange,
+  value,
 }) => {
   return (
     <div>
@@ -48,6 +58,8 @@ export const TextBox = ({
         id={inputType}
         placeholder={inputPlaceholder}
         className={style.textBoxInputField}
+        value={value}
+        onChange={onChange}
         required
       />
     </div>
@@ -154,7 +166,9 @@ export const DropdownInput = ({
 }) => {
   return (
     <div className={style.dropdownGroup}>
-      {inputLabel && <label className={style.dropdownInput}>{inputLabel}</label>}
+      {inputLabel && (
+        <label className={style.dropdownInput}>{inputLabel}</label>
+      )}
       <select
         className={style.dropdownSelectBox}
         onChange={onChange}

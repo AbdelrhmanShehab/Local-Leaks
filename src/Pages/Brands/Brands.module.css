@@ -1,0 +1,121 @@
+.brandsMain {
+  margin-top: 70px;
+  margin-bottom: 200px;
+  color: white;
+}
+.brandsMain h1 {
+  line-height: 150%;
+  font-weight: 400;
+  font-size: 2.9rem;
+  letter-spacing: 4px;
+  margin-bottom: 80px;
+}
+
+.egyptProudTxt,
+.shopByTxt {
+  font-size: 1.2rem;
+  font-weight: 100;
+  line-height: 150%;
+  position: absolute;
+}
+.egyptProudTxt {
+  left: 92%;
+}
+
+.smallerContainer span {
+  color: transparent;
+}
+
+.flexSloganAndEgyptBrands {
+  display: flex;
+}
+
+.brandCard {
+  position: relative;
+  width: 284px;
+  height: 240px;
+  background-color: var(--mainColor);
+  border-radius: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.brandCard img {
+  width: 65%;
+  transition: all 0.3s ease;
+}
+.productsNumBrand {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.brandCard:hover p {
+  display: flex;
+  bottom: 30px;
+  font-size: 18px;
+  animation: textHover 0.8s ease forwards; /* Custom hover animation */
+  letter-spacing: 3px;
+}
+.brandCard:hover img {
+  width: 80%;
+  margin-bottom: 50px;
+  animation: textHover 0.8s ease forwards; /* Custom hover animation */
+}
+@keyframes textHover {
+  0% {
+    letter-spacing: 3px;
+    color: #000;
+    bottom: 0px;
+  }
+  50% {
+    letter-spacing: 6px;
+    color: #fff;
+  }
+  100% {
+    letter-spacing: 3px;
+    color: #000; /* Final color */
+    bottom: 20px;
+    font-weight: 800;
+  }
+}
+.brandsThreeCards {
+  margin-left: 25%;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+.brandsAllCards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.smallerContainer {
+  /* to set all elements in the center verticlly */
+  margin-right: auto;
+  margin-left: auto;
+  /* set the width for the container */
+  /* width: calc( 100% - 200px );  */
+  width: 87%;
+  position: relative;
+}
+
+.brandNum {
+  font-size: 2rem;
+  font-weight: 300;
+  position: absolute;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  left: 50%;
+  letter-spacing: 3px;
+  transform: translate(-50%);
+}
+.brandNum span {
+  font-weight: 600;
+  color: var(--mainColor);
+  font-size: 3.2rem;
+}

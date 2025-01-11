@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import style from "./Signup.module.css";
 
-import Header from "../../Components/Header/Header";
-import Footer from "../../Components/Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 import {
   TextBox,
@@ -65,10 +64,17 @@ const Signup = () => {
     selectedDay &&
     selectedMonth &&
     selectedYear;
+  
+  
+  const navigate = useNavigate();
+
+  const submitBtn = () => {
+    navigate("/");
+  };
+
 
   return (
     <>
-      <Header />
       {!showMoreInfo ? (
         <main className={style.signup}>
           {/* Left Section */}
@@ -108,7 +114,7 @@ const Signup = () => {
 
               <div className={style.options}>
                 <label>
-                  <input type="checkbox" className={style.checkbox}/>
+                  <input type="checkbox" className={style.checkbox} />
                   <span> Keep me signed in</span>
                 </label>
               </div>
@@ -164,14 +170,14 @@ const Signup = () => {
             onChange={(selected) => handleSelectionChange(selected, "style")}
           />
 
-          <BigButton
-            buttonType="submit"
-            buttonText="Submit"
-            disabled={!isFormValid} // Pass the disabled prop based on form validity
+            <BigButton
+              onClick={submitBtn}
+              buttonType="submit"
+              buttonText="Submit"
+              disabled={!isFormValid} // Pass the disabled prop based on form validity
           />
         </div>
       )}
-      <Footer />
     </>
   );
 };

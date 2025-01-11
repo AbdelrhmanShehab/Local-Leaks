@@ -1,0 +1,12 @@
+.userReviewCard {
+  padding: 100px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2), 0 8px 20px rgba(0, 0, 0, 0.3); /* shadow effect */
+  color: white;
+}
+.userCardContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

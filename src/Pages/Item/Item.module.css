@@ -1,95 +1,228 @@
+.productDetsAndImages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 120px;
+}
 .mainSideImage {
-    display: flex;
-    gap: 40px;
-    height: 94vh;
-  }
-  .productDisplay {
-    height: 100%;
-    max-height: 922px;
-  }
-  .imageGallery {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .imageSide {
-    height: 22vh;
-    width: 130px;
-  }
-  
-  /* styling for product details */
-  
-  .productDetails h1 {
-    color: white;
-  }
-  .productBrand,
-  .productModel,
-  .brandModelText p {
-    color: gray;
-  }
-  
-  .productModel a,
-  .productBrand a {
-    text-decoration: none;
-    color: var(--mainColor);
-  }
-  .brandModelText {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .productRatings {
-    display: flex;
-    gap: 3px;
-  }
-  
-  .productColors p {
-    color: white;
-    font-size: 1.4rem;
-  }
-  .productColors span {
-    color: var(--mainColor);
-  }
-  
-  .colorItem {
-    height: 50px;
-    border: none;
-    border-radius: 50px;
-    width: 50px;
-  }
-  
-  .itemColorsPallete {
-    display: flex;
-    gap: 7px;
-  }
-  /* size choosing */
-  .sizeOptions {
-    display: flex;
-    gap: 10px;
-  }
-  .sizebutton {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    border: 1px gray solid;
-    color: gray;
-    background-color: transparent;
-  }
-  
-  .priceAndBasketContainer {
-    width: 400px;
-    height: 80px;
-    display: flex;
-    gap: 80px;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 18px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 12px; /* rounded corners */
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2), 0 8px 20px rgba(0, 0, 0, 0.3); /* shadow effect */
-    transition: all 0.3s ease-in-out; /* smooth transition on hover */
-  }
+  display: flex;
+  gap: 40px;
+  height: 94vh;
+}
+.productDisplay {
+  height: 100%;
+  max-height: 922px;
+}
+.imageGallery {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.imageSide {
+  height: 22vh;
+  width: 130px;
+}
+
+/* styling for product details */
+
+.productDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.productDetails h1 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 10px;
+}
+.brandModelText {
+  display: flex;
+  gap: 5px;
+}
+.productBrand,
+.productModel,
+.brandModelText p {
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  font-weight: 200;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.productModel a,
+.productBrand a {
+  text-decoration: none;
+  color: var(--mainColor);
+}
+
+.productRatings {
+  display: flex;
+  gap: 3px;
+}
+
+.productColors p {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+.productColors span {
+  color: var(--mainColor);
+}
+
+.colorItem {
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  width: 50px;
+}
+
+.itemColorsPallete {
+  display: flex;
+  gap: 7px;
+  margin-top: 15px;
+}
+/* size choosing */
+.sizeOptions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.sizeQtybutton {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: 1px gray solid;
+  color: gray;
+  background-color: transparent;
+  font-weight: 400;
+}
+.qtyBtns button {
+  font-size: 1rem;
+}
+.qtySelector {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.qtySelector span {
+  color: white;
+  font-size: 0.8rem;
+}
+.priceAndBasketContainer {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  gap: 30%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px; /* rounded corners */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2), 0 8px 20px rgba(0, 0, 0, 0.3); /* shadow effect */
+  transition: all 0.3s ease-in-out; /* smooth transition on hover */
+}
+
+.buyThisAndFQAs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+}
+
+.FQAsContainer {
+  width: 45%;
+  height: fit-content;
+  margin-top: 80px;
+}
+.cardContainer {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  align-items: center;
+}
+.suggestOutfit {
+  height: fit-content;
+  width: 60%;
+  color: white;
+}
+
+.mayLikeCards {
+  display: flex;
+  gap: 25px;
+}
+.mayLikeSection {
+  margin-top: 50px;
+  color: white;
+}
+
+.productInsights {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 150px;
+  margin-top: 150px;
+}
+.productInsights h2,
+.insightGroupMiddle h2 {
+  color: var(--mainColor);
+  font-size: 24px;
+}
+.productInsights p,
+.insightGroupMiddle p {
+  color: white;
+  font-size: 18px;
+}
+
+.insightGroup,
+.insightGroupMiddle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.insightGroupMiddle {
+  margin-bottom: 80px;
+}
+
+.cardsReview {
+  display: flex;
+  gap: 70px;
+  justify-content: space-around;
+}
+.userReviewsSection {
+  margin-bottom: 200px;
+}
+
+.userReviewsSection h1 {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #00ff2a, #f55151);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.reviewHeadingDesc {
+  margin-bottom: 50px;
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.reviewHeadingDesc h1 {
+  font-family: "Hachi Maru Pop", cursive;
+  font-size: 40px;
+}
+.reviewHeadingDesc p {
+  color: rgb(183, 183, 183);
+}
+
+.itemPage h2{
+  margin-bottom: 80px
+}

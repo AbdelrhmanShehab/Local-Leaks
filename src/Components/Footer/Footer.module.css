@@ -3,6 +3,7 @@
   text-align: left;
   color: white;
   margin-bottom: 40px;
+  margin-top: 300px;
 }
 
 .footerContainer {
@@ -17,7 +18,9 @@
 .footerLogo {
   flex: 1;
 }
-
+.footerLogo p{
+  line-height: 30px;
+}
 .logo {
   width: 150px;
   margin-bottom: 25px;
@@ -25,6 +28,7 @@
 
 .footerLinks {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
   flex: 2;
   justify-content: space-between;
@@ -52,11 +56,10 @@
   color: #00ff00;
 }
 
-
 .footerLine {
   border: 0.5px solid #fff;
   margin: 20px 0;
-  width:100%;
+  width: 100%;
 }
 
 .footerBottom {
@@ -75,4 +78,9 @@
 
 .socialIcons a:hover {
   color: #00ff00;
+}
+@media (max-width: 500px) {
+  .footerContainer{
+    flex-direction: column;
+  }
 }

@@ -17,7 +17,6 @@ const Favourits = () => {
 
     return (
         <>
-            <Header />
             <main className={style.favoritesContainer}>
                 <header className={style.favoritesHeader}>
                     <h1>Loved By you</h1>
@@ -39,7 +38,6 @@ const Favourits = () => {
                     )}
                 </section>
             </main>
-            <Footer />
         </>
     );
 };

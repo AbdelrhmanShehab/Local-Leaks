@@ -1,0 +1,42 @@
+.AccountSettingsSection {
+  margin-top: 40px;
+  display: flex;
+  gap: 120px;
+}
+.AccountSettingsSection h2 {
+  color: var(--secondryGray);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+.headerSettings {
+  background-color: black;
+  display: flex;
+}
+
+.headerSettingsNav {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.headerAccountSettings {
+  color: var(--secondryGray);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  font-weight: 200;
+  padding-bottom: 5px;
+}
+
+.accountSettingsActive {
+  color: var(--mainColor);
+  border-bottom: 2px solid #00ff00;
+  width: fit-content;
+}
+
+.lineBesideAccountSettings {
+  width: 0.5px;
+  height: 300px;
+  background-color: rgb(153, 153, 153, 0.3);
+}

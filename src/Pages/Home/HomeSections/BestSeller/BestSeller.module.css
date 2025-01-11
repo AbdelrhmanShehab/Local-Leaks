@@ -1,6 +1,7 @@
 .bestSeller {
   padding: 30px 0px;
   margin-top: 20px;
+  margin-bottom: 80px;
 }
 
 .bestSeller h1 {
@@ -69,7 +70,11 @@
   padding: 4px 8px;
   gap: 10px;
   opacity: 0px;
-  background: linear-gradient(271.15deg,rgba(0, 255, 42, 0.7) 7.64%,#1b8926 90.68%);
+  background: linear-gradient(
+    271.15deg,
+    rgba(0, 255, 42, 0.7) 7.64%,
+    #1b8926 90.68%
+  );
   border-radius: 3px;
   font-size: 20px;
   color: #000000;

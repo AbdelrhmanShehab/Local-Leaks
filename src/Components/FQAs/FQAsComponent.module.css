@@ -1,0 +1,90 @@
+
+.flexQuestions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+.questionWidth {
+  height: min-content;
+  display: flex;
+  position: relative;
+}
+.numQuestionFlex {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.freq-title-button-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.questionNum {
+  width: 8%;
+  min-width: 50px;
+  height: 54px;
+  font-size: 16px;
+  background-color: var(--borderColor);
+  border-radius: 6px;
+  border: 1px solid #262626;
+  color: white;
+  display: flex;
+  margin-top: -15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.questionContent,
+.questionContentHidden {
+  color: white;
+  font-weight: 400;
+  width: fit-content;
+  font-size: 20px;
+}
+
+.questionContentHidden {
+  margin-top: 14px;
+}
+
+.answer {
+  color: rgb(144, 144, 144);
+  margin-top: 14px;
+  width: 70%;
+  line-height: 140%;
+  font-size: 16px;
+}
+
+.question,
+.questionHidden {
+  position: relative;
+  color: white;
+  display: flex;
+  margin-bottom: 24px;
+  gap: 16px;
+  width: 50%;
+}
+
+.minusIcon,
+.plusIcon {
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+}
+
+.lineBetweenQuestions {
+  width: 620px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 255, 42, 0.10),
+    #1b8926,
+    rgba(0, 255, 42, 0.65),
+    rgba(0, 255, 42, 0.45),
+    rgba(0, 255, 42, 0.25),
+    rgba(0, 255, 42, 0.1)
+  );
+  border-radius: 10px;
+  margin-bottom: 50px;
+}

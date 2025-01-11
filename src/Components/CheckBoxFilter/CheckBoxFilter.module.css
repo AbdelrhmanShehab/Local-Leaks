@@ -1,50 +1,100 @@
 .checkBoxFilter {
-    width: 100%;
-    transition: all 0.3s ease;
-    position: relative;
+  width: 100%;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .checkBoxFilter::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, rgba(229, 0, 0, 0) 0%, #00FF2A 16.67%, rgba(0, 255, 42, 0.1) 100%);
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  margin-top: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(229, 0, 0, 0) 0%,
+    #00ff2a 16.67%,
+    rgba(0, 255, 42, 0.1) 100%
+  );
 }
 
-.checkBoxFilterHeader{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 8px auto;
+.checkBoxFilterHeader {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.checkBoxFilterHeader:not(:first-child) {
 }
 
 /* Sort By and Filter By Header */
-.checkBoxFilterHeader h3{
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 30px;
-    text-align: left;
+.checkBoxFilterHeader h3 {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
 }
 
 .checkBoxFilterHeader button {
-    background: none;
-    border: none;
-    cursor: pointer;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 /* CheckBoxs */
 
-
 .checkBoxOptions {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0px 15px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0px 15px;
+}
+/* ReusableComponents.module.css */
+
+/* Style for checkbox wrapper */
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+/* Style for checkbox itself */
+.checkboxWrapper input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* When the checkbox is checked, apply different styles */
+.checkboxWrapper input[type="checkbox"]:checked {
+  background-color: #3f51b5; /* Change to your desired color */
+  border-color: #3f51b5;
+}
+
+/* Style when label is checked (text color change) */
+.checkboxWrapper input[type="checkbox"]:checked + label {
+  color: #3f51b5; /* Change label color when checked */
+}
+
+/* Additional style for the label */
+.checkboxWrapper label {
+  font-size: 14px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* Optional: For the checked label */
+.checkedLabel {
+  color: #3f51b5; /* Change to your desired color when checked */
 }

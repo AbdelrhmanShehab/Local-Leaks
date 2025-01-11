@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Footer from '../../Components/Footer/Footer';
-import Header from '../../Components/Header/Header';
 import style from './JoinUs.module.css';
+
+import { useNavigate } from "react-router-dom";
 
 import { TextBox, BigButton, DropdownInput } from '../../Components/ReusableComponents/ReusableComponents';
 
@@ -25,10 +25,15 @@ const JoinUs = () => {
         selectedTargetAudience !== "none" &&
         selectedWebsite !== "none" &&
         selectedIntake !== "none";
+    
+    const navigate = useNavigate();
+
+    const submitBtn = () => {
+        navigate("/");
+    };
 
     return (
         <>
-            <Header />
             <main className={style.joinUs}>
                 <h2 className={style.joinUsHeader}>Join as a brand</h2>
                 <p className={style.joinUsDescription}>Let your brand shine where local meets trendy.</p>
@@ -114,12 +119,12 @@ const JoinUs = () => {
                 />
 
                 <BigButton
+                    onClick={submitBtn}
                     buttonType="submit"
                     buttonText="Submit"
                     disabled={!isFormValid} // Disable the button if the form is invalid
                 />
             </main>
-            <Footer />
         </>
     );
 };

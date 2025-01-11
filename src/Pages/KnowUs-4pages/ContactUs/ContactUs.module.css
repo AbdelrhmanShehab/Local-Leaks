@@ -1,0 +1,45 @@
+.contactUsSection {
+  width: 55%;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.contactInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+.contactInfo h3{
+    font-weight: 100;
+}
+.contactUsSection a {
+  font-style: none;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  font-weight: 200;
+  gap: 15px;
+}
+
+.contactInfoSection{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.joinContactUs{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.joinContactUs h3{
+    font-weight: 400;
+}
+
+.sletterJoin{
+    display: flex;
+}

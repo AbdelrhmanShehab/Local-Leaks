@@ -1,0 +1,32 @@
+.headerSection {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.SettingsHeader {
+  text-align: left;
+  margin-bottom: 20px;
+  color: white;
+  margin-top: 40px;
+}
+
+.SettingsHeader h1 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.SettingsHeader p {
+  margin-bottom: 30px;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--secondryGray);
+}
+
+.separatorSettingsHeader {
+  position: absolute;
+  bottom: 15px;
+  width: 64rem;
+  height: 0.5px;
+  border-color: rgb(153, 153, 153, 0.3);
+}
