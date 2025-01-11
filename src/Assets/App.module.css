@@ -4,14 +4,10 @@
 body {
   background-color: #000000;
 }
-.html {
-  font-size: 10px;
+html {
+  font-size: 21px;
 }
-@media (max-width: 800px) {
-  .html{
-    font-size: 5px;
-  }
-}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -29,11 +25,11 @@ body {
   font-size: 10px;
 }
 
-.container {
+.mainContainer {
   /* to make padding works even in mobile size screens */
   padding-right: 15px;
   padding-left: 15px;
-  /* to set all elements in the center verticlly */
+  /* to set all elements in the center vertically */
   margin-right: auto;
   margin-left: auto;
   /* set the width for the container */
@@ -46,11 +42,37 @@ body {
   /* to make padding works even in mobile size screens */
   padding-right: 15px;
   padding-left: 15px;
-  /* to set all elements in the center verticlly */
+  /* to set all elements in the center vertically */
   margin-right: auto;
   margin-left: auto;
   /* set the width for the container */
   /* width: calc( 100% - 200px );  */
   width: 20%;
   position: relative;
+}
+@media (max-width: 1440px) {
+  html {
+    font-size: 18px;
+  }
+  .mainContainer {
+    width: 98%;
+  }
+}
+@media (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+  .mainContainer {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 479px) {
+  html {
+    font-size: 14px;
+  }
 }

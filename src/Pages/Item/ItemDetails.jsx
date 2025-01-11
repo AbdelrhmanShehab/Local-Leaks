@@ -151,16 +151,23 @@ function ItemDetails() {
               style={{
                 color: "white",
                 display: "flex",
-                width: "53%",
+                width: "100%",
                 justifyContent: "space-between",
               }}
             >
-              <p>Size:</p>
+              <p
+                style={{
+                  fontSize: "0.8rem",
+                }}
+              >
+                Size:
+              </p>
               <p
                 style={{
                   color: "#00ff2a",
                   textDecoration: "underline",
                   curser: "pointer",
+                  fontSize: "0.8rem",
                 }}
               >
                 size guide
@@ -185,7 +192,7 @@ function ItemDetails() {
           </div>
 
           {/* Quantity and Price */}
-          <div className="product-purchase">
+          <div className={style.qtyBtns}>
             <div className={style.qtySelector}>
               <button className={style.sizeQtybutton} onClick={decreaseQty}>
                 -
@@ -200,7 +207,7 @@ function ItemDetails() {
           {/* Add to Basket */}
           <div className={style.priceAndBasketContainer}>
             <p className="product-price">EGP 750</p>
-            <SmallButton smallButtonLabel={"Add To Basket"} />
+            <SmallButton smallButtonLabel={"Add To Cart"} />
           </div>
         </section>
       </div>

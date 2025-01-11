@@ -12,7 +12,6 @@
   cursor: pointer;
 }
 
-
 .navBar {
   border: 1px #222222 solid;
   height: 90px;
@@ -36,11 +35,10 @@
   display: flex;
   align-items: center;
   background-color: transparent;
-  padding: 25px 22px ;
+  padding: 25px 22px;
   border-radius: 15px;
   transition: background-color 0.3s;
 }
-
 
 .navBar ul li.navTagsSelected {
   background-color: #222222;
@@ -48,7 +46,8 @@
   padding: 25px 30px;
 }
 
-.navBar ul li a, .navBar button {
+.navBar ul li a,
+.navBar button {
   background-color: transparent;
   border: none;
   text-decoration: none;
@@ -59,38 +58,35 @@
   cursor: pointer;
 }
 
-
 .iconBar {
   display: flex;
   gap: 20px;
 }
-.iconBar img{
+.iconBar img {
   width: 30px;
   height: 25px;
   cursor: pointer;
 }
 
-
-
-.mobileNav{
+.mobileNav {
   cursor: pointer;
 }
-.openIcon{
+.openIcon {
   font-size: 35px;
   color: white;
 }
 
-.closeIcon{
+.closeIcon {
   font-size: 25px;
   color: white;
 }
 
-.mobileNavBar{
+.mobileNavBar {
   align-items: center;
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 90px; 
+  top: 90px;
   right: 10px;
   background-color: black;
   padding: 20px;
@@ -100,7 +96,7 @@
   z-index: 3;
 }
 
-.mobileNavTags ul{
+.mobileNavTags ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -108,11 +104,10 @@
 
 .mobileNavTags ul li {
   margin-bottom: 20px;
-
 }
 
 .mobileNavTags ul li a,
-.mobileNavTags button{
+.mobileNavTags button {
   text-align: center;
   background-color: transparent;
   border: none;
@@ -131,23 +126,21 @@
   border-radius: 15px;
 }
 
-.mobileIconBar{
+.mobileIconBar {
   display: flex;
   /* flex-direction: column; */
   gap: 20px;
   align-items: center;
 }
 
-.mobileIconBar img{
+.mobileIconBar img {
   width: 25px;
   height: 20px;
 }
 
-
-
 @media (max-width: 1000px) {
   .navBar ul li {
-    padding: 15px 12px ;
+    padding: 15px 12px;
   }
   .navBar ul li.navTagsSelected {
     padding: 20px 25px;

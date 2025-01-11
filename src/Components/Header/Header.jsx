@@ -65,7 +65,7 @@ const Header = ({ showSideBar }) => {
               <Link to="/items">All Clothing</Link>
             </li>
             <li className={ location.pathname === "/brands" ? style.navTagsSelected : "" }>
-              <Link to="/brands">Brands</Link>
+              <Link to="/brands">Our Brands</Link>
             </li>
             <li className={ location.pathname === "/shop" ? style.navTagsSelected : ""} >
               <button onClick={showSideBar}>

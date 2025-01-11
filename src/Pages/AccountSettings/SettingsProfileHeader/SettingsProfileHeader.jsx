@@ -8,7 +8,7 @@ const SettingsProfileHeader = ({ settingsTitle, settingsDesc }) => {
         <h1 className={style.title}>{settingsTitle}</h1>
         <p className={style.subtitle}>{settingsDesc}</p>
       </header>
-      <hr className={style.separatorSettingsHeader} />
+      {/* <hr className={style.separatorSettingsHeader} /> */}
     </div>
   );
 };

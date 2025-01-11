@@ -22,7 +22,7 @@ const LifeStyleWear = [
 
 const LifestyleWear = () => {
     return (
-        <section className={style.lifeStyls}>
+        <section className={style.lifeStyle}>
             {LifeStyleWear.map((lifeStyle, index) => (
                 <article className={style.style} key={index}>
                     <div className={style.greenShadow} aria-hidden="true"></div>

@@ -11,21 +11,22 @@
 }
 
 .SettingsHeader h1 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 10px;
   font-weight: 400;
 }
 
 .SettingsHeader p {
   margin-bottom: 30px;
-  font-size: 14px;
+  font-size: 0.7rem;
+  font-weight: 400;
   color: var(--secondryGray);
 }
 
 .separatorSettingsHeader {
   position: absolute;
+  bottom: 15px;
   width: 64rem;
   height: 0.5px;
-  background-color: rgb(153, 153, 153, 0.3);
+  border-color: rgb(153, 153, 153, 0.3);
 }
-

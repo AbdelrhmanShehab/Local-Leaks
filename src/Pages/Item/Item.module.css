@@ -32,12 +32,21 @@
   gap: 50px;
 }
 .productDetails h1 {
+  font-size: 1.2rem;
+  font-weight: 400;
   color: white;
   margin-bottom: 10px;
+}
+.brandModelText {
+  display: flex;
+  gap: 5px;
 }
 .productBrand,
 .productModel,
 .brandModelText p {
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  font-weight: 200;
   color: gray;
   margin-bottom: 20px;
 }
@@ -47,10 +56,6 @@
   text-decoration: none;
   color: var(--mainColor);
 }
-.brandModelText {
-  display: flex;
-  justify-content: space-between;
-}
 
 .productRatings {
   display: flex;
@@ -59,7 +64,9 @@
 
 .productColors p {
   color: white;
-  font-size: 1.4rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
 }
 .productColors span {
   color: var(--mainColor);
@@ -92,6 +99,9 @@
   background-color: transparent;
   font-weight: 400;
 }
+.qtyBtns button {
+  font-size: 1rem;
+}
 .qtySelector {
   display: flex;
   align-items: center;
@@ -99,11 +109,8 @@
 }
 .qtySelector span {
   color: white;
+  font-size: 0.8rem;
 }
-.qtySelector button {
-  font-size: 1.6rem;
-}
-
 .priceAndBasketContainer {
   width: 100%;
   height: 80px;
@@ -131,6 +138,7 @@
 .FQAsContainer {
   width: 45%;
   height: fit-content;
+  margin-top: 80px;
 }
 .cardContainer {
   width: 75%;
@@ -213,4 +221,8 @@
 }
 .reviewHeadingDesc p {
   color: rgb(183, 183, 183);
+}
+
+.itemPage h2{
+  margin-bottom: 80px
 }

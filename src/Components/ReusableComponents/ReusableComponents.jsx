@@ -21,8 +21,16 @@ export const BigButton = ({ buttonType, buttonText, disabled }) => {
 export const Checkbox = ({ id, label, checked, onChange }) => {
   return (
     <li className={style.checkBox}>
-      <input type="checkbox" id={id} checked={checked} onChange={onChange} />
-      <label htmlFor={id}>{label}</label>
+      <input
+        type="checkbox"
+        id={id}
+        checked={checked}
+        onChange={onChange}
+        className={style.checkbox}
+      />
+      <label htmlFor={id} className={checked ? style.checkedLabel : ""}>
+        {label}
+      </label>
     </li>
   );
 };

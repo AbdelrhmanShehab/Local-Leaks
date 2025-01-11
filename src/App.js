@@ -41,7 +41,7 @@ function App() {
           <SideBarNav isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
         </div>
 
-        <main className={style.container}>
+        <main className={style.mainContainer}>
           <Header showSideBar={toggleSidebar} />
           <Suspense fallback={<h1>Loading...</h1>}>
             <Routes>

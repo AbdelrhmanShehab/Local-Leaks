@@ -55,3 +55,46 @@
   justify-content: space-between;
   gap: 0px 15px;
 }
+/* ReusableComponents.module.css */
+
+/* Style for checkbox wrapper */
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+/* Style for checkbox itself */
+.checkboxWrapper input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* When the checkbox is checked, apply different styles */
+.checkboxWrapper input[type="checkbox"]:checked {
+  background-color: #3f51b5; /* Change to your desired color */
+  border-color: #3f51b5;
+}
+
+/* Style when label is checked (text color change) */
+.checkboxWrapper input[type="checkbox"]:checked + label {
+  color: #3f51b5; /* Change label color when checked */
+}
+
+/* Additional style for the label */
+.checkboxWrapper label {
+  font-size: 14px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* Optional: For the checked label */
+.checkedLabel {
+  color: #3f51b5; /* Change to your desired color when checked */
+}

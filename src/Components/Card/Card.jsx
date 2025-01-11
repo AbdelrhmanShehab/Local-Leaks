@@ -59,7 +59,7 @@ const Card = ({ id, imgSrc, title, price, colors }) => {
 
   return (
     <div className={style.card}>
-      <div className={style.container}>
+      <div className={style.cardContainer}>
         <div className={style.imageWrapper}>
           <img src={imgSrc} alt={title} />
           <button
@@ -69,8 +69,8 @@ const Card = ({ id, imgSrc, title, price, colors }) => {
             {isFavorite ? (
               // Display the filled heart SVG when item is a favorite
               <svg
-                width="18"
-                height="32"
+                width="22"
+                height="36"
                 viewBox="0 0 29 26"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -83,8 +83,8 @@ const Card = ({ id, imgSrc, title, price, colors }) => {
             ) : (
               // Display the empty heart SVG when item is not a favorite
               <svg
-                width="18"
-                height="32"
+                width="22"
+                height="36"
                 viewBox="0 0 29 26"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

@@ -1,15 +1,14 @@
 .card {
   width: 100%;
   transition: all 0.3s ease;
+  max-height: 600px;
 }
-
-.container {
+.cardContainer {
   position: relative;
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 3rem auto;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -18,15 +17,17 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  height: 500px;
+  background-color: #f4f4f4;
   border-radius: 20px;
 }
 
 .imageWrapper img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0) scale(1);
   width: 100%;
-  /* height: auto;  */
-  height: 500px;
-  /* height: 300px; */
-  display: block;
+  height: 100%;
   border-radius: 20px;
   object-fit: cover;
   transition: transform 0.2s;
@@ -34,18 +35,21 @@
 }
 
 .imageWrapper:hover img {
-  transform: scale(1.1);
+  transform: translate(-50%, 0) scale(1.1);
   height: 500px;
   border-radius: 20px;
 }
 
 .favoriteButton {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   top: 10px;
   right: 10px;
   background: #939393;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   color: #fff;
   font-size: 20px;
@@ -147,7 +151,8 @@
 
 /* Large Laptops */
 @media (max-width: 1440px) {
-  .imageWrapper img {
+  .imageWrapper img,
+  .imageWrapper {
     height: 410px;
   }
   .imageWrapper:hover img {
@@ -157,17 +162,23 @@
 
 /* Small Laptops */
 @media (max-width: 1280px) {
-  .imageWrapper img {
+  .imageWrapper img,
+  .imageWrapper {
     height: 400px;
   }
   .imageWrapper:hover img {
     height: 400px;
   }
 }
-
+@media (max-width: 1200px) {
+  .cardContainer {
+    width: 300px;
+  }
+}
 /* Tablets */
 @media (max-width: 768px) {
-  .imageWrapper img {
+  .imageWrapper img,
+  .imageWrapper {
     height: 350px;
   }
   .imageWrapper:hover img {

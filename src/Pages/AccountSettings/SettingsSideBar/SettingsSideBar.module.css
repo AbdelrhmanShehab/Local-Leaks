@@ -5,7 +5,9 @@
 }
 .AccountSettingsSection h2 {
   color: var(--secondryGray);
-  font-size: 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 3px;
 }
 .headerSettings {
   background-color: black;
@@ -21,7 +23,8 @@
 .headerAccountSettings {
   color: var(--secondryGray);
   text-decoration: none;
-  font-size: 16px;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
   font-weight: 200;
   padding-bottom: 5px;
 }

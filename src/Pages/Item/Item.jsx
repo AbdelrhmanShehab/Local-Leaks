@@ -91,7 +91,7 @@ const Item = () => {
     },
   ];
   return (
-    <>
+    <main className={style.itemPage}>
       <ItemDetails />
       <div className={style.buyThisAndFQAs}>
         <section className={style.suggestOutfit}>
@@ -169,7 +169,7 @@ const Item = () => {
           ))}
         </div>
       </section>
-    </>
+    </main>
   );
 };
 
