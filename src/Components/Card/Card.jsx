@@ -1,58 +1,54 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import style from "./Card.module.css";
 import QuickAddCard from "./QuickAddCard/QuickAddCard";
 
-const Card = ({ id, imgSrc, title, price, colors }) => {
+const Card = ({ id, imgSrc, title, price, colors = [] }) => {
   const [isFavorite, setIsFavorite] = useState(false);
-  const [selectedColor, setSelectedColor] = useState(null); // State to track selected color
+  const [selectedColor, setSelectedColor] = useState(null);
   const [quickAddButtonClicked, setQuickAddButtonClicked] = useState(false);
 
   useEffect(() => {
-    // Retrieve favorites from localStorage when component mounts
-    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    const isFavoriteExists = favorites.some((item) => item.id === id);
-    setIsFavorite(isFavoriteExists);
-  }, [id]); // Re-run when id changes
+    try {
+      const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      const isFavoriteExists = favorites.some((item) => item?.id === id);
+      setIsFavorite(isFavoriteExists);
+    } catch (error) {
+      console.error("Error reading favorites:", error);
+      localStorage.setItem("favorites", JSON.stringify([]));
+    }
+  }, [id]);
 
   const handleFavoriteClick = () => {
-    const newFavorite = { id, imgSrc, title, price, colors };
+    try {
+      const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      const existingIndex = favorites.findIndex((item) => item?.id === id);
 
-    // Retrieve existing favorites or initialize an empty array
-    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-
-    // Check if the item already exists in the favorites
-    const isFavoriteExists = favorites.some((item) => item.id === id);
-
-    if (!isFavoriteExists) {
-      // Add new favorite
-      const updatedFavorites = [...favorites, newFavorite];
-
-      // Save updated favorites to localStorage
-      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-
-      setIsFavorite(true);
-
-      // Log the updated favorites table
-      console.log("Updated Favorites:", updatedFavorites);
-    } else {
-      const updatedFavorites = favorites.filter((item) => item.id !== id);
-      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-
-      // Update the state to reflect the item is no longer a favorite
-      setIsFavorite(false);
-      console.log(`Item with ID: ${id} is removed from favorites`);
-      console.log(updatedFavorites);
+      if (existingIndex === -1) {
+        const newFavorite = { id, imgSrc, title, price, colors };
+        const updatedFavorites = [...favorites, newFavorite];
+        localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+        setIsFavorite(true);
+      } else {
+        const updatedFavorites = favorites.filter(
+          (_, index) => index !== existingIndex
+        );
+        localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+        setIsFavorite(false);
+      }
+    } catch (error) {
+      console.error("Error updating favorites:", error);
     }
   };
 
-  // Handle click on color dot with toggle functionality
   const handleColorClick = (color) => {
-    setSelectedColor((prevColor) => (prevColor === color ? null : color)); // Toggle color selection
+    setSelectedColor((prevColor) => (prevColor === color ? null : color));
   };
 
   const quickAddButtonHandler = () => {
     setQuickAddButtonClicked(true);
   };
+
   const handleCloseQuickAdd = () => {
     setQuickAddButtonClicked(false);
   };
@@ -67,7 +63,6 @@ const Card = ({ id, imgSrc, title, price, colors }) => {
             onClick={handleFavoriteClick}
           >
             {isFavorite ? (
-              // Display the filled heart SVG when item is a favorite
               <svg
                 width="22"
                 height="36"
@@ -81,7 +76,6 @@ const Card = ({ id, imgSrc, title, price, colors }) => {
                 />
               </svg>
             ) : (
-              // Display the empty heart SVG when item is not a favorite
               <svg
                 width="22"
                 height="36"
@@ -112,7 +106,7 @@ const Card = ({ id, imgSrc, title, price, colors }) => {
                 key={index}
                 className={`${style.colorDot} ${
                   selectedColor === color ? style.colorDotSelected : ""
-                }`} // Add the selected class if color matches
+                }`}
                 style={{ backgroundColor: color }}
                 onClick={() => handleColorClick(color)}
               ></span>
@@ -127,6 +121,18 @@ const Card = ({ id, imgSrc, title, price, colors }) => {
       )}
     </div>
   );
+};
+
+Card.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  imgSrc: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  colors: PropTypes.arrayOf(PropTypes.string),
+};
+
+Card.defaultProps = {
+  colors: [],
 };
 
 export default Card;
